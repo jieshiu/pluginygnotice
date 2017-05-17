@@ -1,0 +1,19 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (2716b1f2).
+//
+// PlugInYgNotice.tli
+//
+// Wrapper implementations for Win32 type library ..\PlugInYgNotice\Release\PlugInYgNotice.tlb
+// compiler-generated file created 05/15/17 at 15:33:57 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _IRTXEventEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXEventEvents::OnModuleEvent ( _bstr_t recdata ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)recdata);
+    return _result;
+}

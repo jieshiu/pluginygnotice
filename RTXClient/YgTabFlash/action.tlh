@@ -1,0 +1,269 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (0f0c993b).
+//
+// action.tlh
+//
+// C++ source equivalent of Win32 type library ../../../tlb/action.tlb
+// compiler-generated file created 04/12/16 at 12:58:09 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("82776ddb-5018-40f3-af4a-9af68c901958"))
+/* dual interface */ IAction;
+struct __declspec(uuid("fba26cb7-e238-4595-ada7-9702d15fc2d9"))
+/* dual interface */ IActionCollection;
+struct __declspec(uuid("f935d258-fa96-4639-b6c4-d441bdbf0687"))
+/* dual interface */ IActionMgr;
+struct __declspec(uuid("b33795df-8c59-45d7-9e75-c070a74bfdb9"))
+/* dispinterface */ _IActionMgrEvents;
+struct /* coclass */ ActionMgr;
+struct __declspec(uuid("007f50ac-85fd-4cfc-97f3-94ed1b79e31a"))
+/* dispinterface */ _IActionEvents;
+struct /* coclass */ Action;
+struct /* coclass */ ActionCollection;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAction, __uuidof(IAction));
+_COM_SMARTPTR_TYPEDEF(IActionCollection, __uuidof(IActionCollection));
+_COM_SMARTPTR_TYPEDEF(IActionMgr, __uuidof(IActionMgr));
+_COM_SMARTPTR_TYPEDEF(_IActionMgrEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IActionEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("82776ddb-5018-40f3-af4a-9af68c901958"))
+IAction : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetID))
+    _variant_t ID;
+    __declspec(property(get=GetGroupName))
+    _bstr_t GroupName;
+    __declspec(property(get=GetPosition))
+    long Position;
+    __declspec(property(get=GetExtraInfo))
+    _variant_t ExtraInfo;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetID ( );
+    _bstr_t GetGroupName ( );
+    long GetPosition ( );
+    _variant_t GetExtraInfo ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ID (
+        VARIANT * pVal ) = 0;
+    virtual HRESULT __stdcall get_GroupName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Position (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_ExtraInfo (
+        VARIANT * pVal ) = 0;
+};
+
+struct __declspec(uuid("fba26cb7-e238-4595-ada7-9702d15fc2d9"))
+IActionCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IActionPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IActionPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IAction * * ppAction ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("f935d258-fa96-4639-b6c4-d441bdbf0687"))
+IActionMgr : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAction))
+    IActionPtr Action[][];
+    __declspec(property(get=GetActions))
+    IActionCollectionPtr Actions[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT AddAction (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+    HRESULT DelAction (
+        _bstr_t bstrGroup,
+        const _variant_t & varID );
+    HRESULT SetActionPos (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        long lPos );
+    HRESULT SetActionExtraInfo (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+    HRESULT InvokeAction (
+        _bstr_t bstrGroup,
+        const _variant_t & varID );
+    IActionPtr GetAction (
+        _bstr_t bstrGroupName,
+        const _variant_t & varID );
+    IActionCollectionPtr GetActions (
+        _bstr_t bstrGroupName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_AddAction (
+        BSTR bstrGroup,
+        VARIANT varID,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall raw_DelAction (
+        BSTR bstrGroup,
+        VARIANT varID ) = 0;
+    virtual HRESULT __stdcall raw_SetActionPos (
+        BSTR bstrGroup,
+        VARIANT varID,
+        long lPos ) = 0;
+    virtual HRESULT __stdcall raw_SetActionExtraInfo (
+        BSTR bstrGroup,
+        VARIANT varID,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall raw_InvokeAction (
+        BSTR bstrGroup,
+        VARIANT varID ) = 0;
+    virtual HRESULT __stdcall get_Action (
+        BSTR bstrGroupName,
+        VARIANT varID,
+        struct IAction * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Actions (
+        BSTR bstrGroupName,
+        struct IActionCollection * * pVal ) = 0;
+};
+
+struct __declspec(uuid("b33795df-8c59-45d7-9e75-c070a74bfdb9"))
+_IActionMgrEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnActionPosChange (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        long lPos,
+        const _variant_t & varExtraInfo );
+    HRESULT OnActionExtraInfoChange (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+    HRESULT OnActionAdd (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+    HRESULT OnActionDel (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+    HRESULT OnActionInvoked (
+        _bstr_t bstrGroup,
+        const _variant_t & varID,
+        const _variant_t & varExtraInfo );
+};
+
+struct __declspec(uuid("0f82c839-fbae-49d5-988b-64980013f604"))
+ActionMgr;
+    // [ default ] interface IActionMgr
+    // [ default, source ] dispinterface _IActionMgrEvents
+
+struct __declspec(uuid("007f50ac-85fd-4cfc-97f3-94ed1b79e31a"))
+_IActionEvents : IDispatch
+{};
+
+struct __declspec(uuid("23179102-11d6-4f75-b435-bed7f8e16032"))
+Action;
+    // [ default ] interface IAction
+    // [ default, source ] dispinterface _IActionEvents
+
+struct __declspec(uuid("5f1b042c-5498-494e-b6a8-3774a7abe067"))
+ActionCollection;
+    // [ default ] interface IActionCollection
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_ActionLib =
+    {0xa7a77064,0x8915,0x4b6b,{0xb1,0x7f,0x72,0x46,0x93,0x23,0x94,0x8d}};
+extern "C" const GUID __declspec(selectany) IID_IAction =
+    {0x82776ddb,0x5018,0x40f3,{0xaf,0x4a,0x9a,0xf6,0x8c,0x90,0x19,0x58}};
+extern "C" const GUID __declspec(selectany) IID_IActionCollection =
+    {0xfba26cb7,0xe238,0x4595,{0xad,0xa7,0x97,0x02,0xd1,0x5f,0xc2,0xd9}};
+extern "C" const GUID __declspec(selectany) IID_IActionMgr =
+    {0xf935d258,0xfa96,0x4639,{0xb6,0xc4,0xd4,0x41,0xbd,0xbf,0x06,0x87}};
+extern "C" const GUID __declspec(selectany) DIID__IActionMgrEvents =
+    {0xb33795df,0x8c59,0x45d7,{0x9e,0x75,0xc0,0x70,0xa7,0x4b,0xfd,0xb9}};
+extern "C" const GUID __declspec(selectany) CLSID_ActionMgr =
+    {0x0f82c839,0xfbae,0x49d5,{0x98,0x8b,0x64,0x98,0x00,0x13,0xf6,0x04}};
+extern "C" const GUID __declspec(selectany) DIID__IActionEvents =
+    {0x007f50ac,0x85fd,0x4cfc,{0x97,0xf3,0x94,0xed,0x1b,0x79,0xe3,0x1a}};
+extern "C" const GUID __declspec(selectany) CLSID_Action =
+    {0x23179102,0x11d6,0x4f75,{0xb4,0x35,0xbe,0xd7,0xf8,0xe1,0x60,0x32}};
+extern "C" const GUID __declspec(selectany) CLSID_ActionCollection =
+    {0x5f1b042c,0x5498,0x494e,{0xb6,0xa8,0x37,0x74,0xa7,0xab,0xe0,0x67}};
+
+//
+// Wrapper method implementations
+//
+
+#include "action.tli"
+
+#pragma pack(pop)

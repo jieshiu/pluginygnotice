@@ -1,0 +1,154 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (0f0c993b).
+//
+// action.tli
+//
+// Wrapper implementations for Win32 type library ../../../tlb/action.tlb
+// compiler-generated file created 04/11/16 at 15:43:44 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IAction wrapper method implementations
+//
+
+inline _variant_t IAction::GetID ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ID(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _bstr_t IAction::GetGroupName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_GroupName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IAction::GetPosition ( ) {
+    long _result;
+    HRESULT _hr = get_Position(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IAction::GetExtraInfo ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_ExtraInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IActionCollection wrapper method implementations
+//
+
+inline IUnknownPtr IActionCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IActionPtr IActionCollection::GetItem ( long Index ) {
+    struct IAction * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IActionPtr(_result, false);
+}
+
+inline long IActionCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IActionMgr wrapper method implementations
+//
+
+inline HRESULT IActionMgr::AddAction ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _hr = raw_AddAction(bstrGroup, varID, varExtraInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IActionMgr::DelAction ( _bstr_t bstrGroup, const _variant_t & varID ) {
+    HRESULT _hr = raw_DelAction(bstrGroup, varID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IActionMgr::SetActionPos ( _bstr_t bstrGroup, const _variant_t & varID, long lPos ) {
+    HRESULT _hr = raw_SetActionPos(bstrGroup, varID, lPos);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IActionMgr::SetActionExtraInfo ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _hr = raw_SetActionExtraInfo(bstrGroup, varID, varExtraInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IActionMgr::InvokeAction ( _bstr_t bstrGroup, const _variant_t & varID ) {
+    HRESULT _hr = raw_InvokeAction(bstrGroup, varID);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IActionPtr IActionMgr::GetAction ( _bstr_t bstrGroupName, const _variant_t & varID ) {
+    struct IAction * _result;
+    HRESULT _hr = get_Action(bstrGroupName, varID, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IActionPtr(_result, false);
+}
+
+inline IActionCollectionPtr IActionMgr::GetActions ( _bstr_t bstrGroupName ) {
+    struct IActionCollection * _result;
+    HRESULT _hr = get_Actions(bstrGroupName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IActionCollectionPtr(_result, false);
+}
+
+//
+// dispinterface _IActionMgrEvents wrapper method implementations
+//
+
+inline HRESULT _IActionMgrEvents::OnActionPosChange ( _bstr_t bstrGroup, const _variant_t & varID, long lPos, const _variant_t & varExtraInfo ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c\x0003\x000c", (BSTR)bstrGroup, &varID, lPos, &varExtraInfo);
+    return _result;
+}
+
+inline HRESULT _IActionMgrEvents::OnActionExtraInfoChange ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c\x000c", (BSTR)bstrGroup, &varID, &varExtraInfo);
+    return _result;
+}
+
+inline HRESULT _IActionMgrEvents::OnActionAdd ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c\x000c", (BSTR)bstrGroup, &varID, &varExtraInfo);
+    return _result;
+}
+
+inline HRESULT _IActionMgrEvents::OnActionDel ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c\x000c", (BSTR)bstrGroup, &varID, &varExtraInfo);
+    return _result;
+}
+
+inline HRESULT _IActionMgrEvents::OnActionInvoked ( _bstr_t bstrGroup, const _variant_t & varID, const _variant_t & varExtraInfo ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c\x000c", (BSTR)bstrGroup, &varID, &varExtraInfo);
+    return _result;
+}

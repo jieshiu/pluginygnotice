@@ -1,0 +1,2486 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (b01679a9).
+//
+// RTXCAPI.tli
+//
+// Wrapper implementations for Win32 type library ../../../tlb/RTXCAPI.tlb
+// compiler-generated file created 04/13/16 at 10:02:48 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IRTXCDataCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCDataCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCDataCollection::GetItem ( long Index ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline long IRTXCDataCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCDataCollection::Add ( struct IRTXCData * RTXCData ) {
+    HRESULT _hr = raw_Add(RTXCData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCDataCollection::Remove ( long Index ) {
+    HRESULT _hr = raw_Remove(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCDataCollection::GetXML ( ) {
+    BSTR _result;
+    HRESULT _hr = get_XML(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCDataCollection::PutXML ( _bstr_t pVal ) {
+    HRESULT _hr = put_XML(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IRTXCData wrapper method implementations
+//
+
+inline _bstr_t IRTXCData::GetXML ( ) {
+    BSTR _result;
+    HRESULT _hr = get_XML(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCData::PutXML ( _bstr_t pVal ) {
+    HRESULT _hr = put_XML(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRTXCData::GetLong ( _bstr_t Key ) {
+    long _result;
+    HRESULT _hr = raw_GetLong(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCData::SetLong ( _bstr_t Key, long Value ) {
+    HRESULT _hr = raw_SetLong(Key, Value);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCData::GetString ( _bstr_t Key ) {
+    BSTR _result;
+    HRESULT _hr = raw_GetString(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IRTXCData::SetString ( _bstr_t Key, _bstr_t String ) {
+    HRESULT _hr = raw_SetString(Key, String);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCData::SetBuffer ( _bstr_t Key, unsigned char * Buffer, long Length ) {
+    HRESULT _hr = raw_SetBuffer(Key, Buffer, Length);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IRTXCData::GetBufferLength ( _bstr_t Key ) {
+    long _result;
+    HRESULT _hr = raw_GetBufferLength(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCData::GetBuffer ( _bstr_t Key, unsigned char * Buffer, long Length ) {
+    HRESULT _hr = raw_GetBuffer(Key, Buffer, Length);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCData::SetRTXCData ( _bstr_t Key, struct IRTXCData * RTXCData ) {
+    HRESULT _hr = raw_SetRTXCData(Key, RTXCData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCDataPtr IRTXCData::GetRTXCData ( _bstr_t Key ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = raw_GetRTXCData(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataCollectionPtr IRTXCData::GetRTXCDataCollection ( _bstr_t Key ) {
+    struct IRTXCDataCollection * _result;
+    HRESULT _hr = raw_GetRTXCDataCollection(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataCollectionPtr(_result, false);
+}
+
+inline HRESULT IRTXCData::SetRTXCDataCollection ( _bstr_t Key, struct IRTXCDataCollection * RTXCDataCollection ) {
+    HRESULT _hr = raw_SetRTXCDataCollection(Key, RTXCDataCollection);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCData::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IDispatchPtr IRTXCData::GetObject ( _bstr_t Key ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_GetObject(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT IRTXCData::SetObject ( _bstr_t Key, IDispatch * Object ) {
+    HRESULT _hr = raw_SetObject(Key, Object);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCData::GetFileName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FileName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCData::PutFileName ( _bstr_t pVal ) {
+    HRESULT _hr = put_FileName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCData::Save ( ) {
+    HRESULT _hr = raw_Save();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCData::Load ( _bstr_t FileName ) {
+    HRESULT _hr = raw_Load(FileName);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCLicense wrapper method implementations
+//
+
+inline _variant_t IRTXCLicense::GetConfig ( _bstr_t Name ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Config(Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+//
+// interface IRTXCRTXGroup wrapper method implementations
+//
+
+inline IRTXCRTXGroupPtr IRTXCRTXGroup::GetParent ( ) {
+    struct IRTXCRTXGroup * _result;
+    HRESULT _hr = get_Parent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupPtr(_result, false);
+}
+
+inline IRTXCRTXGroupCollectionPtr IRTXCRTXGroup::GetGroups ( ) {
+    struct IRTXCRTXGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupCollectionPtr(_result, false);
+}
+
+inline IRTXCRTXBuddyCollectionPtr IRTXCRTXGroup::GetBuddies ( ) {
+    struct IRTXCRTXBuddyCollection * _result;
+    HRESULT _hr = get_Buddies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXBuddyCollectionPtr(_result, false);
+}
+
+inline long IRTXCRTXGroup::GetId ( ) {
+    long _result;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum RTX_GROUP_TYPE IRTXCRTXGroup::GetType ( ) {
+    enum RTX_GROUP_TYPE _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IRTXCRTXGroup::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXGroup::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCRTXGroup::AddBuddy ( struct IRTXCRTXBuddy * Buddy ) {
+    HRESULT _hr = raw_AddBuddy(Buddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRTXGroup::RemoveBuddy ( struct IRTXCRTXBuddy * Buddy ) {
+    HRESULT _hr = raw_RemoveBuddy(Buddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IRTXCRTXGroup::GetVirtualProperty ( ) {
+    long _result;
+    HRESULT _hr = get_VirtualProperty(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRTXGroup::PutVirtualProperty ( long pVal ) {
+    HRESULT _hr = put_VirtualProperty(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRTXCRTXGroup::GetParentId ( ) {
+    long _result;
+    HRESULT _hr = get_ParentId(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCRTXGroupCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCRTXGroupCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCRTXGroupPtr IRTXCRTXGroupCollection::GetItem ( long Index ) {
+    struct IRTXCRTXGroup * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupPtr(_result, false);
+}
+
+inline long IRTXCRTXGroupCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCRTXBuddyCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCRTXBuddyCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCRTXBuddyPtr IRTXCRTXBuddyCollection::GetItem ( long Index ) {
+    struct IRTXCRTXBuddy * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXBuddyPtr(_result, false);
+}
+
+inline long IRTXCRTXBuddyCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCRTXBuddy wrapper method implementations
+//
+
+inline _bstr_t IRTXCRTXBuddy::GetAccount ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Account(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXBuddy::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetMobile ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Mobile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXBuddy::PutMobile ( _bstr_t pVal ) {
+    HRESULT _hr = put_Mobile(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRTXCRTXBuddy::GetUIN ( ) {
+    long _result;
+    HRESULT _hr = get_UIN(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum RTX_GENDER IRTXCRTXBuddy::GetGender ( ) {
+    enum RTX_GENDER _result;
+    HRESULT _hr = get_Gender(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRTXBuddy::PutGender ( enum RTX_GENDER pVal ) {
+    HRESULT _hr = put_Gender(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetEmail ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Email(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXBuddy::PutEmail ( _bstr_t pVal ) {
+    HRESULT _hr = put_Email(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRTXCRTXBuddy::GetUserRights ( ) {
+    long _result;
+    HRESULT _hr = get_UserRights(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCRTXBuddy::Update ( ) {
+    HRESULT _hr = raw_Update();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetTelephone ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Telephone(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXBuddy::PutTelephone ( _bstr_t pVal ) {
+    HRESULT _hr = put_Telephone(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum RTX_PRESENCE IRTXCRTXBuddy::GetPresence ( ) {
+    enum RTX_PRESENCE _result;
+    HRESULT _hr = get_Presence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCRTXBuddy::Modify ( ) {
+    HRESULT _hr = raw_Modify();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCRTXGroupCollectionPtr IRTXCRTXBuddy::GetGroups ( ) {
+    struct IRTXCRTXGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupCollectionPtr(_result, false);
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetRealName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_RealName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCRTXBuddy::PutRealName ( _bstr_t pVal ) {
+    HRESULT _hr = put_RealName(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCRTXBuddy::UpdateNow ( ) {
+    HRESULT _hr = raw_UpdateNow();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCRTXBuddy::GetPhotoPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_PhotoPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+//
+// interface IRTXCExtBuddy wrapper method implementations
+//
+
+inline _variant_t IRTXCExtBuddy::GetField ( _bstr_t bstrName, _bstr_t bstrNamespace ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Field(bstrName, bstrNamespace, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IRTXCExtBuddy::PutField ( _bstr_t bstrName, _bstr_t bstrNamespace, const _variant_t & pResult ) {
+    HRESULT _hr = put_Field(bstrName, bstrNamespace, pResult);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRTXCExtBuddy::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IRTXCExtGroupCollectionPtr IRTXCExtBuddy::GetGroups ( ) {
+    struct IRTXCExtGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupCollectionPtr(_result, false);
+}
+
+//
+// interface IRTXCExtGroupCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCExtGroupCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCExtGroupPtr IRTXCExtGroupCollection::GetItem ( long Index ) {
+    struct IRTXCExtGroup * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupPtr(_result, false);
+}
+
+inline long IRTXCExtGroupCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCExtGroup wrapper method implementations
+//
+
+inline IRTXCExtGroupPtr IRTXCExtGroup::GetParent ( ) {
+    struct IRTXCExtGroup * _result;
+    HRESULT _hr = get_Parent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupPtr(_result, false);
+}
+
+inline IRTXCExtGroupCollectionPtr IRTXCExtGroup::GetGroups ( ) {
+    struct IRTXCExtGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupCollectionPtr(_result, false);
+}
+
+inline IRTXCExtBuddyCollectionPtr IRTXCExtGroup::GetBuddies ( ) {
+    struct IRTXCExtBuddyCollection * _result;
+    HRESULT _hr = get_Buddies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtBuddyCollectionPtr(_result, false);
+}
+
+inline long IRTXCExtGroup::GetId ( ) {
+    long _result;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum RTX_GROUP_TYPE IRTXCExtGroup::GetType ( ) {
+    enum RTX_GROUP_TYPE _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IRTXCExtGroup::GetName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCExtGroup::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCExtGroup::AddBuddy ( struct IRTXCExtBuddy * Buddy ) {
+    HRESULT _hr = raw_AddBuddy(Buddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExtGroup::RemoveBuddy ( struct IRTXCExtBuddy * Buddy ) {
+    HRESULT _hr = raw_RemoveBuddy(Buddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCExtBuddyCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCExtBuddyCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCExtBuddyPtr IRTXCExtBuddyCollection::GetItem ( long Index ) {
+    struct IRTXCExtBuddy * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtBuddyPtr(_result, false);
+}
+
+inline long IRTXCExtBuddyCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCRTXGroupManager wrapper method implementations
+//
+
+inline IRTXCRTXGroupPtr IRTXCRTXGroupManager::GetGroup ( long Id ) {
+    struct IRTXCRTXGroup * _result;
+    HRESULT _hr = get_Group(Id, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupPtr(_result, false);
+}
+
+inline IRTXCRTXGroupPtr IRTXCRTXGroupManager::AddGroup ( struct IRTXCRTXGroup * Parent, _bstr_t Name ) {
+    struct IRTXCRTXGroup * _result;
+    HRESULT _hr = raw_AddGroup(Parent, Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupPtr(_result, false);
+}
+
+inline HRESULT IRTXCRTXGroupManager::RemoveGroup ( struct IRTXCRTXGroup * Group ) {
+    HRESULT _hr = raw_RemoveGroup(Group);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCRTXGroupCollectionPtr IRTXCRTXGroupManager::GetGroups ( ) {
+    struct IRTXCRTXGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupCollectionPtr(_result, false);
+}
+
+inline HRESULT IRTXCRTXGroupManager::GetAllGroups ( struct IRTXCRTXGroupCollection * * pVal ) {
+    HRESULT _hr = raw_GetAllGroups(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRTXGroupManager::GetAllGroupsCount ( enum RTX_GROUP_TYPE groupType, unsigned long * Count ) {
+    HRESULT _hr = raw_GetAllGroupsCount(groupType, Count);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCRTXGroupCollectionPtr IRTXCRTXGroupManager::GetGroupsByUser ( _bstr_t nickname ) {
+    struct IRTXCRTXGroupCollection * _result;
+    HRESULT _hr = raw_GetGroupsByUser(nickname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupCollectionPtr(_result, false);
+}
+
+//
+// interface IRTXCRTXBuddyManager wrapper method implementations
+//
+
+inline IRTXCRTXBuddyPtr IRTXCRTXBuddyManager::GetBuddy ( _bstr_t Account ) {
+    struct IRTXCRTXBuddy * _result;
+    HRESULT _hr = get_Buddy(Account, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXBuddyPtr(_result, false);
+}
+
+inline HRESULT IRTXCRTXBuddyManager::Update ( struct IRTXCRTXBuddy * RTXBuddy ) {
+    HRESULT _hr = raw_Update(RTXBuddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCRTXBuddyCollectionPtr IRTXCRTXBuddyManager::GetBuddies ( ) {
+    struct IRTXCRTXBuddyCollection * _result;
+    HRESULT _hr = get_Buddies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXBuddyCollectionPtr(_result, false);
+}
+
+inline HRESULT IRTXCRTXBuddyManager::QueryExistence ( _bstr_t Account ) {
+    HRESULT _hr = raw_QueryExistence(Account);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IRTXCRTXBuddyManager::GetLocalExistence ( _bstr_t Account ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_LocalExistence(Account, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCRTXBuddyManager::ForEach ( long pfCallBack, long Param ) {
+    HRESULT _hr = raw_ForEach(pfCallBack, Param);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRTXBuddyManager::UpdateNow ( struct IRTXCRTXBuddy * RTXBuddy ) {
+    HRESULT _hr = raw_UpdateNow(RTXBuddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRTXBuddyManager::GetBuddyFromPhoneNum ( _bstr_t bstrPhoneNum, struct IRTXCRTXBuddy * * ppRTXBuddy ) {
+    HRESULT _hr = raw_GetBuddyFromPhoneNum(bstrPhoneNum, ppRTXBuddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRTXBuddyManager::SearchBuddy ( _bstr_t prefix, BSTR * accountResultList, BSTR * nameResultList ) {
+    HRESULT _hr = raw_SearchBuddy(prefix, accountResultList, nameResultList);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCPresence wrapper method implementations
+//
+
+inline enum RTX_PRESENCE IRTXCPresence::GetRTXPresence ( _bstr_t Account ) {
+    enum RTX_PRESENCE _result;
+    HRESULT _hr = get_RTXPresence(Account, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCPresence::PutRTXPresence ( _bstr_t Account, enum RTX_PRESENCE pVal ) {
+    HRESULT _hr = put_RTXPresence(Account, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCPresence::UpdatePresence ( struct IRTXCDataCollection * Accounts ) {
+    HRESULT _hr = raw_UpdatePresence(Accounts);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCPresence::UpdateAllPresence ( VARIANT_BOOL ForceFromServer ) {
+    HRESULT _hr = raw_UpdateAllPresence(ForceFromServer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCPresence::AddFocusUser ( const _variant_t & User, VARIANT_BOOL UpdateAtOnce ) {
+    HRESULT _hr = raw_AddFocusUser(User, UpdateAtOnce);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IRTXCPresence::GetPhonePresenceSwitch ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_PhonePresenceSwitch(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCPresence::PutPhonePresenceSwitch ( VARIANT_BOOL pvbSwitchOn ) {
+    HRESULT _hr = put_PhonePresenceSwitch(pvbSwitchOn);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IRTXCExState wrapper method implementations
+//
+
+inline long IRTXCExState::GetExState ( _bstr_t bstrAccount, _bstr_t bstrExStateName ) {
+    long _result;
+    HRESULT _hr = get_ExState(bstrAccount, bstrExStateName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IRTXCExState::GetMyExState ( _bstr_t bstrExStateName ) {
+    long _result;
+    HRESULT _hr = get_MyExState(bstrExStateName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCExState::PutMyExState ( _bstr_t bstrExStateName, long pVal ) {
+    HRESULT _hr = put_MyExState(bstrExStateName, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCExState::QueryUsersExState ( const _variant_t & varArrUin ) {
+    HRESULT _hr = raw_QueryUsersExState(varArrUin);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExState::QueryUsersExState2 ( const _variant_t & varArrAccounts ) {
+    HRESULT _hr = raw_QueryUsersExState2(varArrAccounts);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCModuleCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCModuleCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCModulePtr IRTXCModuleCollection::GetItem ( long Index ) {
+    struct IRTXCModule * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCModulePtr(_result, false);
+}
+
+inline long IRTXCModuleCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCSession wrapper method implementations
+//
+
+inline enum RTXC_SESSION_STATE IRTXCSession::GetState ( ) {
+    enum RTXC_SESSION_STATE _result;
+    HRESULT _hr = get_State(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCSession::PutState ( enum RTXC_SESSION_STATE pVal ) {
+    HRESULT _hr = put_State(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRTXCSession::GetType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCSession::GetTopic ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Topic(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCSession::PutTopic ( _bstr_t pVal ) {
+    HRESULT _hr = put_Topic(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IRTXCSession::GetInitiator ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Initiator(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCSession::GetAppName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_AppName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCSession::GetParticipant ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Participant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCSession::PutParticipant ( _bstr_t pVal ) {
+    HRESULT _hr = put_Participant(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCSession::Refresh ( ) {
+    HRESULT _hr = raw_Refresh();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCSession::GetId ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline DATE IRTXCSession::GetCreateTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_CreateTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IRTXCSession::GetParticipantCount ( ) {
+    long _result;
+    HRESULT _hr = get_ParticipantCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IRTXCSession::GetMessageCount ( ) {
+    long _result;
+    HRESULT _hr = get_MessageCount(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCSession::PutMessageCount ( long pVal ) {
+    HRESULT _hr = put_MessageCount(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCSession::RequestInitiator ( ) {
+    HRESULT _hr = raw_RequestInitiator();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCSession::AcceptInitiatorRequest ( ) {
+    HRESULT _hr = raw_AcceptInitiatorRequest();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCSession::RejectInitiatorRequest ( ) {
+    HRESULT _hr = raw_RejectInitiatorRequest();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline DATE IRTXCSession::GetLastTime ( ) {
+    DATE _result;
+    HRESULT _hr = get_LastTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCSession::Save ( ) {
+    HRESULT _hr = raw_Save();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCSession::GetLocalTopic ( ) {
+    BSTR _result;
+    HRESULT _hr = get_LocalTopic(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IRTXCSession::PutLocalTopic ( _bstr_t pVal ) {
+    HRESULT _hr = put_LocalTopic(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCSession::PutRCALocalInitiatorAndParDirectly ( _bstr_t newInitiator ) {
+    HRESULT _hr = raw_PutRCALocalInitiatorAndParDirectly(newInitiator);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCSessionCollection wrapper method implementations
+//
+
+inline IUnknownPtr IRTXCSessionCollection::Get_NewEnum ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get__NewEnum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline IRTXCSessionPtr IRTXCSessionCollection::GetItem ( long Index ) {
+    struct IRTXCSession * _result;
+    HRESULT _hr = get_Item(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionPtr(_result, false);
+}
+
+inline long IRTXCSessionCollection::GetCount ( ) {
+    long _result;
+    HRESULT _hr = get_Count(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCSessionManager wrapper method implementations
+//
+
+inline IRTXCSessionPtr IRTXCSessionManager::CreateSession ( _bstr_t Type, _bstr_t Initiator, _bstr_t AppName ) {
+    struct IRTXCSession * _result;
+    HRESULT _hr = raw_CreateSession(Type, Initiator, AppName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionPtr(_result, false);
+}
+
+inline IRTXCSessionPtr IRTXCSessionManager::GetSession ( _bstr_t SessionId ) {
+    struct IRTXCSession * _result;
+    HRESULT _hr = get_Session(SessionId, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionPtr(_result, false);
+}
+
+inline HRESULT IRTXCSessionManager::QuerySessionInfo ( _bstr_t Receiver, _bstr_t SessionId, long Cookie ) {
+    HRESULT _hr = raw_QuerySessionInfo(Receiver, SessionId, Cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCSessionPtr IRTXCSessionManager::CreateSession2 ( _bstr_t SessionId, _bstr_t Type, _bstr_t Initiator, _bstr_t AppName, _bstr_t Participant ) {
+    struct IRTXCSession * _result;
+    HRESULT _hr = raw_CreateSession2(SessionId, Type, Initiator, AppName, Participant, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionPtr(_result, false);
+}
+
+inline IRTXCSessionCollectionPtr IRTXCSessionManager::GetSessions ( ) {
+    struct IRTXCSessionCollection * _result;
+    HRESULT _hr = get_Sessions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionCollectionPtr(_result, false);
+}
+
+inline IRTXCSessionCollectionPtr IRTXCSessionManager::GetRecentSession ( ) {
+    struct IRTXCSessionCollection * _result;
+    HRESULT _hr = raw_GetRecentSession(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionCollectionPtr(_result, false);
+}
+
+inline HRESULT IRTXCSessionManager::RegisterSession ( struct IRTXCSession * Session ) {
+    HRESULT _hr = raw_RegisterSession(Session);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCSessionPtr IRTXCSessionManager::CreateSession3 ( _bstr_t SessionId, _bstr_t Type, _bstr_t Initiator, _bstr_t AppName, _bstr_t Participant ) {
+    struct IRTXCSession * _result;
+    HRESULT _hr = raw_CreateSession3(SessionId, Type, Initiator, AppName, Participant, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionPtr(_result, false);
+}
+
+//
+// interface IRTXCMFCSupport wrapper method implementations
+//
+
+inline HRESULT IRTXCMFCSupport::PreTranslateMessage ( long MSGPointer ) {
+    HRESULT _hr = raw_PreTranslateMessage(MSGPointer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMFCSupport::OnIdle ( long Count ) {
+    HRESULT _hr = raw_OnIdle(Count);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCMDSessionManager wrapper method implementations
+//
+
+inline IRTXCMDSessionPtr IRTXCMDSessionManager::CreateSession ( _bstr_t AppName, _bstr_t Type ) {
+    struct IRTXCMDSession * _result;
+    HRESULT _hr = raw_CreateSession(AppName, Type, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCMDSessionPtr(_result, false);
+}
+
+//
+// interface IRTXCMDSession wrapper method implementations
+//
+
+inline enum RTXC_MDSESSION_STATE IRTXCMDSession::GetState ( ) {
+    enum RTXC_MDSESSION_STATE _result;
+    HRESULT _hr = get_State(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IRTXCMDSession::GetAppName ( ) {
+    BSTR _result;
+    HRESULT _hr = get_AppName(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCMDSession::GetType ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCMDSession::GetInitiator ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Initiator(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCMDSession::GetParticipant ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Participant(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IRTXCMDSession::GetId ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Id(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IRTXCMDSession::AddParticipant ( _bstr_t Participant, enum RTXC_MDSESSION_CONNTYPE ConnType, _bstr_t VerifyString ) {
+    HRESULT _hr = raw_AddParticipant(Participant, ConnType, VerifyString);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::RemoveParticipant ( _bstr_t Participant ) {
+    HRESULT _hr = raw_RemoveParticipant(Participant);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::Accept ( ) {
+    HRESULT _hr = raw_Accept();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::Reject ( ) {
+    HRESULT _hr = raw_Reject();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::SendData ( const _variant_t & Data ) {
+    HRESULT _hr = raw_SendData(Data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::SendData2 ( const _variant_t & Data ) {
+    HRESULT _hr = raw_SendData2(Data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::SendData3 ( _bstr_t Participant, const _variant_t & Data ) {
+    HRESULT _hr = raw_SendData3(Participant, Data);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCMDSession::Cancel ( _bstr_t Participant ) {
+    HRESULT _hr = raw_Cancel(Participant);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCExtGroupManager wrapper method implementations
+//
+
+inline IRTXCExtGroupPtr IRTXCExtGroupManager::GetGroup ( long Id ) {
+    struct IRTXCExtGroup * _result;
+    HRESULT _hr = get_Group(Id, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupPtr(_result, false);
+}
+
+inline IRTXCExtGroupPtr IRTXCExtGroupManager::AddGroup ( struct IRTXCExtGroup * Parent, _bstr_t Name ) {
+    struct IRTXCExtGroup * _result;
+    HRESULT _hr = raw_AddGroup(Parent, Name, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupPtr(_result, false);
+}
+
+inline HRESULT IRTXCExtGroupManager::RemoveGroup ( struct IRTXCExtGroup * Group ) {
+    HRESULT _hr = raw_RemoveGroup(Group);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCExtGroupCollectionPtr IRTXCExtGroupManager::GetGroups ( ) {
+    struct IRTXCExtGroupCollection * _result;
+    HRESULT _hr = get_Groups(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupCollectionPtr(_result, false);
+}
+
+//
+// interface IRTXCExtBuddyManager wrapper method implementations
+//
+
+inline IRTXCExtBuddyPtr IRTXCExtBuddyManager::GetBuddy ( _bstr_t Account ) {
+    struct IRTXCExtBuddy * _result;
+    HRESULT _hr = get_Buddy(Account, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtBuddyPtr(_result, false);
+}
+
+inline HRESULT IRTXCExtBuddyManager::RemoveBuddy ( LPWSTR lpszAccount ) {
+    HRESULT _hr = raw_RemoveBuddy(lpszAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExtBuddyManager::DeleteBuddy ( LPWSTR lpszAccount ) {
+    HRESULT _hr = raw_DeleteBuddy(lpszAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCExtBuddyCollectionPtr IRTXCExtBuddyManager::GetBuddies ( ) {
+    struct IRTXCExtBuddyCollection * _result;
+    HRESULT _hr = get_Buddies(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtBuddyCollectionPtr(_result, false);
+}
+
+inline _variant_t IRTXCExtBuddyManager::GetPhones ( _bstr_t Account ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Phones(Account, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _bstr_t IRTXCExtBuddyManager::GetUsername ( _bstr_t bstrPhone ) {
+    BSTR _result;
+    HRESULT _hr = get_Username(bstrPhone, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IRTXCExtBuddyManager::ImportExtBuddy ( _bstr_t bstrFilename ) {
+    HRESULT _hr = raw_ImportExtBuddy(bstrFilename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExtBuddyManager::ExportExtBuddy ( _bstr_t bstrFilename ) {
+    HRESULT _hr = raw_ExportExtBuddy(bstrFilename);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExtBuddyManager::CreateRTXCExtBuddy ( _bstr_t Account, struct IRTXCExtBuddy * * ppVal ) {
+    HRESULT _hr = raw_CreateRTXCExtBuddy(Account, ppVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCExtBuddyManager::GetBuddyFromPhoneNum ( _bstr_t bstrPhoneNum, struct IRTXCExtBuddy * * ppRTXBuddy ) {
+    HRESULT _hr = raw_GetBuddyFromPhoneNum(bstrPhoneNum, ppRTXBuddy);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCEventCenter wrapper method implementations
+//
+
+inline long IRTXCEventCenter::AddEventSink ( _bstr_t Id, IUnknown * pSink, VARIANT_BOOL IsUnique ) {
+    long _result;
+    HRESULT _hr = raw_AddEventSink(Id, pSink, IsUnique, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IRTXCEventCenter::FireEvent ( _bstr_t Id, IDispatch * pData ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_FireEvent(Id, pData, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IRTXCEventCenter::RemoveEventSink ( _bstr_t Id, long Cookie ) {
+    HRESULT _hr = raw_RemoveEventSink(Id, Cookie);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IRTXCEventCenter::AddModuleEventSink ( _bstr_t Id, IUnknown * pSink, VARIANT_BOOL IsUnique, struct IRTXCModule * pRTXModule ) {
+    long _result;
+    HRESULT _hr = raw_AddModuleEventSink(Id, pSink, IsUnique, pRTXModule, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IRTXCEventCenter::FireModuleEvent ( _bstr_t Id, struct IRTXCModule * pRTXModule, IDispatch * pData ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = raw_FireModuleEvent(Id, pRTXModule, pData, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline HRESULT IRTXCEventCenter::RemoveModuleEventSink ( _bstr_t Id, long Cookie, struct IRTXCModule * pRTXModule ) {
+    HRESULT _hr = raw_RemoveModuleEventSink(Id, Cookie, pRTXModule);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IRTXCRoot wrapper method implementations
+//
+
+inline IRTXCDataPtr IRTXCRoot::CreateRTXCData ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = raw_CreateRTXCData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataCollectionPtr IRTXCRoot::CreateRTXCDataCollection ( ) {
+    struct IRTXCDataCollection * _result;
+    HRESULT _hr = raw_CreateRTXCDataCollection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataCollectionPtr(_result, false);
+}
+
+inline IRTXCRTXGroupManagerPtr IRTXCRoot::GetRTXGroupManager ( ) {
+    struct IRTXCRTXGroupManager * _result;
+    HRESULT _hr = get_RTXGroupManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXGroupManagerPtr(_result, false);
+}
+
+inline IRTXCRTXBuddyManagerPtr IRTXCRoot::GetRTXBuddyManager ( ) {
+    struct IRTXCRTXBuddyManager * _result;
+    HRESULT _hr = get_RTXBuddyManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRTXBuddyManagerPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::Login ( _bstr_t Server, long Port, const _variant_t & Account, _bstr_t Password ) {
+    HRESULT _hr = raw_Login(Server, Port, Account, Password);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IRTXCRoot::GetTCP ( ) {
+    VARIANT_BOOL _result;
+    HRESULT _hr = get_TCP(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRoot::PutTCP ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_TCP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCRoot::Test ( struct IRTXCRoot * RTXCRoot ) {
+    HRESULT _hr = raw_Test(RTXCRoot);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRoot::Initialize ( ) {
+    HRESULT _hr = raw_Initialize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCRoot::GetAccount ( ) {
+    BSTR _result;
+    HRESULT _hr = get_Account(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IRTXCRoot::GetUIN ( ) {
+    long _result;
+    HRESULT _hr = get_UIN(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IRTXCModulePtr IRTXCRoot::GetModule ( _bstr_t Identifier ) {
+    struct IRTXCModule * _result;
+    HRESULT _hr = get_Module(Identifier, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCModulePtr(_result, false);
+}
+
+inline IRTXCPresencePtr IRTXCRoot::GetPresence ( ) {
+    struct IRTXCPresence * _result;
+    HRESULT _hr = get_Presence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCPresencePtr(_result, false);
+}
+
+inline enum RTX_PRESENCE IRTXCRoot::GetMyPresence ( ) {
+    enum RTX_PRESENCE _result;
+    HRESULT _hr = get_MyPresence(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRoot::PutMyPresence ( enum RTX_PRESENCE pVal ) {
+    HRESULT _hr = put_MyPresence(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IRTXCRoot::Logout ( ) {
+    HRESULT _hr = raw_Logout();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCModuleCollectionPtr IRTXCRoot::GetModuleCollection ( ) {
+    struct IRTXCModuleCollection * _result;
+    HRESULT _hr = get_ModuleCollection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCModuleCollectionPtr(_result, false);
+}
+
+inline IRTXCSessionManagerPtr IRTXCRoot::GetSessionManager ( ) {
+    struct IRTXCSessionManager * _result;
+    HRESULT _hr = get_SessionManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCSessionManagerPtr(_result, false);
+}
+
+inline long IRTXCRoot::GetCurrentServerTime ( ) {
+    long _result;
+    HRESULT _hr = get_CurrentServerTime(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetToken ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_Token(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetSign ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_Sign(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataCollectionPtr IRTXCRoot::GetServerInfo ( ) {
+    struct IRTXCDataCollection * _result;
+    HRESULT _hr = get_ServerInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataCollectionPtr(_result, false);
+}
+
+inline IRTXCMFCSupportPtr IRTXCRoot::GetMFCSupport ( ) {
+    struct IRTXCMFCSupport * _result;
+    HRESULT _hr = get_MFCSupport(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCMFCSupportPtr(_result, false);
+}
+
+inline IRTXCMDSessionManagerPtr IRTXCRoot::GetMDSessionManager ( ) {
+    struct IRTXCMDSessionManager * _result;
+    HRESULT _hr = get_MDSessionManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCMDSessionManagerPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::ModifyPassword ( _bstr_t OldPwd, _bstr_t NewPwd ) {
+    HRESULT _hr = raw_ModifyPassword(OldPwd, NewPwd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRoot::Uninitialize ( ) {
+    HRESULT _hr = raw_Uninitialize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetEnterpriseInfo ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_EnterpriseInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::LoadPlugin ( _bstr_t Identifier ) {
+    HRESULT _hr = raw_LoadPlugin(Identifier);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRoot::UnloadPlugin ( _bstr_t Identifier ) {
+    HRESULT _hr = raw_UnloadPlugin(Identifier);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCLicensePtr IRTXCRoot::GetLicense ( ) {
+    struct IRTXCLicense * _result;
+    HRESULT _hr = get_License(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCLicensePtr(_result, false);
+}
+
+inline IRTXCExtBuddyManagerPtr IRTXCRoot::GetRTXExtBuddyManager ( ) {
+    struct IRTXCExtBuddyManager * _result;
+    HRESULT _hr = get_RTXExtBuddyManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtBuddyManagerPtr(_result, false);
+}
+
+inline IRTXCExtGroupManagerPtr IRTXCRoot::GetRTXExtGroupManager ( ) {
+    struct IRTXCExtGroupManager * _result;
+    HRESULT _hr = get_RTXExtGroupManager(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExtGroupManagerPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::LoadPluginEx ( _bstr_t Identifier, enum RTXC_PLGUIN_LOAD_RESULT * Result ) {
+    HRESULT _hr = raw_LoadPluginEx(Identifier, Result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRoot::LoginSessionKey ( _bstr_t bstrServer, long lPort, const _variant_t & varAccount, _bstr_t bstrSessionKey ) {
+    HRESULT _hr = raw_LoginSessionKey(bstrServer, lPort, varAccount, bstrSessionKey);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCEventCenterPtr IRTXCRoot::GetRTXCEventCenter ( ) {
+    struct IRTXCEventCenter * _result;
+    HRESULT _hr = get_RTXCEventCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCEventCenterPtr(_result, false);
+}
+
+inline IRTXCExStatePtr IRTXCRoot::GetExState ( ) {
+    struct IRTXCExState * _result;
+    HRESULT _hr = get_ExState(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCExStatePtr(_result, false);
+}
+
+inline enum RTXC_LOGIN_MODE IRTXCRoot::GetLoginMode ( ) {
+    enum RTXC_LOGIN_MODE _result;
+    HRESULT _hr = get_LoginMode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRoot::PutLoginMode ( enum RTXC_LOGIN_MODE pVal ) {
+    HRESULT _hr = put_LoginMode(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned long IRTXCRoot::GetETrunk ( ) {
+    unsigned long _result;
+    HRESULT _hr = get_ETrunk(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IRTXCRoot::PutETrunk ( unsigned long pVal ) {
+    HRESULT _hr = put_ETrunk(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IRTXCRoot::GetNetProxy ( ) {
+    long _result;
+    HRESULT _hr = get_NetProxy(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IDispatchPtr IRTXCRoot::CreateP2PMgr ( ) {
+    IDispatch * _result;
+    HRESULT _hr = raw_CreateP2PMgr(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetConnectionInfo ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_ConnectionInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetServerAddress ( enum RTX_SERVER_TYPE Type ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_ServerAddress(Type, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetBase64Sign ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_Base64Sign(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::ShowTabs ( _bstr_t bstrGuid ) {
+    HRESULT _hr = raw_ShowTabs(bstrGuid);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline enum RTXC_LANGUAGE_TYPE IRTXCRoot::GetLanguage ( ) {
+    enum RTXC_LANGUAGE_TYPE _result;
+    HRESULT _hr = get_Language(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetNetProxyParam ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_NetProxyParam(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetAVSetInfo ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_AVSetInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::GetMainFrameWnd ( long * pWnd ) {
+    HRESULT _hr = raw_GetMainFrameWnd(pWnd);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline void IRTXCRoot::GetServerIP ( long * pVal ) {
+    HRESULT _hr = get_ServerIP(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetRCAToken ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_RCAToken(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline long IRTXCRoot::GetUseMultiFileServer ( ) {
+    long _result;
+    HRESULT _hr = get_UseMultiFileServer(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IRTXCDataPtr IRTXCRoot::GetOutSupServerInfo ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_OutSupServerInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IDispatchPtr IRTXCRoot::GetRTXIM ( ) {
+    IDispatch * _result;
+    HRESULT _hr = get_RTXIM(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IDispatchPtr(_result, false);
+}
+
+inline IUnknownPtr IRTXCRoot::GetRTXOrgInfo ( ) {
+    IUnknown * _result;
+    HRESULT _hr = get_RTXOrgInfo(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IUnknownPtr(_result, false);
+}
+
+inline HRESULT IRTXCRoot::PreExit ( VARIANT_BOOL * pbCanExit ) {
+    HRESULT _hr = raw_PreExit(pbCanExit);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCRoot::ShowDialPad ( ) {
+    HRESULT _hr = raw_ShowDialPad();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IRTXCRoot::GetFileListPath ( ) {
+    BSTR _result;
+    HRESULT _hr = get_FileListPath(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IRTXCRoot::GetOptimizeLevel ( ) {
+    long _result;
+    HRESULT _hr = raw_GetOptimizeLevel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IRTXCModuleSite wrapper method implementations
+//
+
+inline IRTXCDataPtr IRTXCModuleSite::GetData ( _bstr_t Key, VARIANT_BOOL Remove ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = raw_GetData(Key, Remove, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline long IRTXCModuleSite::GetDataCount ( _bstr_t Key ) {
+    long _result;
+    HRESULT _hr = get_DataCount(Key, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IRTXCModuleSite::ViewData ( _bstr_t Key ) {
+    HRESULT _hr = raw_ViewData(Key);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite::ReceiveData ( struct IRTXCData * RTXCData ) {
+    HRESULT _hr = raw_ReceiveData(RTXCData);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCDataPtr IRTXCModuleSite::GetGlobalModuleData ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_GlobalModuleData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline IRTXCDataPtr IRTXCModuleSite::GetUserModuleData ( ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = get_UserModuleData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline HRESULT IRTXCModuleSite::SendData ( _bstr_t Receiver, struct IRTXCData * RTXCData, enum RTXC_SEND_DATA_FLAG Flags ) {
+    HRESULT _hr = raw_SendData(Receiver, RTXCData, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCRootPtr IRTXCModuleSite::GetRTXCRoot ( ) {
+    struct IRTXCRoot * _result;
+    HRESULT _hr = get_RTXCRoot(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCRootPtr(_result, false);
+}
+
+//
+// interface IRTXCModuleSite2 wrapper method implementations
+//
+
+inline HRESULT IRTXCModuleSite2::SendData2 ( _bstr_t MsgType, _bstr_t Receiver, struct IRTXCData * RTXCData, enum RTXC_SEND_DATA_FLAG Flags ) {
+    HRESULT _hr = raw_SendData2(MsgType, Receiver, RTXCData, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::SendData3 ( long DisGroupId, struct IRTXCData * RTXCData, enum RTXC_SEND_DATA_FLAG Flags ) {
+    HRESULT _hr = raw_SendData3(DisGroupId, RTXCData, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::DisGroupGetVer ( ) {
+    HRESULT _hr = raw_DisGroupGetVer();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::DisGroupGetBasic ( long DisGroupId ) {
+    HRESULT _hr = raw_DisGroupGetBasic(DisGroupId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::DisGroupGetUserlist ( long DisGroupId, _bstr_t NextAccount ) {
+    HRESULT _hr = raw_DisGroupGetUserlist(DisGroupId, NextAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IRTXCDataPtr IRTXCModuleSite2::GetData2 ( _bstr_t Key, VARIANT_BOOL Remove, VARIANT_BOOL Reverse ) {
+    struct IRTXCData * _result;
+    HRESULT _hr = raw_GetData2(Key, Remove, Reverse, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IRTXCDataPtr(_result, false);
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpVer ( unsigned char byteProtoVer, long nRId ) {
+    HRESULT _hr = raw_GetRCACorpVer(byteProtoVer, nRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpUserRight ( unsigned char byteProtoVer, unsigned long dwCount, unsigned long * pdwUin, unsigned long * pdwRId ) {
+    HRESULT _hr = raw_GetRCACorpUserRight(byteProtoVer, dwCount, pdwUin, pdwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpList ( unsigned char byteProtoVer, unsigned long dwNextUIN ) {
+    HRESULT _hr = raw_GetRCACorpList(byteProtoVer, dwNextUIN);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpUserState ( unsigned char byteProtoVer, unsigned long dwCount, unsigned long * pdwUin, unsigned long * pdwRId ) {
+    HRESULT _hr = raw_GetRCACorpUserState(byteProtoVer, dwCount, pdwUin, pdwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpFriends ( unsigned char byteProtoVer, long nRId, _bstr_t NextAccount ) {
+    HRESULT _hr = raw_GetRCACorpFriends(byteProtoVer, nRId, NextAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpFriendVer ( unsigned char byteProtoVer ) {
+    HRESULT _hr = raw_GetRCACorpFriendVer(byteProtoVer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCAUserProfileVer ( unsigned char byteProtoVer, unsigned long dwCount, BSTR * pAccounts, unsigned long * pdwRId ) {
+    HRESULT _hr = raw_GetRCAUserProfileVer(byteProtoVer, dwCount, pAccounts, pdwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCAUserProfile ( unsigned char byteProtoVer, _bstr_t lpszAccount, unsigned long dwRId ) {
+    HRESULT _hr = raw_GetRCAUserProfile(byteProtoVer, lpszAccount, dwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::QueryRCAUserExistence ( unsigned char byteProtoVer, _bstr_t lpszAccount, unsigned long dwRId ) {
+    HRESULT _hr = raw_QueryRCAUserExistence(byteProtoVer, lpszAccount, dwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetCorpUserListVer ( unsigned char byteProtoVer, unsigned long dwRId, unsigned long dwNextDeptId ) {
+    HRESULT _hr = raw_GetCorpUserListVer(byteProtoVer, dwRId, dwNextDeptId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetCorpUserList ( unsigned char byteProtoVer, unsigned long dwRId, unsigned long dwDeptId, unsigned long dwNextUIN ) {
+    HRESULT _hr = raw_GetCorpUserList(byteProtoVer, dwRId, dwDeptId, dwNextUIN);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetOrgFileInfo ( unsigned char byteProtoVer, long nRId ) {
+    HRESULT _hr = raw_GetOrgFileInfo(byteProtoVer, nRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetExtConfig ( unsigned char byteProtoVer ) {
+    HRESULT _hr = raw_GetExtConfig(byteProtoVer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpListVer ( unsigned char byteProtoVer ) {
+    HRESULT _hr = raw_GetRCACorpListVer(byteProtoVer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCASendData ( unsigned char byteProtoVer, _bstr_t Receiver, struct IRTXCData * RTXCData, enum RTXC_SEND_DATA_FLAG Flags ) {
+    HRESULT _hr = raw_RCASendData(byteProtoVer, Receiver, RTXCData, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::SetIdentifyMode ( unsigned char byteProtoVer, unsigned char byteVal ) {
+    HRESULT _hr = raw_SetIdentifyMode(byteProtoVer, byteVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::SetRCABasicInfo ( unsigned char byteProtoVer, unsigned long dwUIN, _bstr_t Nick, _bstr_t Name, unsigned char Gender, _bstr_t Position, unsigned char Age, _bstr_t Mobile, _bstr_t Email, _bstr_t Phone ) {
+    HRESULT _hr = raw_SetRCABasicInfo(byteProtoVer, dwUIN, Nick, Name, Gender, Position, Age, Mobile, Email, Phone);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCASearchUser ( unsigned char byteProtoVer, unsigned long dwBUIN, LPWSTR szKeyWord ) {
+    HRESULT _hr = raw_RCASearchUser(byteProtoVer, dwBUIN, szKeyWord);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAApplyAddExtBuddy ( unsigned char byteProtoVer, unsigned long dwBUIN, LPWSTR szUserAccount, unsigned long dwBuddyBUin, LPWSTR szBuddyAccount ) {
+    HRESULT _hr = raw_RCAApplyAddExtBuddy(byteProtoVer, dwBUIN, szUserAccount, dwBuddyBUin, szBuddyAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAAddExtBuddy ( unsigned char byteProtoVer, unsigned long dwBUIN, LPWSTR szUserAccount, unsigned long dwBuddyBUin, LPWSTR szBuddyAccount, LPWSTR szAuthInfo ) {
+    HRESULT _hr = raw_RCAAddExtBuddy(byteProtoVer, dwBUIN, szUserAccount, dwBuddyBUin, szBuddyAccount, szAuthInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAReAddExtBuddy ( unsigned char byteProtoVer, long bAllowAdd, unsigned long dwBUIN, LPWSTR szAccount, unsigned long dwBuddyBUin, unsigned long dwBuddyCUin, LPWSTR szBuddyAccount, LPWSTR szInfo ) {
+    HRESULT _hr = raw_RCAReAddExtBuddy(byteProtoVer, bAllowAdd, dwBUIN, szAccount, dwBuddyBUin, dwBuddyCUin, szBuddyAccount, szInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCADelExtBuddy ( unsigned char byteProtoVer, unsigned long dwBUIN, unsigned long dwBuddyBUin, unsigned long dwBuddyCUin, LPWSTR szBuddyAccount ) {
+    HRESULT _hr = raw_RCADelExtBuddy(byteProtoVer, dwBUIN, dwBuddyBUin, dwBuddyCUin, szBuddyAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAGetToken ( unsigned char byteProtoVer ) {
+    HRESULT _hr = raw_RCAGetToken(byteProtoVer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCACorpUserRightEx ( unsigned char byteProtoVer, unsigned long dwCount, BSTR * pAccounts, unsigned long * pdwRId ) {
+    HRESULT _hr = raw_GetRCACorpUserRightEx(byteProtoVer, dwCount, pAccounts, pdwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::GetRCAFriendMsg ( unsigned char byteProtoVer, unsigned long dwNextBuin, _bstr_t pAccounts ) {
+    HRESULT _hr = raw_GetRCAFriendMsg(byteProtoVer, dwNextBuin, pAccounts);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAGetMyExtInfo ( unsigned char byteProtoVer ) {
+    HRESULT _hr = raw_RCAGetMyExtInfo(byteProtoVer);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCASearchExactUser ( unsigned char byteProtoVer, unsigned long dwBUIN, LPWSTR lpszAccount ) {
+    HRESULT _hr = raw_RCASearchExactUser(byteProtoVer, dwBUIN, lpszAccount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAQUeryExtUserStateEx ( unsigned char byteProtoVer, unsigned long dwCount, BSTR * pAccounts, unsigned long * pdwRId ) {
+    HRESULT _hr = raw_RCAQUeryExtUserStateEx(byteProtoVer, dwCount, pAccounts, pdwRId);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IRTXCModuleSite2::RCAQuerySessionState ( unsigned char byteProtoVer, _bstr_t Receiver, struct IRTXCData * RTXCData, enum RTXC_SEND_DATA_FLAG Flags ) {
+    HRESULT _hr = raw_RCAQuerySessionState(byteProtoVer, Receiver, RTXCData, Flags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// dispinterface _IRTXCModuleSiteEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCModuleSiteEvents::OnDataReceived ( _bstr_t Key ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Key);
+    return _result;
+}
+
+inline HRESULT _IRTXCModuleSiteEvents::OnViewData ( _bstr_t Key ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Key);
+    return _result;
+}
+
+inline HRESULT _IRTXCModuleSiteEvents::OnSendDataResult ( enum RTXC_MODULE_SEND_DATA_RESULT Result, const _variant_t & Extra ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x000c", Result, &Extra);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCMFCSupportEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCMFCSupportEvents::OnPreTranslateMessage ( long MSGPointer, VARIANT_BOOL * Handled ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x400b", MSGPointer, Handled);
+    return _result;
+}
+
+inline HRESULT _IRTXCMFCSupportEvents::OnIdle ( long Count ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", Count);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCRootEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCRootEvents::OnLoginResult ( enum RTXC_LOGIN_RESULT Result ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", Result);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnMyPresenceChange ( enum RTXC_RESULT Result, enum RTX_PRESENCE RTXPresence ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x0003", Result, RTXPresence);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnLogoutResult ( enum RTXC_RESULT Result ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", Result);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnAccountChange ( ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnPackageCome ( long Reserved ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", Reserved);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnModifyPassword ( enum RTXC_MODIFY_PWD_RESULT Result ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", Result);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnMsgCountChange ( long Count, VARIANT_BOOL Forbid, _bstr_t Identifier, _bstr_t Key, _bstr_t Sender ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003\x000b\x0008\x0008\x0008", Count, Forbid, (BSTR)Identifier, (BSTR)Key, (BSTR)Sender);
+    return _result;
+}
+
+inline HRESULT _IRTXCRootEvents::OnExitApp ( struct IRTXCData * pData, VARIANT_BOOL * pbCanExit ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x400b", pData, pbCanExit);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCRTXGroupManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCRTXGroupManagerEvents::OnGroupChange ( struct IRTXCRTXGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCRTXGroupManagerEvents::OnGroupAdd ( struct IRTXCRTXGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCRTXGroupManagerEvents::OnGroupRemove ( struct IRTXCRTXGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCRTXGroupManagerEvents::OnBuddyAdd ( struct IRTXCRTXGroup * RTXCRTXGroup, struct IRTXCRTXBuddy * RTXCRTXBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0009", RTXCRTXGroup, RTXCRTXBuddy);
+    return _result;
+}
+
+inline HRESULT _IRTXCRTXGroupManagerEvents::OnBuddyRemove ( struct IRTXCRTXGroup * RTXCRTXGroup, struct IRTXCRTXBuddy * RTXCRTXBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0009", RTXCRTXGroup, RTXCRTXBuddy);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCRTXBuddyManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCRTXBuddyManagerEvents::OnBuddyProfileChange ( struct IRTXCRTXBuddy * RTXCRTXBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXBuddy);
+    return _result;
+}
+
+inline HRESULT _IRTXCRTXBuddyManagerEvents::OnQueryExistence ( _bstr_t Account, VARIANT_BOOL Existence ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000b", (BSTR)Account, Existence);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCRTXBuddyEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCRTXBuddyEvents::OnModifyProfile ( VARIANT_BOOL Success ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x000b", Success);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCPresenceEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCPresenceEvents::OnPresenceChange ( _bstr_t Account, enum RTX_PRESENCE RTXPresence ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)Account, RTXPresence);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCSessionManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCSessionManagerEvents::OnQuerySessionInfoComplete ( struct IRTXCSession * Session, long Cookie ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0003", Session, Cookie);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionManagerEvents::OnSessionAdd ( struct IRTXCSession * Session ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", Session);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionManagerEvents::OnRequestInitiator ( struct IRTXCSession * Session, _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0008", Session, (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionManagerEvents::OnRegisterSession ( struct IRTXCSession * Session ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", Session);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCSessionEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCSessionEvents::OnParticipantChange ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnTopicChange ( _bstr_t Topic ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Topic);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnMessageCountChange ( long MsgCount ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", MsgCount);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnRequestInitiator ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnRequestInitiatorComplete ( long nResult ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", nResult);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnInitiatorChange ( _bstr_t Initiator ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Initiator);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnStateChange ( enum RTXC_SESSION_STATE State ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0003", State);
+    return _result;
+}
+
+inline HRESULT _IRTXCSessionEvents::OnParticipantChangeState ( _bstr_t Participant, enum RTXC_SESSION_STATE State ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)Participant, State);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCMDSessionManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCMDSessionManagerEvents::OnInvite ( struct IRTXCMDSession * Session, _bstr_t VerifyString ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0008", Session, (BSTR)VerifyString);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionManagerEvents::OnCancel ( struct IRTXCMDSession * Session ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", Session);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCMDSessionEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCMDSessionEvents::OnAddParticipantComplete ( _bstr_t Participant, long nResult ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)Participant, nResult);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnConnectComplete ( _bstr_t Participant, long nResult ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x0003", (BSTR)Participant, nResult);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnParticipantChange ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnDisConnect ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnBye ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnRecvData ( _bstr_t Participant, const _variant_t & Data ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x000c", (BSTR)Participant, &Data);
+    return _result;
+}
+
+inline HRESULT _IRTXCMDSessionEvents::OnKickout ( _bstr_t Participant ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Participant);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCLicenseEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCLicenseEvents::OnConfigChanged ( VARIANT_BOOL IsSucceed, _bstr_t Name, const _variant_t & Val ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x000b\x0008\x000c", IsSucceed, (BSTR)Name, &Val);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCExtBuddyManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCExtBuddyManagerEvents::OnExtBuddyChange ( struct IRTXCExtBuddy * RTXCExtBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCExtBuddy);
+    return _result;
+}
+
+inline HRESULT _IRTXCExtBuddyManagerEvents::OnAddNewExtBuddy ( _bstr_t Account ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008", (BSTR)Account);
+    return _result;
+}
+
+//
+// dispinterface _IRTXCExtGroupManagerEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCExtGroupManagerEvents::OnGroupChange ( struct IRTXCExtGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCExtGroupManagerEvents::OnGroupAdd ( struct IRTXCExtGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCExtGroupManagerEvents::OnGroupRemove ( struct IRTXCExtGroup * RTXCRTXGroup ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009", RTXCRTXGroup);
+    return _result;
+}
+
+inline HRESULT _IRTXCExtGroupManagerEvents::OnBuddyAdd ( struct IRTXCExtGroup * RTXCRTXGroup, struct IRTXCExtBuddy * RTXCRTXBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0009", RTXCRTXGroup, RTXCRTXBuddy);
+    return _result;
+}
+
+inline HRESULT _IRTXCExtGroupManagerEvents::OnBuddyRemove ( struct IRTXCExtGroup * RTXCRTXGroup, struct IRTXCExtBuddy * RTXCRTXBuddy ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0009\x0009", RTXCRTXGroup, RTXCRTXBuddy);
+    return _result;
+}
+
+//
+// dispinterface _DRTXOrg wrapper method implementations
+//
+
+inline HRESULT _DRTXOrg::SetShowStyle ( long lstyle ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", lstyle);
+}
+
+inline char _DRTXOrg::InitCtrl ( IDispatch * pModule ) {
+    char _result;
+    _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_UI1, (void*)&_result, 
+        L"\x0009", pModule);
+    return _result;
+}
+
+inline long _DRTXOrg::RemoveUsers ( long lDeptID ) {
+    long _result;
+    _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", lDeptID);
+    return _result;
+}
+
+inline char _DRTXOrg::StartAnimate ( _bstr_t pszUserName ) {
+    char _result;
+    _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_UI1, (void*)&_result, 
+        L"\x0008", (BSTR)pszUserName);
+    return _result;
+}
+
+inline char _DRTXOrg::SetState ( _bstr_t pszUserName, short nState ) {
+    char _result;
+    _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_UI1, (void*)&_result, 
+        L"\x0008\x0002", (BSTR)pszUserName, nState);
+    return _result;
+}
+
+inline char _DRTXOrg::GetSelectedData ( struct IRTXCDataCollection * * RTXCDataCollection ) {
+    char _result;
+    _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_UI1, (void*)&_result, 
+        L"\x4009", RTXCDataCollection);
+    return _result;
+}
+
+inline char _DRTXOrg::SetTipsIcon ( _bstr_t Account, struct IRTXCDataCollection * pIconDataCollection ) {
+    char _result;
+    _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_UI1, (void*)&_result, 
+        L"\x0008\x0009", (BSTR)Account, pIconDataCollection);
+    return _result;
+}
+
+inline HRESULT _DRTXOrg::AboutBox ( ) {
+    return _com_dispatch_method(this, DISPID_ABOUTBOX, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// dispinterface _DRTXOrgEvents wrapper method implementations
+//
+
+inline HRESULT _DRTXOrgEvents::LClickEvent ( const _variant_t & Val, long nType ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x000c\x0003", &Val, nType);
+}
+
+//
+// dispinterface _IRTXCExStateEvents wrapper method implementations
+//
+
+inline HRESULT _IRTXCExStateEvents::OnExStateChange ( _bstr_t bstrAccount, _bstr_t bstrExStateName, long lExState ) {
+    HRESULT _result;
+    _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_ERROR, (void*)&_result, 
+        L"\x0008\x0008\x0003", (BSTR)bstrAccount, (BSTR)bstrExStateName, lExState);
+    return _result;
+}

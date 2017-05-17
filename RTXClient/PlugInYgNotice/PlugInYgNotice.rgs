@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{AFC688CB-5F2D-417F-AA2F-A98E8295177C} = s 'PlugInYgNotice'
+		'PlugInYgNotice.EXE'
+		{
+			val AppID = s {AFC688CB-5F2D-417F-AA2F-A98E8295177C}
+		}
+	}
+}

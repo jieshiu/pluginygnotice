@@ -1,0 +1,572 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (567a986e).
+//
+// RTXCModuleInterface.tlh
+//
+// C++ source equivalent of Win32 type library ../../../tlb/RTXCModuleInterface.tlb
+// compiler-generated file created 04/21/16 at 16:35:07 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("0d603557-93d7-4e0a-beff-0670bb092c51"))
+/* dual interface */ IRTXCModule;
+struct __declspec(uuid("9c49f56d-d4e4-4795-a530-ab6dd158750e"))
+/* dual interface */ IRTXCModule2;
+struct __declspec(uuid("fe51872f-051c-4514-ba4f-f2a40fd75927"))
+/* dual interface */ IRTXCPlugin;
+struct __declspec(uuid("d74b0924-115e-4cd0-88b6-030866069048"))
+/* dual interface */ IRTXIM;
+struct __declspec(uuid("edf18c0f-f0ef-477f-b8f2-1f5509f4709c"))
+/* dispinterface */ _IRTXIMEvents;
+struct __declspec(uuid("693a6ac8-0d45-430d-a6e9-8f01d089261c"))
+/* dual interface */ IRTXFaceImage;
+struct __declspec(uuid("8d0d0e36-399e-4e7a-96e7-7dc3fb14c1d7"))
+/* dual interface */ IAppRoot;
+struct __declspec(uuid("63a8ccdf-5a17-45c6-8978-536bef951970"))
+/* dual interface */ IAPI_Helper;
+struct __declspec(uuid("467abc8c-a54b-4df6-ac4e-53e68f675748"))
+/* dual interface */ IAPI_Version;
+struct __declspec(uuid("da859190-c54d-45a4-a983-fddf4bf36e06"))
+/* interface */ IRTXPluginIcon;
+struct __declspec(uuid("153701c0-c789-442c-80af-a3ca2c416303"))
+/* interface */ IRTXPluginTab;
+struct __declspec(uuid("92cfdcf3-fd82-4a7c-abd1-37eb92b4ecb8"))
+/* interface */ IRTXPluginHandler;
+struct __declspec(uuid("2c2c957b-0776-43d8-8d6e-d1779fad3ec5"))
+/* dual interface */ IRTXPluginTip;
+struct __declspec(uuid("de88b7d6-41d8-4fc6-bd48-2efa53c705ab"))
+/* interface */ IRTXPluginPage;
+struct __declspec(uuid("c30272e8-9f6c-4409-a965-ef2493cc1ce2"))
+/* dual interface */ IRTXImageSite;
+struct __declspec(uuid("151b5477-6d02-4e99-9318-e7d7e7a5bc97"))
+/* dual interface */ IRTXImageEvent;
+struct __declspec(uuid("94e2a404-727c-4874-a137-7b030f3cf0d1"))
+/* dual interface */ IRTXSMS;
+struct __declspec(uuid("02e63391-0145-45d4-902e-62c82f70ce1d"))
+/* dual interface */ IAPILicense;
+struct __declspec(uuid("5ae854f0-3880-4130-87bd-1551be54be0f"))
+/* interface */ IRTXPluginFrameSize;
+struct __declspec(uuid("d4e42dc6-d204-46f6-93ae-11c0ee96fd4b"))
+/* interface */ IRTXCPluginExtTabNotify;
+struct /* coclass */ RTXCModule;
+struct __declspec(uuid("f0b061fa-33dd-4a98-8960-47528966794f"))
+/* interface */ IRTXPluginMsgMgr;
+struct __declspec(uuid("c2ce9d09-ac4b-4b66-93ed-43d96c9db4d5"))
+/* dual interface */ IRTXCCRight;
+struct __declspec(uuid("8a7407c6-37f5-490d-af1b-2a5b722623c1"))
+/* dual interface */ IRTXMainFrame;
+struct __declspec(uuid("82deee29-fe19-4912-ad44-cc3550dfa791"))
+/* dispinterface */ _IRTXCRightEvents;
+struct __declspec(uuid("d547f08f-694f-4ca9-aba0-b948bf9ce8e3"))
+/* dual interface */ IRTXOrgInfo;
+struct __declspec(uuid("dd1e9418-6117-4513-b6ed-e8d544d6b0a1"))
+/* dual interface */ IRTXCUserSelector;
+struct __declspec(uuid("98e66fb1-4ef7-410d-97b0-48ed9fc15413"))
+/* dual interface */ IRTXCUserProfile;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IRTXCModule, __uuidof(IRTXCModule));
+_COM_SMARTPTR_TYPEDEF(IRTXCModule2, __uuidof(IRTXCModule2));
+_COM_SMARTPTR_TYPEDEF(IRTXCPlugin, __uuidof(IRTXCPlugin));
+_COM_SMARTPTR_TYPEDEF(IRTXIM, __uuidof(IRTXIM));
+_COM_SMARTPTR_TYPEDEF(_IRTXIMEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXFaceImage, __uuidof(IRTXFaceImage));
+_COM_SMARTPTR_TYPEDEF(IAppRoot, __uuidof(IAppRoot));
+_COM_SMARTPTR_TYPEDEF(IAPI_Helper, __uuidof(IAPI_Helper));
+_COM_SMARTPTR_TYPEDEF(IAPI_Version, __uuidof(IAPI_Version));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginIcon, __uuidof(IRTXPluginIcon));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginTab, __uuidof(IRTXPluginTab));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginHandler, __uuidof(IRTXPluginHandler));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginTip, __uuidof(IRTXPluginTip));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginPage, __uuidof(IRTXPluginPage));
+_COM_SMARTPTR_TYPEDEF(IRTXImageSite, __uuidof(IRTXImageSite));
+_COM_SMARTPTR_TYPEDEF(IRTXImageEvent, __uuidof(IRTXImageEvent));
+_COM_SMARTPTR_TYPEDEF(IRTXSMS, __uuidof(IRTXSMS));
+_COM_SMARTPTR_TYPEDEF(IAPILicense, __uuidof(IAPILicense));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginFrameSize, __uuidof(IRTXPluginFrameSize));
+_COM_SMARTPTR_TYPEDEF(IRTXCPluginExtTabNotify, __uuidof(IRTXCPluginExtTabNotify));
+_COM_SMARTPTR_TYPEDEF(IRTXPluginMsgMgr, __uuidof(IRTXPluginMsgMgr));
+_COM_SMARTPTR_TYPEDEF(IRTXCCRight, __uuidof(IRTXCCRight));
+_COM_SMARTPTR_TYPEDEF(IRTXMainFrame, __uuidof(IRTXMainFrame));
+_COM_SMARTPTR_TYPEDEF(_IRTXCRightEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXOrgInfo, __uuidof(IRTXOrgInfo));
+_COM_SMARTPTR_TYPEDEF(IRTXCUserSelector, __uuidof(IRTXCUserSelector));
+_COM_SMARTPTR_TYPEDEF(IRTXCUserProfile, __uuidof(IRTXCUserProfile));
+
+//
+// Type library items
+//
+
+enum RTXC_MODULE_SEND_DATA_RESULT
+{
+    RTXC_MODULE_SEND_DATA_RESULT_OK = 0,
+    RTXC_MODULE_SEND_DATA_RESULT_FAILED = -1,
+    RTXC_MODULE_SEND_DATA_RESULT_TIME_OUT = -2,
+    RTXC_MODULE_SEND_DATA_RESULT_UNKNOWN_ERROR = -3,
+    RTXC_MODULE_SEND_DATA_RESULT_NO_APP = -4,
+    RTXC_MODULE_SEND_DATA_RESULT_NOT_EXIST = -5
+};
+
+enum RTXC_PLUGIN_INFO_FIELD
+{
+    RTXC_PLUGIN_INFO_FIELD_DESCRIPTION = 0
+};
+
+enum RTXC_MODULE_UNLOAD_REASON
+{
+    RTXC_MODULE_UNLOAD_REASON_NORMAL = 0
+};
+
+struct __declspec(uuid("0d603557-93d7-4e0a-beff-0670bb092c51"))
+IRTXCModule : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Identifier (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_ModuleSite (
+        IDispatch * * pVal ) = 0;
+    virtual HRESULT __stdcall OnLoad (
+        IDispatch * RTXCModuleSite ) = 0;
+    virtual HRESULT __stdcall OnAccountChange ( ) = 0;
+    virtual HRESULT __stdcall OnInvoke (
+        VARIANT Receiver,
+        VARIANT Parameter,
+        VARIANT Extra,
+        VARIANT * Result ) = 0;
+    virtual HRESULT __stdcall OnUnload (
+        enum RTXC_MODULE_UNLOAD_REASON Reason ) = 0;
+};
+
+struct __declspec(uuid("9c49f56d-d4e4-4795-a530-ab6dd158750e"))
+IRTXCModule2 : IRTXCModule
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall OnSDKInvoke (
+        VARIANT Receiver,
+        VARIANT Parameter,
+        VARIANT Extra,
+        VARIANT * Result ) = 0;
+};
+
+struct __declspec(uuid("fe51872f-051c-4514-ba4f-f2a40fd75927"))
+IRTXCPlugin : IRTXCModule
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Info (
+        enum RTXC_PLUGIN_INFO_FIELD Field,
+        BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("d74b0924-115e-4cd0-88b6-030866069048"))
+IRTXIM : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SendIM (
+        VARIANT Receiver,
+        VARIANT Parameter,
+        VARIANT Extra,
+        VARIANT * Result ) = 0;
+    virtual HRESULT __stdcall SendIMEx (
+        VARIANT Receiver,
+        VARIANT Parameter,
+        VARIANT Extra,
+        VARIANT * Result ) = 0;
+    virtual HRESULT __stdcall SendDisIM (
+        VARIANT Receiver,
+        VARIANT Parameter,
+        VARIANT Extra,
+        VARIANT * Result ) = 0;
+};
+
+struct __declspec(uuid("edf18c0f-f0ef-477f-b8f2-1f5509f4709c"))
+_IRTXIMEvents : IDispatch
+{};
+
+enum RTX_FACE
+{
+    RTX_FACE_ONLINE = 0,
+    RTX_FACE_OFFLINE = 1,
+    RTX_FACE_AWAY = 2
+};
+
+struct __declspec(uuid("693a6ac8-0d45-430d-a6e9-8f01d089261c"))
+IRTXFaceImage : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetFaceImage (
+        VARIANT vUser,
+        enum RTX_FACE type,
+        BSTR * pbstrPath ) = 0;
+};
+
+struct __declspec(uuid("8d0d0e36-399e-4e7a-96e7-7dc3fb14c1d7"))
+IAppRoot : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetAppObject (
+        VARIANT vObjectID,
+        IDispatch * * ppObject ) = 0;
+};
+
+struct __declspec(uuid("63a8ccdf-5a17-45c6-8978-536bef951970"))
+IAPI_Helper : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetBuddyDept (
+        BSTR bstrAccount,
+        BSTR * pbstrDept ) = 0;
+};
+
+struct __declspec(uuid("467abc8c-a54b-4df6-ac4e-53e68f675748"))
+IAPI_Version : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetCompileVer (
+        BSTR * pbstrVer ) = 0;
+    virtual HRESULT __stdcall GetLicenseVer (
+        BSTR * pbstrVer ) = 0;
+};
+
+struct __declspec(uuid("da859190-c54d-45a4-a983-fddf4bf36e06"))
+IRTXPluginIcon : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetIcon (
+        BSTR * IconPath,
+        VARIANT_BOOL IsMsgIcon ) = 0;
+};
+
+struct __declspec(uuid("153701c0-c789-442c-80af-a3ca2c416303"))
+IRTXPluginTab : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall InitCtrl (
+        IDispatch * RtxRoot ) = 0;
+};
+
+struct __declspec(uuid("92cfdcf3-fd82-4a7c-abd1-37eb92b4ecb8"))
+IRTXPluginHandler : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall OnEvent (
+        BSTR id,
+        IDispatch * pData,
+        VARIANT * pRet ) = 0;
+};
+
+struct __declspec(uuid("2c2c957b-0776-43d8-8d6e-d1779fad3ec5"))
+IRTXPluginTip : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_GetTipWndTitle (
+        BSTR * strTipWndTitle ) = 0;
+    virtual HRESULT __stdcall ShowTipWnd (
+        BSTR Key ) = 0;
+    virtual HRESULT __stdcall GetWinType (
+        int * nType ) = 0;
+};
+
+struct __declspec(uuid("de88b7d6-41d8-4fc6-bd48-2efa53c705ab"))
+IRTXPluginPage : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall InitCtrl (
+        IDispatch * pRTXRoot ) = 0;
+    virtual HRESULT __stdcall GetInfo (
+        BSTR * pbstrTitleIconPath,
+        BSTR * pbstrTitleText,
+        BSTR * pbstrTreeText ) = 0;
+    virtual HRESULT __stdcall OnOK ( ) = 0;
+    virtual HRESULT __stdcall OnCancel ( ) = 0;
+    virtual HRESULT __stdcall OnApply ( ) = 0;
+};
+
+struct __declspec(uuid("c30272e8-9f6c-4409-a965-ef2493cc1ce2"))
+IRTXImageSite : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetUserImagePath (
+        BSTR Account,
+        long nUserLocalImage,
+        BSTR * ImagePath ) = 0;
+};
+
+struct __declspec(uuid("151b5477-6d02-4e99-9318-e7d7e7a5bc97"))
+IRTXImageEvent : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall OnSetUserImage (
+        BSTR bstrAccount,
+        BSTR bstrImagePath ) = 0;
+};
+
+struct __declspec(uuid("94e2a404-727c-4874-a137-7b030f3cf0d1"))
+IRTXSMS : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SendSMS (
+        VARIANT vReceivers,
+        VARIANT * pResult ) = 0;
+};
+
+struct __declspec(uuid("02e63391-0145-45d4-902e-62c82f70ce1d"))
+IAPILicense : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_EnterpriseName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_EnterpriseShortName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_EnterpriseTrunkNumber (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_EnterpriseAddress (
+        BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("5ae854f0-3880-4130-87bd-1551be54be0f"))
+IRTXPluginFrameSize : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetCustomSize (
+        long * x,
+        long * y ) = 0;
+};
+
+struct __declspec(uuid("d4e42dc6-d204-46f6-93ae-11c0ee96fd4b"))
+IRTXCPluginExtTabNotify : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall EnterExtTab ( ) = 0;
+    virtual HRESULT __stdcall LeaveExtTab ( ) = 0;
+};
+
+struct __declspec(uuid("4cc1780d-3de7-420f-b6f9-bf387fc8c64d"))
+RTXCModule;
+    // [ default ] interface IRTXCModule
+
+struct __declspec(uuid("f0b061fa-33dd-4a98-8960-47528966794f"))
+IRTXPluginMsgMgr : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall InitCtrl (
+        IDispatch * RtxRoot ) = 0;
+    virtual HRESULT __stdcall OnMsgMgrCmd (
+        int iCmd ) = 0;
+};
+
+struct __declspec(uuid("c2ce9d09-ac4b-4b66-93ed-43d96c9db4d5"))
+IRTXCCRight : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetClientRight (
+        BSTR strRightName,
+        long * Result,
+        VARIANT * ExtendParam,
+        VARIANT * Extend ) = 0;
+    virtual HRESULT __stdcall GetClientRightInfos (
+        VARIANT * val ) = 0;
+    virtual HRESULT __stdcall GetGivenRightInfo (
+        BSTR bstrRightID,
+        VARIANT * val ) = 0;
+    virtual HRESULT __stdcall GetClientRoleList (
+        BSTR * bstrRoleList ) = 0;
+    virtual HRESULT __stdcall GetClientShowAdminPanelInfo (
+        VARIANT_BOOL * pbEverybodyShowAdminPannel ) = 0;
+};
+
+struct __declspec(uuid("8a7407c6-37f5-490d-af1b-2a5b722623c1"))
+IRTXMainFrame : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetMenuObject (
+        IDispatch * * ppObject ) = 0;
+};
+
+struct __declspec(uuid("82deee29-fe19-4912-ad44-cc3550dfa791"))
+_IRTXCRightEvents : IDispatch
+{};
+
+struct __declspec(uuid("d547f08f-694f-4ca9-aba0-b948bf9ce8e3"))
+IRTXOrgInfo : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetOrgSelected (
+        IDispatch * * ptrDispatch ) = 0;
+    virtual HRESULT __stdcall GetMobileSelected (
+        IDispatch * * ppDispatch ) = 0;
+    virtual HRESULT __stdcall GetRtxOrgCtrl (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall GetOrgSelectedContacts (
+        BSTR * pbstrContacts ) = 0;
+};
+
+struct __declspec(uuid("dd1e9418-6117-4513-b6ed-e8d544d6b0a1"))
+IRTXCUserSelector : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SelectUserWithPhoneNum (
+        VARIANT_BOOL bSingleSel,
+        VARIANT_BOOL bCanSelFolder,
+        unsigned long hParent,
+        VARIANT varReceiver,
+        VARIANT * pVarResult ) = 0;
+};
+
+struct __declspec(uuid("98e66fb1-4ef7-410d-97b0-48ed9fc15413"))
+IRTXCUserProfile : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall ShowProfile (
+        BSTR bstrAccount ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_RTXCMODULEINTERFACELib =
+    {0x547f2ace,0x60b1,0x41e1,{0xbd,0x00,0x12,0xaf,0xf1,0x4d,0x77,0x7c}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModule =
+    {0x0d603557,0x93d7,0x4e0a,{0xbe,0xff,0x06,0x70,0xbb,0x09,0x2c,0x51}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModule2 =
+    {0x9c49f56d,0xd4e4,0x4795,{0xa5,0x30,0xab,0x6d,0xd1,0x58,0x75,0x0e}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCPlugin =
+    {0xfe51872f,0x051c,0x4514,{0xba,0x4f,0xf2,0xa4,0x0f,0xd7,0x59,0x27}};
+extern "C" const GUID __declspec(selectany) IID_IRTXIM =
+    {0xd74b0924,0x115e,0x4cd0,{0x88,0xb6,0x03,0x08,0x66,0x06,0x90,0x48}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXIMEvents =
+    {0xedf18c0f,0xf0ef,0x477f,{0xb8,0xf2,0x1f,0x55,0x09,0xf4,0x70,0x9c}};
+extern "C" const GUID __declspec(selectany) IID_IRTXFaceImage =
+    {0x693a6ac8,0x0d45,0x430d,{0xa6,0xe9,0x8f,0x01,0xd0,0x89,0x26,0x1c}};
+extern "C" const GUID __declspec(selectany) IID_IAppRoot =
+    {0x8d0d0e36,0x399e,0x4e7a,{0x96,0xe7,0x7d,0xc3,0xfb,0x14,0xc1,0xd7}};
+extern "C" const GUID __declspec(selectany) IID_IAPI_Helper =
+    {0x63a8ccdf,0x5a17,0x45c6,{0x89,0x78,0x53,0x6b,0xef,0x95,0x19,0x70}};
+extern "C" const GUID __declspec(selectany) IID_IAPI_Version =
+    {0x467abc8c,0xa54b,0x4df6,{0xac,0x4e,0x53,0xe6,0x8f,0x67,0x57,0x48}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginIcon =
+    {0xda859190,0xc54d,0x45a4,{0xa9,0x83,0xfd,0xdf,0x4b,0xf3,0x6e,0x06}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginTab =
+    {0x153701c0,0xc789,0x442c,{0x80,0xaf,0xa3,0xca,0x2c,0x41,0x63,0x03}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginHandler =
+    {0x92cfdcf3,0xfd82,0x4a7c,{0xab,0xd1,0x37,0xeb,0x92,0xb4,0xec,0xb8}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginTip =
+    {0x2c2c957b,0x0776,0x43d8,{0x8d,0x6e,0xd1,0x77,0x9f,0xad,0x3e,0xc5}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginPage =
+    {0xde88b7d6,0x41d8,0x4fc6,{0xbd,0x48,0x2e,0xfa,0x53,0xc7,0x05,0xab}};
+extern "C" const GUID __declspec(selectany) IID_IRTXImageSite =
+    {0xc30272e8,0x9f6c,0x4409,{0xa9,0x65,0xef,0x24,0x93,0xcc,0x1c,0xe2}};
+extern "C" const GUID __declspec(selectany) IID_IRTXImageEvent =
+    {0x151b5477,0x6d02,0x4e99,{0x93,0x18,0xe7,0xd7,0xe7,0xa5,0xbc,0x97}};
+extern "C" const GUID __declspec(selectany) IID_IRTXSMS =
+    {0x94e2a404,0x727c,0x4874,{0xa1,0x37,0x7b,0x03,0x0f,0x3c,0xf0,0xd1}};
+extern "C" const GUID __declspec(selectany) IID_IAPILicense =
+    {0x02e63391,0x0145,0x45d4,{0x90,0x2e,0x62,0xc8,0x2f,0x70,0xce,0x1d}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginFrameSize =
+    {0x5ae854f0,0x3880,0x4130,{0x87,0xbd,0x15,0x51,0xbe,0x54,0xbe,0x0f}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCPluginExtTabNotify =
+    {0xd4e42dc6,0xd204,0x46f6,{0x93,0xae,0x11,0xc0,0xee,0x96,0xfd,0x4b}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCModule =
+    {0x4cc1780d,0x3de7,0x420f,{0xb6,0xf9,0xbf,0x38,0x7f,0xc8,0xc6,0x4d}};
+extern "C" const GUID __declspec(selectany) IID_IRTXPluginMsgMgr =
+    {0xf0b061fa,0x33dd,0x4a98,{0x89,0x60,0x47,0x52,0x89,0x66,0x79,0x4f}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCCRight =
+    {0xc2ce9d09,0xac4b,0x4b66,{0x93,0xed,0x43,0xd9,0x6c,0x9d,0xb4,0xd5}};
+extern "C" const GUID __declspec(selectany) IID_IRTXMainFrame =
+    {0x8a7407c6,0x37f5,0x490d,{0xaf,0x1b,0x2a,0x5b,0x72,0x26,0x23,0xc1}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCRightEvents =
+    {0x82deee29,0xfe19,0x4912,{0xad,0x44,0xcc,0x35,0x50,0xdf,0xa7,0x91}};
+extern "C" const GUID __declspec(selectany) IID_IRTXOrgInfo =
+    {0xd547f08f,0x694f,0x4ca9,{0xab,0xa0,0xb9,0x48,0xbf,0x9c,0xe8,0xe3}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCUserSelector =
+    {0xdd1e9418,0x6117,0x4513,{0xb6,0xed,0xe8,0xd5,0x44,0xd6,0xb0,0xa1}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCUserProfile =
+    {0x98e66fb1,0x4ef7,0x410d,{0x97,0xb0,0x48,0xed,0x9f,0xc1,0x54,0x13}};
+
+#pragma pack(pop)

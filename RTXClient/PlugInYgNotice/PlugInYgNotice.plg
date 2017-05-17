@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PlugInYgNotice - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\JayX\AppData\Local\Temp\RSPD45D.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "..\..\Include" /I "..\..\..\Include" /I "..\..\tlb" /I "..\..\..\tlb" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_USRDLL" /D "_UNICODE" /D "UNICODE" /Fp"Release/PlugInYgNotice.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\Program Files (x86)\Tencent\RTXCSDK\samples\VC\PlugInYgNotice\PlugInYgNoticeModule.cpp"
+]
+Creating command line "cl.exe @C:\Users\JayX\AppData\Local\Temp\RSPD45D.tmp" 
+Creating temporary file "C:\Users\JayX\AppData\Local\Temp\RSPD45E.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"Release/PlugInYgNotice.pdb" /machine:I386 /def:".\PlugInYgNotice.def" /out:"..\PlugInYgNotice_OutPut\PlugInYgNotice.dll" /implib:"Release/PlugInYgNotice.lib" /libpath:"..\..\Lib" /libpath:"..\..\..\Lib" 
+".\Release\PlugInYgNotice.obj"
+".\Release\PlugInYgNoticeModule.obj"
+".\Release\RTXEvent.obj"
+".\Release\StdAfx.obj"
+".\Release\PlugInYgNotice.res"
+"\Program Files (x86)\Tencent\RTXCSDK\samples\VC\YgMsgMgrOcx\Release\YgMsgMgrOcx.lib"
+]
+Creating command line "link.exe @C:\Users\JayX\AppData\Local\Temp\RSPD45E.tmp"
+<h3>Output Window</h3>
+Compiling...
+PlugInYgNoticeModule.cpp
+Linking...
+   Creating library Release/PlugInYgNotice.lib and object Release/PlugInYgNotice.exp
+
+
+
+<h3>Results</h3>
+PlugInYgNotice.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

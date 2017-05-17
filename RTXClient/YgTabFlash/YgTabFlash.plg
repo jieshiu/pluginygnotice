@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: YgTabFlash - Win32 Unicode Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\JayX\AppData\Local\Temp\RSPC803.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseU/YgTabFlash.pdb" /machine:I386 /def:".\YgTabFlash.def" /out:"../PlugInYgNotice_OutPut/YgTabFlash.ocx" /implib:"ReleaseU/YgTabFlash.lib" 
+".\ReleaseU\BtnST.obj"
+".\ReleaseU\HyperLink.obj"
+".\ReleaseU\MsgWnd.obj"
+".\ReleaseU\SAStatusLog.obj"
+".\ReleaseU\StdAfx.obj"
+".\ReleaseU\TalkDlg.obj"
+".\ReleaseU\ToolTipWnd.obj"
+".\ReleaseU\XPButton.obj"
+".\ReleaseU\YgNoticeDlg.obj"
+".\ReleaseU\YgTabFlash.obj"
+".\ReleaseU\YgTabFlashCtl.obj"
+".\ReleaseU\YgTabFlashPpg.obj"
+".\ReleaseU\YgTabFlash.res"
+]
+Creating command line "link.exe @C:\Users\JayX\AppData\Local\Temp\RSPC803.tmp"
+Creating temporary file "C:\Users\JayX\AppData\Local\Temp\RSPC804.bat" with contents
+[
+@echo off
+regsvr32 /s /c "\Program Files (x86)\Tencent\RTXCSDK\samples\VC\PlugInYgNotice_OutPut\YgTabFlash.ocx"
+echo regsvr32 exec. time > ".\ReleaseU\regsvr32.trg"
+]
+Creating command line "C:\Users\JayX\AppData\Local\Temp\RSPC804.bat"
+Linking...
+   Creating library ReleaseU/YgTabFlash.lib and object ReleaseU/YgTabFlash.exp
+<h3>Output Window</h3>
+Registering ActiveX Control...
+
+
+
+<h3>Results</h3>
+YgTabFlash.ocx - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

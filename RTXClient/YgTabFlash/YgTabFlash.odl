@@ -1,0 +1,69 @@
+// YgTabFlash.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (YgTabFlash.tlb) that will become a resource in
+// YgTabFlash.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(F27C1818-D0A6-4E4E-B427-A51F77AE3CD7), version(1.0),
+  helpfile("YgTabFlash.hlp"),
+  helpstring("YgTabFlash ActiveX Control module"),
+  control ]
+library YGTABFLASHLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CYgTabFlashCtrl
+
+	[ uuid(DF1A4646-BB8E-49CB-ADE0-09F97925EF18),
+	  helpstring("Dispatch interface for YgTabFlash Control"), hidden ]
+	dispinterface _DYgTabFlash
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CYgTabFlashCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CYgTabFlashCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CYgTabFlashCtrl
+
+	[ uuid(0825E61A-BB46-45D3-8D94-0DE1BBAF41A9),
+	  helpstring("Event interface for YgTabFlash Control") ]
+	dispinterface _DYgTabFlashEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CYgTabFlashCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CYgTabFlashCtrl
+
+	[ uuid(2866B93D-EF7B-4C1A-8E00-4D626F3203F8),
+	  helpstring("YgTabFlash Control"), control ]
+	coclass YgTabFlash
+	{
+		[default] dispinterface _DYgTabFlash;
+		[default, source] dispinterface _DYgTabFlashEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};

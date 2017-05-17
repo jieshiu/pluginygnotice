@@ -1,0 +1,81 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (26385666).
+//
+// PlugInYgNotice.tlh
+//
+// C++ source equivalent of Win32 type library ..\PlugInYgNotice\Release\PlugInYgNotice.tlb
+// compiler-generated file created 04/27/16 at 14:53:48 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct /* coclass */ PlugInYgNoticeModule;
+struct __declspec(uuid("4b4ead9b-fb9c-4855-8578-d039fc4d7ab1"))
+/* dispinterface */ _IRTXEventEvents;
+struct /* coclass */ RTXEvent;
+struct __declspec(uuid("796be106-8710-4333-a292-74afbd381146"))
+/* dual interface */ IRTXEvent;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IRTXEventEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXEvent, __uuidof(IRTXEvent));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("31bcb913-6b09-476a-9e94-5e97eb997223"))
+PlugInYgNoticeModule;
+    // [ default ] interface IRTXCModule
+
+struct __declspec(uuid("4b4ead9b-fb9c-4855-8578-d039fc4d7ab1"))
+_IRTXEventEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnModuleEvent (
+        _bstr_t recdata );
+};
+
+struct __declspec(uuid("07b5e93f-635f-47c2-8ca6-68bd98ede8df"))
+RTXEvent;
+    // [ default ] interface IRTXEvent
+    // [ default, source ] dispinterface _IRTXEventEvents
+
+struct __declspec(uuid("796be106-8710-4333-a292-74afbd381146"))
+IRTXEvent : IDispatch
+{};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_PlugInYgNotice =
+    {0xfbec9369,0xe16e,0x4e27,{0xbf,0x30,0x6e,0xb4,0xbe,0x71,0x19,0x79}};
+extern "C" const GUID __declspec(selectany) CLSID_PlugInYgNoticeModule =
+    {0x31bcb913,0x6b09,0x476a,{0x9e,0x94,0x5e,0x97,0xeb,0x99,0x72,0x23}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXEventEvents =
+    {0x4b4ead9b,0xfb9c,0x4855,{0x85,0x78,0xd0,0x39,0xfc,0x4d,0x7a,0xb1}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXEvent =
+    {0x07b5e93f,0x635f,0x47c2,{0x8c,0xa6,0x68,0xbd,0x98,0xed,0xe8,0xdf}};
+extern "C" const GUID __declspec(selectany) IID_IRTXEvent =
+    {0x796be106,0x8710,0x4333,{0xa2,0x92,0x74,0xaf,0xbd,0x38,0x11,0x46}};
+
+//
+// Wrapper method implementations
+//
+
+#include "PlugInYgNotice.tli"
+
+#pragma pack(pop)

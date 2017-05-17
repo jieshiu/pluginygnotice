@@ -1,0 +1,26 @@
+HKCR
+{
+	PlugInYgNotice.RTXEvent.1 = s 'RTXEvent Class'
+	{
+		CLSID = s '{07B5E93F-635F-47C2-8CA6-68BD98EDE8DF}'
+	}
+	PlugInYgNotice.RTXEvent = s 'RTXEvent Class'
+	{
+		CLSID = s '{07B5E93F-635F-47C2-8CA6-68BD98EDE8DF}'
+		CurVer = s 'PlugInYgNotice.RTXEvent.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {07B5E93F-635F-47C2-8CA6-68BD98EDE8DF} = s 'RTXEvent Class'
+		{
+			ProgID = s 'PlugInYgNotice.RTXEvent.1'
+			VersionIndependentProgID = s 'PlugInYgNotice.RTXEvent'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{FBEC9369-E16E-4E27-BF30-6EB4BE711979}'
+		}
+	}
+}

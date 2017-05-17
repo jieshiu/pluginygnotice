@@ -1,0 +1,3182 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (b01679a9).
+//
+// RTXCAPI.tlh
+//
+// C++ source equivalent of Win32 type library ../../../tlb/RTXCAPI.tlb
+// compiler-generated file created 04/13/16 at 10:02:48 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\Program Files (x86)\Tencent\RTXC\RTXCModuleInterface.dll"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("db69c2a9-c6e4-4200-b418-61c1ed532499"))
+/* dual interface */ IRTXCDataCollection;
+struct __declspec(uuid("b1251ee5-3843-4857-9cff-a97ec20c3d85"))
+/* dual interface */ IRTXCData;
+struct __declspec(uuid("93899b30-3ac4-4c33-8443-2ecdabe8ce5d"))
+/* dual interface */ IRTXCLicense;
+struct __declspec(uuid("6e9340fd-535f-4997-aa6d-9ea59202c58b"))
+/* dual interface */ IRTXCRTXGroup;
+struct __declspec(uuid("33156ed4-7eda-40cd-92f4-160c3dcd5970"))
+/* dual interface */ IRTXCRTXGroupCollection;
+struct __declspec(uuid("142275c8-b019-498b-956d-b6fda135f69b"))
+/* dual interface */ IRTXCRTXBuddyCollection;
+struct __declspec(uuid("2e38f2e2-5e73-4447-a9c8-f3ed22c05e28"))
+/* dual interface */ IRTXCRTXBuddy;
+struct __declspec(uuid("07c671cc-7905-4301-8a7a-be292a575f60"))
+/* dual interface */ IRTXCExtBuddy;
+struct __declspec(uuid("814eee2c-097c-41d3-907d-043b5f96921b"))
+/* dual interface */ IRTXCExtGroupCollection;
+struct __declspec(uuid("524ba3c7-4ac8-4bfc-84b4-63dcffcce845"))
+/* dual interface */ IRTXCExtGroup;
+struct __declspec(uuid("9d70436e-e766-4025-9fb5-2343d8d1d493"))
+/* dual interface */ IRTXCExtBuddyCollection;
+struct __declspec(uuid("4df115ec-9ab2-4d75-a610-5d0b58129e29"))
+/* dual interface */ IRTXCRTXGroupManager;
+struct __declspec(uuid("b7a37633-d5e6-4472-b00e-ba741f6b4ae9"))
+/* dual interface */ IRTXCRTXBuddyManager;
+struct __declspec(uuid("6b73cb5c-baa6-4dbc-b0f6-75dddc66147a"))
+/* dual interface */ IRTXCPresence;
+struct __declspec(uuid("e4373fd6-6add-408b-acf2-e66d796ac608"))
+/* dual interface */ IRTXCExState;
+struct __declspec(uuid("2cb3b961-dc69-49d2-af3c-7cd73c9bfbba"))
+/* dual interface */ IRTXCModuleCollection;
+struct __declspec(uuid("f747e1c2-fe0b-4a3b-9906-22804daca844"))
+/* dual interface */ IRTXCSession;
+struct __declspec(uuid("c4914eae-8d0d-4fb2-8e89-11adc809fb1d"))
+/* dual interface */ IRTXCSessionCollection;
+struct __declspec(uuid("91f9d53d-dc7e-4a10-b109-20972c7564aa"))
+/* dual interface */ IRTXCSessionManager;
+struct __declspec(uuid("19ec1a99-03e4-463b-a643-93b887b31356"))
+/* dual interface */ IRTXCMFCSupport;
+struct __declspec(uuid("0fcebd34-f4f9-4244-a9a7-da04badb80a0"))
+/* dual interface */ IRTXCMDSessionManager;
+struct __declspec(uuid("3a9ca998-1def-4682-8976-0892ff6613d4"))
+/* dual interface */ IRTXCMDSession;
+struct __declspec(uuid("552b2c18-c977-4850-bf82-46e8bc4c9c70"))
+/* dual interface */ IRTXCExtGroupManager;
+struct __declspec(uuid("bd43582c-4cdb-4168-8d12-02ba2e73e19a"))
+/* dual interface */ IRTXCExtBuddyManager;
+struct __declspec(uuid("e4508738-c04a-4e1d-861e-3c701049e153"))
+/* dual interface */ IRTXCEventCenter;
+struct __declspec(uuid("2c86c87b-a019-4204-a7d3-fb4c2464cfe0"))
+/* dual interface */ IRTXCRoot;
+struct __declspec(uuid("7bac8791-6182-45e0-a067-30a040f36553"))
+/* dual interface */ IRTXCModuleSite;
+struct __declspec(uuid("d7392fbc-bc0b-4865-9d77-9ef52d8762bc"))
+/* dual interface */ IRTXCModuleSite2;
+struct __declspec(uuid("deec9bd4-338a-42bd-b029-ddc142b1b11f"))
+/* dual interface */ IRTXCModuleSite3;
+struct __declspec(uuid("e32dc330-3889-4d94-bfd6-39fc3a5432bd"))
+/* dispinterface */ _IRTXCModuleSiteEvents;
+struct __declspec(uuid("7c96e265-9231-431a-91e0-15a5846ff59a"))
+/* dispinterface */ _IRTXCMFCSupportEvents;
+struct __declspec(uuid("8295917f-7481-438f-9bad-6afd6ef7ac7b"))
+/* dispinterface */ _IRTXCRootEvents;
+struct __declspec(uuid("dee9d53f-41d4-463d-b064-3baf402f85dd"))
+/* dispinterface */ _IRTXCRTXGroupManagerEvents;
+struct /* coclass */ RTXCRoot;
+struct /* coclass */ RTXCData;
+struct /* coclass */ RTXCDataCollection;
+struct /* coclass */ RTXCRTXGroupManager;
+struct /* coclass */ RTXCRTXGroup;
+struct __declspec(uuid("a3c821fe-d270-470e-8535-f5797993a1ba"))
+/* dispinterface */ _IRTXCRTXBuddyManagerEvents;
+struct /* coclass */ RTXCRTXBuddyManager;
+struct __declspec(uuid("de015f73-c0ea-46de-9e9d-3374f3d0e209"))
+/* dispinterface */ _IRTXCRTXBuddyEvents;
+struct /* coclass */ RTXCRTXBuddy;
+struct /* coclass */ RTXCRTXGroupCollection;
+struct /* coclass */ RTXCRTXBuddyCollection;
+struct /* coclass */ RTXCModuleSite;
+struct /* coclass */ RTXCModuleCollection;
+struct __declspec(uuid("eb354242-29f3-4fa5-a5e6-b3599973589d"))
+/* dispinterface */ _IRTXCPresenceEvents;
+struct /* coclass */ RTXCPresence;
+struct __declspec(uuid("84525e5c-a868-41b2-b01f-a42b7b12d7b0"))
+/* dispinterface */ _IRTXCSessionManagerEvents;
+struct /* coclass */ RTXCSessionManager;
+struct __declspec(uuid("08191316-5140-48fd-8ae7-17f07f149be0"))
+/* dispinterface */ _IRTXCSessionEvents;
+struct /* coclass */ RTXCSession;
+struct /* coclass */ RTXCSessionCollection;
+struct /* coclass */ RTXCMFCSupport;
+struct __declspec(uuid("277cdfbb-5ef6-449e-b09f-5b984c1ebdcf"))
+/* dispinterface */ _IRTXCMDSessionManagerEvents;
+struct /* coclass */ RTXCMDSessionManager;
+struct __declspec(uuid("8244eed1-c5ac-4648-9606-df81e3891744"))
+/* dispinterface */ _IRTXCMDSessionEvents;
+struct /* coclass */ RTXCMDSession;
+struct __declspec(uuid("5e6697f9-a328-4b68-9c8f-36dd4c8ac009"))
+/* dispinterface */ _IRTXCLicenseEvents;
+struct /* coclass */ RTXCLicense;
+struct __declspec(uuid("cdf6a4e0-0068-4c51-a3ff-8640df5abd0b"))
+/* dispinterface */ _IRTXCExtBuddyEvents;
+struct /* coclass */ RTXCExtBuddy;
+struct __declspec(uuid("8ff094d3-e84c-40ea-afee-34b06b3f2ac5"))
+/* dispinterface */ _IRTXCExtBuddyManagerEvents;
+struct /* coclass */ RTXCExtBuddyManager;
+struct /* coclass */ RTXCExtBuddyCollection;
+struct __declspec(uuid("c69ed89f-4024-45e9-be5e-cd27700e5ef5"))
+/* dispinterface */ _IRTXCExtGroupManagerEvents;
+struct __declspec(uuid("31955751-57a1-4067-8f6d-0e4118c955fb"))
+/* dispinterface */ _IRTXCExtGroupEvents;
+struct /* coclass */ RTXCExtGroup;
+struct /* coclass */ RTXCExtGroupManager;
+struct __declspec(uuid("e1f89f78-2bbe-41d9-b91d-db379938145d"))
+/* dispinterface */ _IRTXCExtGroupCollectionEvents;
+struct /* coclass */ RTXCExtGroupCollection;
+struct __declspec(uuid("528935aa-74a9-425f-a632-51c4f3e3e458"))
+/* dispinterface */ _IRTXCEventCenterEvents;
+struct /* coclass */ RTXCEventCenter;
+struct __declspec(uuid("bc0ac144-423e-40d5-b369-9c5dd05360a1"))
+/* dispinterface */ _DRTXOrg;
+struct __declspec(uuid("7aefd014-cd49-40a4-8593-eba23bc4c6a3"))
+/* dispinterface */ _DRTXOrgEvents;
+struct __declspec(uuid("45846cfe-5908-458d-a6bc-bfef97cd39f6"))
+/* dispinterface */ _IRTXCExStateEvents;
+struct /* coclass */ RTXCExState;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IRTXCDataCollection, __uuidof(IRTXCDataCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCData, __uuidof(IRTXCData));
+_COM_SMARTPTR_TYPEDEF(IRTXCLicense, __uuidof(IRTXCLicense));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXGroup, __uuidof(IRTXCRTXGroup));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXGroupCollection, __uuidof(IRTXCRTXGroupCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXBuddyCollection, __uuidof(IRTXCRTXBuddyCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXBuddy, __uuidof(IRTXCRTXBuddy));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtBuddy, __uuidof(IRTXCExtBuddy));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtGroupCollection, __uuidof(IRTXCExtGroupCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtGroup, __uuidof(IRTXCExtGroup));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtBuddyCollection, __uuidof(IRTXCExtBuddyCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXGroupManager, __uuidof(IRTXCRTXGroupManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCRTXBuddyManager, __uuidof(IRTXCRTXBuddyManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCPresence, __uuidof(IRTXCPresence));
+_COM_SMARTPTR_TYPEDEF(IRTXCExState, __uuidof(IRTXCExState));
+_COM_SMARTPTR_TYPEDEF(IRTXCModuleCollection, __uuidof(IRTXCModuleCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCSession, __uuidof(IRTXCSession));
+_COM_SMARTPTR_TYPEDEF(IRTXCSessionCollection, __uuidof(IRTXCSessionCollection));
+_COM_SMARTPTR_TYPEDEF(IRTXCSessionManager, __uuidof(IRTXCSessionManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCMFCSupport, __uuidof(IRTXCMFCSupport));
+_COM_SMARTPTR_TYPEDEF(IRTXCMDSessionManager, __uuidof(IRTXCMDSessionManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCMDSession, __uuidof(IRTXCMDSession));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtGroupManager, __uuidof(IRTXCExtGroupManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCExtBuddyManager, __uuidof(IRTXCExtBuddyManager));
+_COM_SMARTPTR_TYPEDEF(IRTXCEventCenter, __uuidof(IRTXCEventCenter));
+_COM_SMARTPTR_TYPEDEF(IRTXCRoot, __uuidof(IRTXCRoot));
+_COM_SMARTPTR_TYPEDEF(IRTXCModuleSite, __uuidof(IRTXCModuleSite));
+_COM_SMARTPTR_TYPEDEF(IRTXCModuleSite2, __uuidof(IRTXCModuleSite2));
+_COM_SMARTPTR_TYPEDEF(IRTXCModuleSite3, __uuidof(IRTXCModuleSite3));
+_COM_SMARTPTR_TYPEDEF(_IRTXCModuleSiteEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCMFCSupportEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCRootEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCRTXGroupManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCRTXBuddyManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCRTXBuddyEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCPresenceEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCSessionManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCSessionEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCMDSessionManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCMDSessionEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCLicenseEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtBuddyEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtBuddyManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtGroupManagerEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtGroupEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtGroupCollectionEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCEventCenterEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DRTXOrg, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DRTXOrgEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExStateEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+enum OBJECT_TYPE
+{
+    OBJECT_RTX_BUDDY = 0,
+    OBJECT_RTX_GROUP = 1,
+    OBJECT_MOBILE_BUDDY = 2,
+    OBJECT_MOBILE_GROUP = 3,
+    OBJECT_QQBAR_HITEM = 4,
+    OBJECT_MOBILE = 5,
+    OBJECT_RTX_SESSION = 6,
+    OBJECT_RTX_RECENTCONTACT = 7,
+    OBJECT_RTX_MENUPARAFROM = 8,
+    OBJECT_RTX_MOUSEBUTTON = 9,
+    OBJECT_RTX_DRAGFILEPATH = 10,
+    OBJECT_RCA_BUDDY = 11,
+    OBJECT_PHONENUM = 12
+};
+
+enum RTX_SERVER_TYPE
+{
+    RST_MAIN_SVR = 0,
+    RST_FILE_SVR = 1,
+    RST_SESSION_SVR = 2,
+    RST_HTTP_SVR = 3,
+    RST_SESSION_SVR_WAN = 10,
+    RST_HTTP_SVR_WAN = 11,
+    RST_FILE_SVR_WAN = 12,
+    RST_INFOSERVER = 100,
+    RST_INFOSERVER_PHOTO = 101,
+    RST_INFOSERVER_ORGSTRUCT = 102,
+    RST_INFOSERVER_MAINFRAME = 103,
+    RST_INFOSERVER_WAN = 200,
+    RST_INFOSERVER_PHOTO_WAN = 201,
+    RST_INFOSERVER_ORGSTRUCT_WAN = 202,
+    RST_INFOSERVER_MAINFRAME_WAN = 203,
+    RST_RCAPROXYFILESERVER = 40,
+    RST_RCAPROXYFILESERVER_WAN = 41,
+    RST_UPGRADESVR = 50,
+    RST_UPGRADESVR_WAN = 51,
+    RST_PROXYSVR = 60,
+    RST_PROXYSVR_WAN = 61,
+    RST_OFFMSGSVR = 70,
+    RST_OFFMSGSVR_WAN = 71
+};
+
+enum RTX_GENDER
+{
+    RTX_GENDER_UNKNOWN = -1,
+    RTX_GENDER_MALE = 0,
+    RTX_GENDER_FEMALE = 1
+};
+
+enum RTX_PRESENCE
+{
+    RTX_PRESENCE_OFFLINE = 0,
+    RTX_PRESENCE_ONLINE = 1,
+    RTX_PRESENCE_AWAY = 2,
+    RTX_PRESENCE_ONTHEPHONE = 3,
+    RTX_PRESENCE_MOBILE_ONLINE = 4,
+    RTX_PRESENCE_WEB_ONLINE = 5,
+    RTX_PRESENCE_COMMON_ONLINE = 6,
+    RTX_PRESENCE_INVISIBLE_ONLINE = 7
+};
+
+enum RTX_UIN
+{
+    RTX_UIN_INVALID = 0
+};
+
+enum RTX_ITEM_TYPE
+{
+    RTX_ITEM_TYPE_RTX_BUDDY = 0,
+    RTX_ITEM_TYPE_RTX_GROUP = 1,
+    RTX_ITEM_TYPE_MOBILE_BUDDY = 2,
+    RTX_ITEM_TYPE_MOBILE_GROUP = 3,
+    RTX_ITEM_TYPE_MOBILE = 4,
+    RTX_ITEM_TYPE_RCA_BUDDY = 5,
+    RTX_ITEM_TYPE_RCA_GROUP = 6,
+    RTX_ITEM_TYPE_PHONENUM = 7
+};
+
+enum RTX_GROUP_TYPE
+{
+    RTX_GROUP_TYPE_INVALID = 0,
+    RTX_GROUP_TYPE_ORGSTRUCT = 1,
+    RTX_GROUP_TYPE_MY_CONTACTS = 2,
+    RTX_GROUP_TYPE_RECENT_CONTACTS = 3,
+    RTX_GROUP_TYPE_USER_DEFINED = 4,
+    RTX_GROUP_TYPE_MOBILE = 5,
+    RTX_GROUP_TYPE_EXTBUDDY = 6
+};
+
+enum RTX_GROUP_ROOT_ID
+{
+    RTX_GROUP_ROOT_ID_ORG_STRUCT = 19999001,
+    RTX_GROUP_ROOT_ID_ALL_CONTACTS = 19999002,
+    RTX_GROUP_ROOT_ID_MOBILE = 19999004,
+    RTX_GROUP_ROOT_ID_RCA = 19999005
+};
+
+enum RTX_GROUP_ID
+{
+    RTX_GROUP_ID_INVALID = -1,
+    RTX_GROUP_ID_ORGSTRUCT = 10000001,
+    RTX_GROUP_ID_MY_CONTACTS = 20000001,
+    RTX_GROUP_ID_RECENT_CONTACTS = 40000001,
+    RTX_GROUP_ID_DAILY_DEPT = 50000001,
+    RTX_GROUP_ID_USER_DEFINED = 60000001,
+    RTX_GROUP_ID_USER_GROUP = 70000001,
+    RTX_GROUP_ID_SESSION = 80000001,
+    RTX_GROUP_ID_MOBILE = 90000001,
+    RTX_GROUP_ID_EXTBUDDY = 100000001,
+    RTX_GROUP_ID_RCA = 110000001,
+    RTX_GROUP_ID_RCA_FRIEND = 120000001
+};
+
+enum RTXC_SESSION_STATE
+{
+    RTXC_SESSION_STATE_NORMAL = 0,
+    RTXC_SESSION_STATE_BLOCKMSG = 1
+};
+
+enum RTXC_MDSESSION_STATE
+{
+    RTXC_MDSESSION_STATE_IDLE = 0,
+    RTXC_MDSESSION_STATE_INCOMING = 1,
+    RTXC_MDSESSION_STATE_ANSWERING = 2,
+    RTXC_MDSESSION_STATE_INPROGRESS = 3,
+    RTXC_MDSESSION_STATE_CONNECTED = 4
+};
+
+enum RTXC_MDSESSION_CONNTYPE
+{
+    RTXC_MDSESSION_CONNTYPE_STREAM = 0,
+    RTXC_MDSESSION_CONNTYPE_DGRAM = 1,
+    RTXC_MDSESSION_CONNTYPE_SESSION_STREAM = 2,
+    RTXC_MDSESSION_CONNTYPE_SESSION_DGRAM = 3,
+    RTXC_MDSESSION_CONNTYPE_ANY = 4
+};
+
+enum RTXC_RESULT
+{
+    RTXC_RESULT_OK = 0,
+    RTXC_RESULT_TIME_OUT = -1,
+    RTXC_RESULT_UNKNOWN_ERROR = -2,
+    RTXC_RESULT_TICKOUT = -3,
+    RTXC_RESULT_SETOFFLINE = -4
+};
+
+enum RTXC_LOGIN_RESULT
+{
+    RTXC_LOGIN_RESULT_OK = 0,
+    RTXC_LOGIN_RESULT_START = 1,
+    RTXC_LOGIN_RESULT_START_DETECTING = 2,
+    RTXC_LOGIN_RESULT_TIME_OUT = -1,
+    RTXC_LOGIN_RESULT_UNKNOWN_ERROR = -2,
+    RTXC_LOGIN_RESULT_ACCOUNT_OR_PASSWORD_INCORRECT = -3,
+    RTXC_LOGIN_RESULT_CONNECT_FAILED = -4,
+    RTXC_LOGIN_RESULT_USER_FULL = -5,
+    RTXC_LOGIN_RESULT_CONNREFUSE = -6,
+    RTXC_LOGIN_RESULT_TIMEDOUT = -7,
+    RTXC_LOGIN_RESULT_HOSTUNREACH = -8,
+    RTXC_LOGIN_RESULT_PLAIN_PASSWORD_NO_HANDLER = -9,
+    RTXC_LOGIN_RESULT_ADDRNOTAVAIL = -10,
+    RTXC_LOGIN_RESULT_SUB_USER_FULL = -11,
+    RTXC_LOGIN_RESULT_SVR_BUSY = -12,
+    RTXC_LOGIN_RESULT_RESERVED = 2000
+};
+
+enum RTXC_MODIFY_PWD_RESULT
+{
+    RTXC_MODIFY_PWD_RESULT_OK = 0,
+    RTXC_MODIFY_PWD_RESULT_FAILED = -1,
+    RTXC_MODIFY_PWD_RESULT_ACCOUNT_NOT_EXIST = -2,
+    RTXC_MODIFY_PWD_RESULT_DENIED = -3,
+    RTXC_MODIFY_PWD_RESULT_OLD_PWD_INCORRECT = -4
+};
+
+enum RTXC_SEND_DATA_FLAG
+{
+    RTXC_SEND_DATA_FLAG_DEFAULT = 0,
+    RTXC_SEND_DATA_FLAG_FILTERING_IS_ALLOWED = 0,
+    RTXC_SEND_DATA_FLAG_PICKING_OFF_IS_ALLOWED = 0,
+    RTXC_SEND_DATA_FLAG_FILTERING_IS_FORBIDDEN = 1,
+    RTXC_SEND_DATA_FLAG_PICKING_OFF_IS_FORBIDDEN = 2
+};
+
+enum RTXC_PLGUIN_LOAD_RESULT
+{
+    RTXC_PLUGIN_LOAD_OK = 0,
+    RTXC_PLGUIN_LOAD_NORIGHT = 1,
+    RTXC_PLGUIN_LOAD_NOFILE = 2,
+    RTXC_PLUGIN_LOAD_NOXML = 3,
+    RTXC_PLUGIN_LOAD_SETERROR = 4,
+    RTXC_PLUGIN_LOAD_OTHERERROR = 5
+};
+
+enum RTXC_LOGIN_MODE
+{
+    RTXC_LOGIN_MODE_NORMAL = 0,
+    RTXC_LOGIN_MODE_OUT_SUPPORT = 1,
+    RTXC_LOGIN_MODE_OTHER = 255
+};
+
+enum RTXC_LANGUAGE_TYPE
+{
+    RTXC_LANGUAGE_CN = 0,
+    RTXC_LANGUAGE_EN = 1,
+    RTXC_LANGUAGE_TW = 2
+};
+
+enum RTXC_NET_PROXY_TYPE
+{
+    RTXC_NET_PROXY_NONE = 0,
+    RTXC_NET_PROXY_SOCK5 = 1,
+    RTXC_NET_PROXY_HTTP = 2
+};
+
+enum RCA_GROUP_TYPE
+{
+    RCA_GROUP_TYPE_INVALID = 0,
+    RCA_GROUP_TYPE_ORGSTRUCT = 1,
+    RCA_GROUP_TYPE_MY_CONTACTS = 2
+};
+
+struct __declspec(uuid("db69c2a9-c6e4-4200-b418-61c1ed532499"))
+IRTXCDataCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCDataPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=GetXML,put=PutXML))
+    _bstr_t XML;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCDataPtr GetItem (
+        long Index );
+    long GetCount ( );
+    HRESULT Add (
+        struct IRTXCData * RTXCData );
+    HRESULT Remove (
+        long Index );
+    _bstr_t GetXML ( );
+    void PutXML (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCData * * ppRTXCData ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+    virtual HRESULT __stdcall raw_Add (
+        struct IRTXCData * RTXCData ) = 0;
+    virtual HRESULT __stdcall raw_Remove (
+        long Index ) = 0;
+    virtual HRESULT __stdcall get_XML (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_XML (
+        BSTR pVal ) = 0;
+};
+
+struct __declspec(uuid("b1251ee5-3843-4857-9cff-a97ec20c3d85"))
+IRTXCData : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetXML,put=PutXML))
+    _bstr_t XML;
+    __declspec(property(get=GetFileName,put=PutFileName))
+    _bstr_t FileName;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetXML ( );
+    void PutXML (
+        _bstr_t pVal );
+    long GetLong (
+        _bstr_t Key );
+    HRESULT SetLong (
+        _bstr_t Key,
+        long Value );
+    _bstr_t GetString (
+        _bstr_t Key );
+    HRESULT SetString (
+        _bstr_t Key,
+        _bstr_t String );
+    HRESULT SetBuffer (
+        _bstr_t Key,
+        unsigned char * Buffer,
+        long Length );
+    long GetBufferLength (
+        _bstr_t Key );
+    HRESULT GetBuffer (
+        _bstr_t Key,
+        unsigned char * Buffer,
+        long Length );
+    HRESULT SetRTXCData (
+        _bstr_t Key,
+        struct IRTXCData * RTXCData );
+    IRTXCDataPtr GetRTXCData (
+        _bstr_t Key );
+    IRTXCDataCollectionPtr GetRTXCDataCollection (
+        _bstr_t Key );
+    HRESULT SetRTXCDataCollection (
+        _bstr_t Key,
+        struct IRTXCDataCollection * RTXCDataCollection );
+    HRESULT Clear ( );
+    IDispatchPtr GetObject (
+        _bstr_t Key );
+    HRESULT SetObject (
+        _bstr_t Key,
+        IDispatch * Object );
+    _bstr_t GetFileName ( );
+    void PutFileName (
+        _bstr_t pVal );
+    HRESULT Save ( );
+    HRESULT Load (
+        _bstr_t FileName );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_XML (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_XML (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetLong (
+        BSTR Key,
+        long * Value ) = 0;
+    virtual HRESULT __stdcall raw_SetLong (
+        BSTR Key,
+        long Value ) = 0;
+    virtual HRESULT __stdcall raw_GetString (
+        BSTR Key,
+        BSTR * String ) = 0;
+    virtual HRESULT __stdcall raw_SetString (
+        BSTR Key,
+        BSTR String ) = 0;
+    virtual HRESULT __stdcall raw_SetBuffer (
+        BSTR Key,
+        unsigned char * Buffer,
+        long Length ) = 0;
+    virtual HRESULT __stdcall raw_GetBufferLength (
+        BSTR Key,
+        long * Length ) = 0;
+    virtual HRESULT __stdcall raw_GetBuffer (
+        BSTR Key,
+        unsigned char * Buffer,
+        long Length ) = 0;
+    virtual HRESULT __stdcall raw_SetRTXCData (
+        BSTR Key,
+        struct IRTXCData * RTXCData ) = 0;
+    virtual HRESULT __stdcall raw_GetRTXCData (
+        BSTR Key,
+        struct IRTXCData * * RTXCData ) = 0;
+    virtual HRESULT __stdcall raw_GetRTXCDataCollection (
+        BSTR Key,
+        struct IRTXCDataCollection * * RTXCDataCollection ) = 0;
+    virtual HRESULT __stdcall raw_SetRTXCDataCollection (
+        BSTR Key,
+        struct IRTXCDataCollection * RTXCDataCollection ) = 0;
+    virtual HRESULT __stdcall raw_Clear ( ) = 0;
+    virtual HRESULT __stdcall raw_GetObject (
+        BSTR Key,
+        IDispatch * * Object ) = 0;
+    virtual HRESULT __stdcall raw_SetObject (
+        BSTR Key,
+        IDispatch * Object ) = 0;
+    virtual HRESULT __stdcall get_FileName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_FileName (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_Save ( ) = 0;
+    virtual HRESULT __stdcall raw_Load (
+        BSTR FileName ) = 0;
+};
+
+struct __declspec(uuid("93899b30-3ac4-4c33-8443-2ecdabe8ce5d"))
+IRTXCLicense : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetConfig))
+    _variant_t Config[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetConfig (
+        _bstr_t Name );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Config (
+        BSTR Name,
+        VARIANT * pVal ) = 0;
+};
+
+struct __declspec(uuid("6e9340fd-535f-4997-aa6d-9ea59202c58b"))
+IRTXCRTXGroup : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetParent))
+    IRTXCRTXGroupPtr Parent;
+    __declspec(property(get=GetGroups))
+    IRTXCRTXGroupCollectionPtr Groups;
+    __declspec(property(get=GetBuddies))
+    IRTXCRTXBuddyCollectionPtr Buddies;
+    __declspec(property(get=GetId))
+    long Id;
+    __declspec(property(get=GetType))
+    enum RTX_GROUP_TYPE Type;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetVirtualProperty,put=PutVirtualProperty))
+    long VirtualProperty;
+    __declspec(property(get=GetParentId))
+    long ParentId;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCRTXGroupPtr GetParent ( );
+    IRTXCRTXGroupCollectionPtr GetGroups ( );
+    IRTXCRTXBuddyCollectionPtr GetBuddies ( );
+    long GetId ( );
+    enum RTX_GROUP_TYPE GetType ( );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    HRESULT AddBuddy (
+        struct IRTXCRTXBuddy * Buddy );
+    HRESULT RemoveBuddy (
+        struct IRTXCRTXBuddy * Buddy );
+    long GetVirtualProperty ( );
+    void PutVirtualProperty (
+        long pVal );
+    long GetParentId ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Parent (
+        struct IRTXCRTXGroup * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCRTXGroupCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Buddies (
+        struct IRTXCRTXBuddyCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Id (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        enum RTX_GROUP_TYPE * pVal ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Name (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddBuddy (
+        struct IRTXCRTXBuddy * Buddy ) = 0;
+    virtual HRESULT __stdcall raw_RemoveBuddy (
+        struct IRTXCRTXBuddy * Buddy ) = 0;
+    virtual HRESULT __stdcall get_VirtualProperty (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_VirtualProperty (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_ParentId (
+        long * pVal ) = 0;
+};
+
+struct __declspec(uuid("33156ed4-7eda-40cd-92f4-160c3dcd5970"))
+IRTXCRTXGroupCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCRTXGroupPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCRTXGroupPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCRTXGroup * * ppRTXCRTXGroup ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("142275c8-b019-498b-956d-b6fda135f69b"))
+IRTXCRTXBuddyCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCRTXBuddyPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCRTXBuddyPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCRTXBuddy * * ppRTXCRTXBuddy ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("2e38f2e2-5e73-4447-a9c8-f3ed22c05e28"))
+IRTXCRTXBuddy : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAccount))
+    _bstr_t Account;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetMobile,put=PutMobile))
+    _bstr_t Mobile;
+    __declspec(property(get=GetUIN))
+    long UIN;
+    __declspec(property(get=GetGender,put=PutGender))
+    enum RTX_GENDER Gender;
+    __declspec(property(get=GetEmail,put=PutEmail))
+    _bstr_t Email;
+    __declspec(property(get=GetUserRights))
+    long UserRights;
+    __declspec(property(get=GetTelephone,put=PutTelephone))
+    _bstr_t Telephone;
+    __declspec(property(get=GetPresence))
+    enum RTX_PRESENCE Presence;
+    __declspec(property(get=GetGroups))
+    IRTXCRTXGroupCollectionPtr Groups;
+    __declspec(property(get=GetRealName,put=PutRealName))
+    _bstr_t RealName;
+    __declspec(property(get=GetPhotoPath))
+    _bstr_t PhotoPath;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetAccount ( );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    _bstr_t GetMobile ( );
+    void PutMobile (
+        _bstr_t pVal );
+    long GetUIN ( );
+    enum RTX_GENDER GetGender ( );
+    void PutGender (
+        enum RTX_GENDER pVal );
+    _bstr_t GetEmail ( );
+    void PutEmail (
+        _bstr_t pVal );
+    long GetUserRights ( );
+    HRESULT Update ( );
+    _bstr_t GetTelephone ( );
+    void PutTelephone (
+        _bstr_t pVal );
+    enum RTX_PRESENCE GetPresence ( );
+    HRESULT Modify ( );
+    IRTXCRTXGroupCollectionPtr GetGroups ( );
+    _bstr_t GetRealName ( );
+    void PutRealName (
+        _bstr_t pVal );
+    HRESULT UpdateNow ( );
+    _bstr_t GetPhotoPath ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Account (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Name (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_Mobile (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Mobile (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_UIN (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Gender (
+        enum RTX_GENDER * pVal ) = 0;
+    virtual HRESULT __stdcall put_Gender (
+        enum RTX_GENDER pVal ) = 0;
+    virtual HRESULT __stdcall get_Email (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Email (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_UserRights (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Update ( ) = 0;
+    virtual HRESULT __stdcall get_Telephone (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Telephone (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_Presence (
+        enum RTX_PRESENCE * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Modify ( ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCRTXGroupCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_RealName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_RealName (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_UpdateNow ( ) = 0;
+    virtual HRESULT __stdcall get_PhotoPath (
+        BSTR * pVal ) = 0;
+};
+
+struct __declspec(uuid("07c671cc-7905-4301-8a7a-be292a575f60"))
+IRTXCExtBuddy : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetField,put=PutField))
+    _variant_t Field[][];
+    __declspec(property(get=GetName))
+    _bstr_t Name;
+    __declspec(property(get=GetGroups))
+    IRTXCExtGroupCollectionPtr Groups;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetField (
+        _bstr_t bstrName,
+        _bstr_t bstrNamespace );
+    void PutField (
+        _bstr_t bstrName,
+        _bstr_t bstrNamespace,
+        const _variant_t & pResult );
+    _bstr_t GetName ( );
+    IRTXCExtGroupCollectionPtr GetGroups ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Field (
+        BSTR bstrName,
+        BSTR bstrNamespace,
+        VARIANT * pResult ) = 0;
+    virtual HRESULT __stdcall put_Field (
+        BSTR bstrName,
+        BSTR bstrNamespace,
+        VARIANT pResult ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pbstrName ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCExtGroupCollection * * pVal ) = 0;
+};
+
+struct __declspec(uuid("814eee2c-097c-41d3-907d-043b5f96921b"))
+IRTXCExtGroupCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCExtGroupPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCExtGroupPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCExtGroup * * ppRTXCRTXGroup ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("524ba3c7-4ac8-4bfc-84b4-63dcffcce845"))
+IRTXCExtGroup : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetParent))
+    IRTXCExtGroupPtr Parent;
+    __declspec(property(get=GetGroups))
+    IRTXCExtGroupCollectionPtr Groups;
+    __declspec(property(get=GetBuddies))
+    IRTXCExtBuddyCollectionPtr Buddies;
+    __declspec(property(get=GetId))
+    long Id;
+    __declspec(property(get=GetType))
+    enum RTX_GROUP_TYPE Type;
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCExtGroupPtr GetParent ( );
+    IRTXCExtGroupCollectionPtr GetGroups ( );
+    IRTXCExtBuddyCollectionPtr GetBuddies ( );
+    long GetId ( );
+    enum RTX_GROUP_TYPE GetType ( );
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    HRESULT AddBuddy (
+        struct IRTXCExtBuddy * Buddy );
+    HRESULT RemoveBuddy (
+        struct IRTXCExtBuddy * Buddy );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Parent (
+        struct IRTXCExtGroup * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCExtGroupCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Buddies (
+        struct IRTXCExtBuddyCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Id (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        enum RTX_GROUP_TYPE * pVal ) = 0;
+    virtual HRESULT __stdcall get_Name (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Name (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddBuddy (
+        struct IRTXCExtBuddy * Buddy ) = 0;
+    virtual HRESULT __stdcall raw_RemoveBuddy (
+        struct IRTXCExtBuddy * Buddy ) = 0;
+};
+
+struct __declspec(uuid("9d70436e-e766-4025-9fb5-2343d8d1d493"))
+IRTXCExtBuddyCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCExtBuddyPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCExtBuddyPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCExtBuddy * * ppRTXCRTXGroup ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("4df115ec-9ab2-4d75-a610-5d0b58129e29"))
+IRTXCRTXGroupManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetGroup))
+    IRTXCRTXGroupPtr Group[];
+    __declspec(property(get=GetGroups))
+    IRTXCRTXGroupCollectionPtr Groups;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCRTXGroupPtr GetGroup (
+        long Id );
+    IRTXCRTXGroupPtr AddGroup (
+        struct IRTXCRTXGroup * Parent,
+        _bstr_t Name );
+    HRESULT RemoveGroup (
+        struct IRTXCRTXGroup * Group );
+    IRTXCRTXGroupCollectionPtr GetGroups ( );
+    HRESULT GetAllGroups (
+        struct IRTXCRTXGroupCollection * * pVal );
+    HRESULT GetAllGroupsCount (
+        enum RTX_GROUP_TYPE groupType,
+        unsigned long * Count );
+    IRTXCRTXGroupCollectionPtr GetGroupsByUser (
+        _bstr_t nickname );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Group (
+        long Id,
+        struct IRTXCRTXGroup * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddGroup (
+        struct IRTXCRTXGroup * Parent,
+        BSTR Name,
+        struct IRTXCRTXGroup * * NewGroup ) = 0;
+    virtual HRESULT __stdcall raw_RemoveGroup (
+        struct IRTXCRTXGroup * Group ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCRTXGroupCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetAllGroups (
+        struct IRTXCRTXGroupCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetAllGroupsCount (
+        enum RTX_GROUP_TYPE groupType,
+        unsigned long * Count ) = 0;
+    virtual HRESULT __stdcall raw_GetGroupsByUser (
+        BSTR nickname,
+        struct IRTXCRTXGroupCollection * * pVal ) = 0;
+};
+
+struct __declspec(uuid("b7a37633-d5e6-4472-b00e-ba741f6b4ae9"))
+IRTXCRTXBuddyManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBuddy))
+    IRTXCRTXBuddyPtr Buddy[];
+    __declspec(property(get=GetBuddies))
+    IRTXCRTXBuddyCollectionPtr Buddies;
+    __declspec(property(get=GetLocalExistence))
+    VARIANT_BOOL LocalExistence[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCRTXBuddyPtr GetBuddy (
+        _bstr_t Account );
+    HRESULT Update (
+        struct IRTXCRTXBuddy * RTXBuddy );
+    IRTXCRTXBuddyCollectionPtr GetBuddies ( );
+    HRESULT QueryExistence (
+        _bstr_t Account );
+    VARIANT_BOOL GetLocalExistence (
+        _bstr_t Account );
+    HRESULT ForEach (
+        long pfCallBack,
+        long Param );
+    HRESULT UpdateNow (
+        struct IRTXCRTXBuddy * RTXBuddy );
+    HRESULT GetBuddyFromPhoneNum (
+        _bstr_t bstrPhoneNum,
+        struct IRTXCRTXBuddy * * ppRTXBuddy );
+    HRESULT SearchBuddy (
+        _bstr_t prefix,
+        BSTR * accountResultList,
+        BSTR * nameResultList );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Buddy (
+        BSTR Account,
+        struct IRTXCRTXBuddy * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Update (
+        struct IRTXCRTXBuddy * RTXBuddy ) = 0;
+    virtual HRESULT __stdcall get_Buddies (
+        struct IRTXCRTXBuddyCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_QueryExistence (
+        BSTR Account ) = 0;
+    virtual HRESULT __stdcall get_LocalExistence (
+        BSTR Account,
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ForEach (
+        long pfCallBack,
+        long Param ) = 0;
+    virtual HRESULT __stdcall raw_UpdateNow (
+        struct IRTXCRTXBuddy * RTXBuddy ) = 0;
+    virtual HRESULT __stdcall raw_GetBuddyFromPhoneNum (
+        BSTR bstrPhoneNum,
+        struct IRTXCRTXBuddy * * ppRTXBuddy ) = 0;
+    virtual HRESULT __stdcall raw_SearchBuddy (
+        BSTR prefix,
+        BSTR * accountResultList,
+        BSTR * nameResultList ) = 0;
+};
+
+struct __declspec(uuid("6b73cb5c-baa6-4dbc-b0f6-75dddc66147a"))
+IRTXCPresence : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetRTXPresence,put=PutRTXPresence))
+    enum RTX_PRESENCE RTXPresence[];
+    __declspec(property(get=GetPhonePresenceSwitch,put=PutPhonePresenceSwitch))
+    VARIANT_BOOL PhonePresenceSwitch;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum RTX_PRESENCE GetRTXPresence (
+        _bstr_t Account );
+    void PutRTXPresence (
+        _bstr_t Account,
+        enum RTX_PRESENCE pVal );
+    HRESULT UpdatePresence (
+        struct IRTXCDataCollection * Accounts );
+    HRESULT UpdateAllPresence (
+        VARIANT_BOOL ForceFromServer );
+    HRESULT AddFocusUser (
+        const _variant_t & User,
+        VARIANT_BOOL UpdateAtOnce );
+    VARIANT_BOOL GetPhonePresenceSwitch ( );
+    void PutPhonePresenceSwitch (
+        VARIANT_BOOL pvbSwitchOn );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_RTXPresence (
+        BSTR Account,
+        enum RTX_PRESENCE * pVal ) = 0;
+    virtual HRESULT __stdcall put_RTXPresence (
+        BSTR Account,
+        enum RTX_PRESENCE pVal ) = 0;
+    virtual HRESULT __stdcall raw_UpdatePresence (
+        struct IRTXCDataCollection * Accounts ) = 0;
+    virtual HRESULT __stdcall raw_UpdateAllPresence (
+        VARIANT_BOOL ForceFromServer ) = 0;
+    virtual HRESULT __stdcall raw_AddFocusUser (
+        VARIANT User,
+        VARIANT_BOOL UpdateAtOnce ) = 0;
+    virtual HRESULT __stdcall get_PhonePresenceSwitch (
+        VARIANT_BOOL * pvbSwitchOn ) = 0;
+    virtual HRESULT __stdcall put_PhonePresenceSwitch (
+        VARIANT_BOOL pvbSwitchOn ) = 0;
+};
+
+struct __declspec(uuid("e4373fd6-6add-408b-acf2-e66d796ac608"))
+IRTXCExState : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetExState))
+    long ExState[][];
+    __declspec(property(get=GetMyExState,put=PutMyExState))
+    long MyExState[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetExState (
+        _bstr_t bstrAccount,
+        _bstr_t bstrExStateName );
+    long GetMyExState (
+        _bstr_t bstrExStateName );
+    void PutMyExState (
+        _bstr_t bstrExStateName,
+        long pVal );
+    HRESULT QueryUsersExState (
+        const _variant_t & varArrUin );
+    HRESULT QueryUsersExState2 (
+        const _variant_t & varArrAccounts );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_ExState (
+        BSTR bstrAccount,
+        BSTR bstrExStateName,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_MyExState (
+        BSTR bstrExStateName,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MyExState (
+        BSTR bstrExStateName,
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_QueryUsersExState (
+        VARIANT varArrUin ) = 0;
+    virtual HRESULT __stdcall raw_QueryUsersExState2 (
+        VARIANT varArrAccounts ) = 0;
+};
+
+struct __declspec(uuid("2cb3b961-dc69-49d2-af3c-7cd73c9bfbba"))
+IRTXCModuleCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCModulePtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCModulePtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCModule * * ppRTXCModule ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("f747e1c2-fe0b-4a3b-9906-22804daca844"))
+IRTXCSession : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetState,put=PutState))
+    enum RTXC_SESSION_STATE State;
+    __declspec(property(get=GetType))
+    _bstr_t Type;
+    __declspec(property(get=GetTopic,put=PutTopic))
+    _bstr_t Topic;
+    __declspec(property(get=GetInitiator))
+    _bstr_t Initiator;
+    __declspec(property(get=GetAppName))
+    _bstr_t AppName;
+    __declspec(property(get=GetParticipant,put=PutParticipant))
+    _bstr_t Participant;
+    __declspec(property(get=GetId))
+    _bstr_t Id;
+    __declspec(property(get=GetCreateTime))
+    DATE CreateTime;
+    __declspec(property(get=GetParticipantCount))
+    long ParticipantCount;
+    __declspec(property(get=GetMessageCount,put=PutMessageCount))
+    long MessageCount;
+    __declspec(property(get=GetLastTime))
+    DATE LastTime;
+    __declspec(property(get=GetLocalTopic,put=PutLocalTopic))
+    _bstr_t LocalTopic;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum RTXC_SESSION_STATE GetState ( );
+    void PutState (
+        enum RTXC_SESSION_STATE pVal );
+    _bstr_t GetType ( );
+    _bstr_t GetTopic ( );
+    void PutTopic (
+        _bstr_t pVal );
+    _bstr_t GetInitiator ( );
+    _bstr_t GetAppName ( );
+    _bstr_t GetParticipant ( );
+    void PutParticipant (
+        _bstr_t pVal );
+    HRESULT Refresh ( );
+    _bstr_t GetId ( );
+    DATE GetCreateTime ( );
+    long GetParticipantCount ( );
+    long GetMessageCount ( );
+    void PutMessageCount (
+        long pVal );
+    HRESULT RequestInitiator ( );
+    HRESULT AcceptInitiatorRequest ( );
+    HRESULT RejectInitiatorRequest ( );
+    DATE GetLastTime ( );
+    HRESULT Save ( );
+    _bstr_t GetLocalTopic ( );
+    void PutLocalTopic (
+        _bstr_t pVal );
+    HRESULT PutRCALocalInitiatorAndParDirectly (
+        _bstr_t newInitiator );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_State (
+        enum RTXC_SESSION_STATE * pVal ) = 0;
+    virtual HRESULT __stdcall put_State (
+        enum RTXC_SESSION_STATE pVal ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Topic (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Topic (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall get_Initiator (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_AppName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Participant (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_Participant (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_Refresh ( ) = 0;
+    virtual HRESULT __stdcall get_Id (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_CreateTime (
+        DATE * pVal ) = 0;
+    virtual HRESULT __stdcall get_ParticipantCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_MessageCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_MessageCount (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall raw_RequestInitiator ( ) = 0;
+    virtual HRESULT __stdcall raw_AcceptInitiatorRequest ( ) = 0;
+    virtual HRESULT __stdcall raw_RejectInitiatorRequest ( ) = 0;
+    virtual HRESULT __stdcall get_LastTime (
+        DATE * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Save ( ) = 0;
+    virtual HRESULT __stdcall get_LocalTopic (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall put_LocalTopic (
+        BSTR pVal ) = 0;
+    virtual HRESULT __stdcall raw_PutRCALocalInitiatorAndParDirectly (
+        BSTR newInitiator ) = 0;
+};
+
+struct __declspec(uuid("c4914eae-8d0d-4fb2-8e89-11adc809fb1d"))
+IRTXCSessionCollection : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetItem))
+    IRTXCSessionPtr Item[];
+    __declspec(property(get=GetCount))
+    long Count;
+    __declspec(property(get=Get_NewEnum))
+    IUnknownPtr _NewEnum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IUnknownPtr Get_NewEnum ( );
+    IRTXCSessionPtr GetItem (
+        long Index );
+    long GetCount ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get__NewEnum (
+        IUnknown * * ppUnknown ) = 0;
+    virtual HRESULT __stdcall get_Item (
+        long Index,
+        struct IRTXCSession * * ppRTXCSession ) = 0;
+    virtual HRESULT __stdcall get_Count (
+        long * pCount ) = 0;
+};
+
+struct __declspec(uuid("91f9d53d-dc7e-4a10-b109-20972c7564aa"))
+IRTXCSessionManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetSession))
+    IRTXCSessionPtr Session[];
+    __declspec(property(get=GetSessions))
+    IRTXCSessionCollectionPtr Sessions;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCSessionPtr CreateSession (
+        _bstr_t Type,
+        _bstr_t Initiator,
+        _bstr_t AppName );
+    IRTXCSessionPtr GetSession (
+        _bstr_t SessionId );
+    HRESULT QuerySessionInfo (
+        _bstr_t Receiver,
+        _bstr_t SessionId,
+        long Cookie );
+    IRTXCSessionPtr CreateSession2 (
+        _bstr_t SessionId,
+        _bstr_t Type,
+        _bstr_t Initiator,
+        _bstr_t AppName,
+        _bstr_t Participant );
+    IRTXCSessionCollectionPtr GetSessions ( );
+    IRTXCSessionCollectionPtr GetRecentSession ( );
+    HRESULT RegisterSession (
+        struct IRTXCSession * Session );
+    IRTXCSessionPtr CreateSession3 (
+        _bstr_t SessionId,
+        _bstr_t Type,
+        _bstr_t Initiator,
+        _bstr_t AppName,
+        _bstr_t Participant );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_CreateSession (
+        BSTR Type,
+        BSTR Initiator,
+        BSTR AppName,
+        struct IRTXCSession * * Session ) = 0;
+    virtual HRESULT __stdcall get_Session (
+        BSTR SessionId,
+        struct IRTXCSession * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_QuerySessionInfo (
+        BSTR Receiver,
+        BSTR SessionId,
+        long Cookie ) = 0;
+    virtual HRESULT __stdcall raw_CreateSession2 (
+        BSTR SessionId,
+        BSTR Type,
+        BSTR Initiator,
+        BSTR AppName,
+        BSTR Participant,
+        struct IRTXCSession * * Session ) = 0;
+    virtual HRESULT __stdcall get_Sessions (
+        struct IRTXCSessionCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetRecentSession (
+        struct IRTXCSessionCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_RegisterSession (
+        struct IRTXCSession * Session ) = 0;
+    virtual HRESULT __stdcall raw_CreateSession3 (
+        BSTR SessionId,
+        BSTR Type,
+        BSTR Initiator,
+        BSTR AppName,
+        BSTR Participant,
+        struct IRTXCSession * * Session ) = 0;
+};
+
+struct __declspec(uuid("19ec1a99-03e4-463b-a643-93b887b31356"))
+IRTXCMFCSupport : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT PreTranslateMessage (
+        long MSGPointer );
+    HRESULT OnIdle (
+        long Count );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_PreTranslateMessage (
+        long MSGPointer ) = 0;
+    virtual HRESULT __stdcall raw_OnIdle (
+        long Count ) = 0;
+};
+
+struct __declspec(uuid("0fcebd34-f4f9-4244-a9a7-da04badb80a0"))
+IRTXCMDSessionManager : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCMDSessionPtr CreateSession (
+        _bstr_t AppName,
+        _bstr_t Type );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_CreateSession (
+        BSTR AppName,
+        BSTR Type,
+        struct IRTXCMDSession * * Session ) = 0;
+};
+
+struct __declspec(uuid("3a9ca998-1def-4682-8976-0892ff6613d4"))
+IRTXCMDSession : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetState))
+    enum RTXC_MDSESSION_STATE State;
+    __declspec(property(get=GetAppName))
+    _bstr_t AppName;
+    __declspec(property(get=GetType))
+    _bstr_t Type;
+    __declspec(property(get=GetInitiator))
+    _bstr_t Initiator;
+    __declspec(property(get=GetParticipant))
+    _bstr_t Participant;
+    __declspec(property(get=GetId))
+    _bstr_t Id;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    enum RTXC_MDSESSION_STATE GetState ( );
+    _bstr_t GetAppName ( );
+    _bstr_t GetType ( );
+    _bstr_t GetInitiator ( );
+    _bstr_t GetParticipant ( );
+    _bstr_t GetId ( );
+    HRESULT AddParticipant (
+        _bstr_t Participant,
+        enum RTXC_MDSESSION_CONNTYPE ConnType,
+        _bstr_t VerifyString );
+    HRESULT RemoveParticipant (
+        _bstr_t Participant );
+    HRESULT Accept ( );
+    HRESULT Reject ( );
+    HRESULT SendData (
+        const _variant_t & Data );
+    HRESULT SendData2 (
+        const _variant_t & Data );
+    HRESULT SendData3 (
+        _bstr_t Participant,
+        const _variant_t & Data );
+    HRESULT Cancel (
+        _bstr_t Participant );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_State (
+        enum RTXC_MDSESSION_STATE * pVal ) = 0;
+    virtual HRESULT __stdcall get_AppName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Type (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Initiator (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Participant (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_Id (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddParticipant (
+        BSTR Participant,
+        enum RTXC_MDSESSION_CONNTYPE ConnType,
+        BSTR VerifyString ) = 0;
+    virtual HRESULT __stdcall raw_RemoveParticipant (
+        BSTR Participant ) = 0;
+    virtual HRESULT __stdcall raw_Accept ( ) = 0;
+    virtual HRESULT __stdcall raw_Reject ( ) = 0;
+    virtual HRESULT __stdcall raw_SendData (
+        VARIANT Data ) = 0;
+    virtual HRESULT __stdcall raw_SendData2 (
+        VARIANT Data ) = 0;
+    virtual HRESULT __stdcall raw_SendData3 (
+        BSTR Participant,
+        VARIANT Data ) = 0;
+    virtual HRESULT __stdcall raw_Cancel (
+        BSTR Participant ) = 0;
+};
+
+struct __declspec(uuid("552b2c18-c977-4850-bf82-46e8bc4c9c70"))
+IRTXCExtGroupManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetGroup))
+    IRTXCExtGroupPtr Group[];
+    __declspec(property(get=GetGroups))
+    IRTXCExtGroupCollectionPtr Groups;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCExtGroupPtr GetGroup (
+        long Id );
+    IRTXCExtGroupPtr AddGroup (
+        struct IRTXCExtGroup * Parent,
+        _bstr_t Name );
+    HRESULT RemoveGroup (
+        struct IRTXCExtGroup * Group );
+    IRTXCExtGroupCollectionPtr GetGroups ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Group (
+        long Id,
+        struct IRTXCExtGroup * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_AddGroup (
+        struct IRTXCExtGroup * Parent,
+        BSTR Name,
+        struct IRTXCExtGroup * * NewGroup ) = 0;
+    virtual HRESULT __stdcall raw_RemoveGroup (
+        struct IRTXCExtGroup * Group ) = 0;
+    virtual HRESULT __stdcall get_Groups (
+        struct IRTXCExtGroupCollection * * pVal ) = 0;
+};
+
+struct __declspec(uuid("bd43582c-4cdb-4168-8d12-02ba2e73e19a"))
+IRTXCExtBuddyManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetBuddy))
+    IRTXCExtBuddyPtr Buddy[];
+    __declspec(property(get=GetBuddies))
+    IRTXCExtBuddyCollectionPtr Buddies;
+    __declspec(property(get=GetPhones))
+    _variant_t Phones[];
+    __declspec(property(get=GetUsername))
+    _bstr_t Username[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCExtBuddyPtr GetBuddy (
+        _bstr_t Account );
+    HRESULT RemoveBuddy (
+        LPWSTR lpszAccount );
+    HRESULT DeleteBuddy (
+        LPWSTR lpszAccount );
+    IRTXCExtBuddyCollectionPtr GetBuddies ( );
+    _variant_t GetPhones (
+        _bstr_t Account );
+    _bstr_t GetUsername (
+        _bstr_t bstrPhone );
+    HRESULT ImportExtBuddy (
+        _bstr_t bstrFilename );
+    HRESULT ExportExtBuddy (
+        _bstr_t bstrFilename );
+    HRESULT CreateRTXCExtBuddy (
+        _bstr_t Account,
+        struct IRTXCExtBuddy * * ppVal );
+    HRESULT GetBuddyFromPhoneNum (
+        _bstr_t bstrPhoneNum,
+        struct IRTXCExtBuddy * * ppRTXBuddy );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Buddy (
+        BSTR Account,
+        struct IRTXCExtBuddy * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_RemoveBuddy (
+        LPWSTR lpszAccount ) = 0;
+    virtual HRESULT __stdcall raw_DeleteBuddy (
+        LPWSTR lpszAccount ) = 0;
+    virtual HRESULT __stdcall get_Buddies (
+        struct IRTXCExtBuddyCollection * * ppVal ) = 0;
+    virtual HRESULT __stdcall get_Phones (
+        BSTR Account,
+        VARIANT * pVarResult ) = 0;
+    virtual HRESULT __stdcall get_Username (
+        BSTR bstrPhone,
+        BSTR * pVarResult ) = 0;
+    virtual HRESULT __stdcall raw_ImportExtBuddy (
+        BSTR bstrFilename ) = 0;
+    virtual HRESULT __stdcall raw_ExportExtBuddy (
+        BSTR bstrFilename ) = 0;
+    virtual HRESULT __stdcall raw_CreateRTXCExtBuddy (
+        BSTR Account,
+        struct IRTXCExtBuddy * * ppVal ) = 0;
+    virtual HRESULT __stdcall raw_GetBuddyFromPhoneNum (
+        BSTR bstrPhoneNum,
+        struct IRTXCExtBuddy * * ppRTXBuddy ) = 0;
+};
+
+struct __declspec(uuid("e4508738-c04a-4e1d-861e-3c701049e153"))
+IRTXCEventCenter : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long AddEventSink (
+        _bstr_t Id,
+        IUnknown * pSink,
+        VARIANT_BOOL IsUnique );
+    _variant_t FireEvent (
+        _bstr_t Id,
+        IDispatch * pData );
+    HRESULT RemoveEventSink (
+        _bstr_t Id,
+        long Cookie );
+    long AddModuleEventSink (
+        _bstr_t Id,
+        IUnknown * pSink,
+        VARIANT_BOOL IsUnique,
+        struct IRTXCModule * pRTXModule );
+    _variant_t FireModuleEvent (
+        _bstr_t Id,
+        struct IRTXCModule * pRTXModule,
+        IDispatch * pData );
+    HRESULT RemoveModuleEventSink (
+        _bstr_t Id,
+        long Cookie,
+        struct IRTXCModule * pRTXModule );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_AddEventSink (
+        BSTR Id,
+        IUnknown * pSink,
+        VARIANT_BOOL IsUnique,
+        long * pCookie ) = 0;
+    virtual HRESULT __stdcall raw_FireEvent (
+        BSTR Id,
+        IDispatch * pData,
+        VARIANT * pRet ) = 0;
+    virtual HRESULT __stdcall raw_RemoveEventSink (
+        BSTR Id,
+        long Cookie ) = 0;
+    virtual HRESULT __stdcall raw_AddModuleEventSink (
+        BSTR Id,
+        IUnknown * pSink,
+        VARIANT_BOOL IsUnique,
+        struct IRTXCModule * pRTXModule,
+        long * pCookie ) = 0;
+    virtual HRESULT __stdcall raw_FireModuleEvent (
+        BSTR Id,
+        struct IRTXCModule * pRTXModule,
+        IDispatch * pData,
+        VARIANT * pRet ) = 0;
+    virtual HRESULT __stdcall raw_RemoveModuleEventSink (
+        BSTR Id,
+        long Cookie,
+        struct IRTXCModule * pRTXModule ) = 0;
+};
+
+struct __declspec(uuid("2c86c87b-a019-4204-a7d3-fb4c2464cfe0"))
+IRTXCRoot : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetRTXGroupManager))
+    IRTXCRTXGroupManagerPtr RTXGroupManager;
+    __declspec(property(get=GetRTXBuddyManager))
+    IRTXCRTXBuddyManagerPtr RTXBuddyManager;
+    __declspec(property(get=GetTCP,put=PutTCP))
+    VARIANT_BOOL TCP;
+    __declspec(property(get=GetAccount))
+    _bstr_t Account;
+    __declspec(property(get=GetUIN))
+    long UIN;
+    __declspec(property(get=GetModule))
+    IRTXCModulePtr Module[];
+    __declspec(property(get=GetPresence))
+    IRTXCPresencePtr Presence;
+    __declspec(property(get=GetMyPresence,put=PutMyPresence))
+    enum RTX_PRESENCE MyPresence;
+    __declspec(property(get=GetModuleCollection))
+    IRTXCModuleCollectionPtr ModuleCollection;
+    __declspec(property(get=GetSessionManager))
+    IRTXCSessionManagerPtr SessionManager;
+    __declspec(property(get=GetCurrentServerTime))
+    long CurrentServerTime;
+    __declspec(property(get=GetToken))
+    IRTXCDataPtr Token;
+    __declspec(property(get=GetSign))
+    IRTXCDataPtr Sign;
+    __declspec(property(get=GetServerInfo))
+    IRTXCDataCollectionPtr ServerInfo;
+    __declspec(property(get=GetMFCSupport))
+    IRTXCMFCSupportPtr MFCSupport;
+    __declspec(property(get=GetMDSessionManager))
+    IRTXCMDSessionManagerPtr MDSessionManager;
+    __declspec(property(get=GetEnterpriseInfo))
+    IRTXCDataPtr EnterpriseInfo;
+    __declspec(property(get=GetLicense))
+    IRTXCLicensePtr License;
+    __declspec(property(get=GetRTXExtBuddyManager))
+    IRTXCExtBuddyManagerPtr RTXExtBuddyManager;
+    __declspec(property(get=GetRTXExtGroupManager))
+    IRTXCExtGroupManagerPtr RTXExtGroupManager;
+    __declspec(property(get=GetRTXCEventCenter))
+    IRTXCEventCenterPtr RTXCEventCenter;
+    __declspec(property(get=GetExState))
+    IRTXCExStatePtr ExState;
+    __declspec(property(get=GetLoginMode,put=PutLoginMode))
+    enum RTXC_LOGIN_MODE LoginMode;
+    __declspec(property(get=GetETrunk,put=PutETrunk))
+    unsigned long ETrunk;
+    __declspec(property(get=GetNetProxy))
+    long NetProxy;
+    __declspec(property(get=GetConnectionInfo))
+    IRTXCDataPtr ConnectionInfo;
+    __declspec(property(get=GetServerAddress))
+    IRTXCDataPtr ServerAddress[];
+    __declspec(property(get=GetBase64Sign))
+    IRTXCDataPtr Base64Sign;
+    __declspec(property(get=GetLanguage))
+    enum RTXC_LANGUAGE_TYPE Language;
+    __declspec(property(get=GetNetProxyParam))
+    IRTXCDataPtr NetProxyParam;
+    __declspec(property(get=GetAVSetInfo))
+    IRTXCDataPtr AVSetInfo;
+    __declspec(property(get=GetRCAToken))
+    IRTXCDataPtr RCAToken;
+    __declspec(property(get=GetUseMultiFileServer))
+    long UseMultiFileServer;
+    __declspec(property(get=GetOutSupServerInfo))
+    IRTXCDataPtr OutSupServerInfo;
+    __declspec(property(get=GetRTXIM))
+    IDispatchPtr RTXIM;
+    __declspec(property(get=GetRTXOrgInfo))
+    IUnknownPtr RTXOrgInfo;
+    __declspec(property(get=GetFileListPath))
+    _bstr_t FileListPath;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCDataPtr CreateRTXCData ( );
+    IRTXCDataCollectionPtr CreateRTXCDataCollection ( );
+    IRTXCRTXGroupManagerPtr GetRTXGroupManager ( );
+    IRTXCRTXBuddyManagerPtr GetRTXBuddyManager ( );
+    HRESULT Login (
+        _bstr_t Server,
+        long Port,
+        const _variant_t & Account,
+        _bstr_t Password );
+    VARIANT_BOOL GetTCP ( );
+    void PutTCP (
+        VARIANT_BOOL pVal );
+    HRESULT Test (
+        struct IRTXCRoot * RTXCRoot );
+    HRESULT Initialize ( );
+    _bstr_t GetAccount ( );
+    long GetUIN ( );
+    IRTXCModulePtr GetModule (
+        _bstr_t Identifier );
+    IRTXCPresencePtr GetPresence ( );
+    enum RTX_PRESENCE GetMyPresence ( );
+    void PutMyPresence (
+        enum RTX_PRESENCE pVal );
+    HRESULT Logout ( );
+    IRTXCModuleCollectionPtr GetModuleCollection ( );
+    IRTXCSessionManagerPtr GetSessionManager ( );
+    long GetCurrentServerTime ( );
+    IRTXCDataPtr GetToken ( );
+    IRTXCDataPtr GetSign ( );
+    IRTXCDataCollectionPtr GetServerInfo ( );
+    IRTXCMFCSupportPtr GetMFCSupport ( );
+    IRTXCMDSessionManagerPtr GetMDSessionManager ( );
+    HRESULT ModifyPassword (
+        _bstr_t OldPwd,
+        _bstr_t NewPwd );
+    HRESULT Uninitialize ( );
+    IRTXCDataPtr GetEnterpriseInfo ( );
+    HRESULT LoadPlugin (
+        _bstr_t Identifier );
+    HRESULT UnloadPlugin (
+        _bstr_t Identifier );
+    IRTXCLicensePtr GetLicense ( );
+    IRTXCExtBuddyManagerPtr GetRTXExtBuddyManager ( );
+    IRTXCExtGroupManagerPtr GetRTXExtGroupManager ( );
+    HRESULT LoadPluginEx (
+        _bstr_t Identifier,
+        enum RTXC_PLGUIN_LOAD_RESULT * Result );
+    HRESULT LoginSessionKey (
+        _bstr_t bstrServer,
+        long lPort,
+        const _variant_t & varAccount,
+        _bstr_t bstrSessionKey );
+    IRTXCEventCenterPtr GetRTXCEventCenter ( );
+    IRTXCExStatePtr GetExState ( );
+    enum RTXC_LOGIN_MODE GetLoginMode ( );
+    void PutLoginMode (
+        enum RTXC_LOGIN_MODE pVal );
+    unsigned long GetETrunk ( );
+    void PutETrunk (
+        unsigned long pVal );
+    long GetNetProxy ( );
+    IDispatchPtr CreateP2PMgr ( );
+    IRTXCDataPtr GetConnectionInfo ( );
+    IRTXCDataPtr GetServerAddress (
+        enum RTX_SERVER_TYPE Type );
+    IRTXCDataPtr GetBase64Sign ( );
+    HRESULT ShowTabs (
+        _bstr_t bstrGuid );
+    enum RTXC_LANGUAGE_TYPE GetLanguage ( );
+    IRTXCDataPtr GetNetProxyParam ( );
+    IRTXCDataPtr GetAVSetInfo ( );
+    HRESULT GetMainFrameWnd (
+        long * pWnd );
+    void GetServerIP (
+        long * pVal );
+    IRTXCDataPtr GetRCAToken ( );
+    long GetUseMultiFileServer ( );
+    IRTXCDataPtr GetOutSupServerInfo ( );
+    IDispatchPtr GetRTXIM ( );
+    IUnknownPtr GetRTXOrgInfo ( );
+    HRESULT PreExit (
+        VARIANT_BOOL * pbCanExit );
+    HRESULT ShowDialPad ( );
+    _bstr_t GetFileListPath ( );
+    long GetOptimizeLevel ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_CreateRTXCData (
+        struct IRTXCData * * RTXCData ) = 0;
+    virtual HRESULT __stdcall raw_CreateRTXCDataCollection (
+        struct IRTXCDataCollection * * RTXCDataCollection ) = 0;
+    virtual HRESULT __stdcall get_RTXGroupManager (
+        struct IRTXCRTXGroupManager * * pVal ) = 0;
+    virtual HRESULT __stdcall get_RTXBuddyManager (
+        struct IRTXCRTXBuddyManager * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_Login (
+        BSTR Server,
+        long Port,
+        VARIANT Account,
+        BSTR Password ) = 0;
+    virtual HRESULT __stdcall get_TCP (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_TCP (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall raw_Test (
+        struct IRTXCRoot * RTXCRoot ) = 0;
+    virtual HRESULT __stdcall raw_Initialize ( ) = 0;
+    virtual HRESULT __stdcall get_Account (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall get_UIN (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Module (
+        BSTR Identifier,
+        struct IRTXCModule * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Presence (
+        struct IRTXCPresence * * pVal ) = 0;
+    virtual HRESULT __stdcall get_MyPresence (
+        enum RTX_PRESENCE * pVal ) = 0;
+    virtual HRESULT __stdcall put_MyPresence (
+        enum RTX_PRESENCE pVal ) = 0;
+    virtual HRESULT __stdcall raw_Logout ( ) = 0;
+    virtual HRESULT __stdcall get_ModuleCollection (
+        struct IRTXCModuleCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_SessionManager (
+        struct IRTXCSessionManager * * pVal ) = 0;
+    virtual HRESULT __stdcall get_CurrentServerTime (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_Token (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Sign (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_ServerInfo (
+        struct IRTXCDataCollection * * pVal ) = 0;
+    virtual HRESULT __stdcall get_MFCSupport (
+        struct IRTXCMFCSupport * * pVal ) = 0;
+    virtual HRESULT __stdcall get_MDSessionManager (
+        struct IRTXCMDSessionManager * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ModifyPassword (
+        BSTR OldPwd,
+        BSTR NewPwd ) = 0;
+    virtual HRESULT __stdcall raw_Uninitialize ( ) = 0;
+    virtual HRESULT __stdcall get_EnterpriseInfo (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_LoadPlugin (
+        BSTR Identifier ) = 0;
+    virtual HRESULT __stdcall raw_UnloadPlugin (
+        BSTR Identifier ) = 0;
+    virtual HRESULT __stdcall get_License (
+        struct IRTXCLicense * * pVal ) = 0;
+    virtual HRESULT __stdcall get_RTXExtBuddyManager (
+        struct IRTXCExtBuddyManager * * ppVal ) = 0;
+    virtual HRESULT __stdcall get_RTXExtGroupManager (
+        struct IRTXCExtGroupManager * * ppVal ) = 0;
+    virtual HRESULT __stdcall raw_LoadPluginEx (
+        BSTR Identifier,
+        enum RTXC_PLGUIN_LOAD_RESULT * Result ) = 0;
+    virtual HRESULT __stdcall raw_LoginSessionKey (
+        BSTR bstrServer,
+        long lPort,
+        VARIANT varAccount,
+        BSTR bstrSessionKey ) = 0;
+    virtual HRESULT __stdcall get_RTXCEventCenter (
+        struct IRTXCEventCenter * * ppVal ) = 0;
+    virtual HRESULT __stdcall get_ExState (
+        struct IRTXCExState * * pVal ) = 0;
+    virtual HRESULT __stdcall get_LoginMode (
+        enum RTXC_LOGIN_MODE * pVal ) = 0;
+    virtual HRESULT __stdcall put_LoginMode (
+        enum RTXC_LOGIN_MODE pVal ) = 0;
+    virtual HRESULT __stdcall get_ETrunk (
+        unsigned long * pVal ) = 0;
+    virtual HRESULT __stdcall put_ETrunk (
+        unsigned long pVal ) = 0;
+    virtual HRESULT __stdcall get_NetProxy (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_CreateP2PMgr (
+        IDispatch * * P2PMgrEx ) = 0;
+    virtual HRESULT __stdcall get_ConnectionInfo (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_ServerAddress (
+        enum RTX_SERVER_TYPE Type,
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_Base64Sign (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ShowTabs (
+        BSTR bstrGuid ) = 0;
+    virtual HRESULT __stdcall get_Language (
+        enum RTXC_LANGUAGE_TYPE * pVal ) = 0;
+    virtual HRESULT __stdcall get_NetProxyParam (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_AVSetInfo (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetMainFrameWnd (
+        long * pWnd ) = 0;
+    virtual HRESULT __stdcall get_ServerIP (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall get_RCAToken (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_UseMultiFileServer (
+        long * pUseMultiServer ) = 0;
+    virtual HRESULT __stdcall get_OutSupServerInfo (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_RTXIM (
+        IDispatch * * ppVal ) = 0;
+    virtual HRESULT __stdcall get_RTXOrgInfo (
+        IUnknown * * ppVal ) = 0;
+    virtual HRESULT __stdcall raw_PreExit (
+        VARIANT_BOOL * pbCanExit ) = 0;
+    virtual HRESULT __stdcall raw_ShowDialPad ( ) = 0;
+    virtual HRESULT __stdcall get_FileListPath (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall raw_GetOptimizeLevel (
+        long * pOptimizeLevel ) = 0;
+};
+
+struct __declspec(uuid("7bac8791-6182-45e0-a067-30a040f36553"))
+IRTXCModuleSite : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDataCount))
+    long DataCount[];
+    __declspec(property(get=GetRTXCRoot))
+    IRTXCRootPtr RTXCRoot;
+    __declspec(property(get=GetGlobalModuleData))
+    IRTXCDataPtr GlobalModuleData;
+    __declspec(property(get=GetUserModuleData))
+    IRTXCDataPtr UserModuleData;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IRTXCDataPtr GetData (
+        _bstr_t Key,
+        VARIANT_BOOL Remove );
+    long GetDataCount (
+        _bstr_t Key );
+    HRESULT ViewData (
+        _bstr_t Key );
+    HRESULT ReceiveData (
+        struct IRTXCData * RTXCData );
+    IRTXCDataPtr GetGlobalModuleData ( );
+    IRTXCDataPtr GetUserModuleData ( );
+    HRESULT SendData (
+        _bstr_t Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags );
+    IRTXCRootPtr GetRTXCRoot ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_GetData (
+        BSTR Key,
+        VARIANT_BOOL Remove,
+        struct IRTXCData * * Data ) = 0;
+    virtual HRESULT __stdcall get_DataCount (
+        BSTR Key,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall raw_ViewData (
+        BSTR Key ) = 0;
+    virtual HRESULT __stdcall raw_ReceiveData (
+        struct IRTXCData * RTXCData ) = 0;
+    virtual HRESULT __stdcall get_GlobalModuleData (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall get_UserModuleData (
+        struct IRTXCData * * pVal ) = 0;
+    virtual HRESULT __stdcall raw_SendData (
+        BSTR Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags ) = 0;
+    virtual HRESULT __stdcall get_RTXCRoot (
+        struct IRTXCRoot * * pVal ) = 0;
+};
+
+struct __declspec(uuid("d7392fbc-bc0b-4865-9d77-9ef52d8762bc"))
+IRTXCModuleSite2 : IRTXCModuleSite
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SendData2 (
+        _bstr_t MsgType,
+        _bstr_t Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags );
+    HRESULT SendData3 (
+        long DisGroupId,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags );
+    HRESULT DisGroupGetVer ( );
+    HRESULT DisGroupGetBasic (
+        long DisGroupId );
+    HRESULT DisGroupGetUserlist (
+        long DisGroupId,
+        _bstr_t NextAccount );
+    IRTXCDataPtr GetData2 (
+        _bstr_t Key,
+        VARIANT_BOOL Remove,
+        VARIANT_BOOL Reverse );
+    HRESULT GetRCACorpVer (
+        unsigned char byteProtoVer,
+        long nRId );
+    HRESULT GetRCACorpUserRight (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        unsigned long * pdwUin,
+        unsigned long * pdwRId );
+    HRESULT GetRCACorpList (
+        unsigned char byteProtoVer,
+        unsigned long dwNextUIN );
+    HRESULT GetRCACorpUserState (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        unsigned long * pdwUin,
+        unsigned long * pdwRId );
+    HRESULT GetRCACorpFriends (
+        unsigned char byteProtoVer,
+        long nRId,
+        _bstr_t NextAccount );
+    HRESULT GetRCACorpFriendVer (
+        unsigned char byteProtoVer );
+    HRESULT GetRCAUserProfileVer (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId );
+    HRESULT GetRCAUserProfile (
+        unsigned char byteProtoVer,
+        _bstr_t lpszAccount,
+        unsigned long dwRId );
+    HRESULT QueryRCAUserExistence (
+        unsigned char byteProtoVer,
+        _bstr_t lpszAccount,
+        unsigned long dwRId );
+    HRESULT GetCorpUserListVer (
+        unsigned char byteProtoVer,
+        unsigned long dwRId,
+        unsigned long dwNextDeptId );
+    HRESULT GetCorpUserList (
+        unsigned char byteProtoVer,
+        unsigned long dwRId,
+        unsigned long dwDeptId,
+        unsigned long dwNextUIN );
+    HRESULT GetOrgFileInfo (
+        unsigned char byteProtoVer,
+        long nRId );
+    HRESULT GetExtConfig (
+        unsigned char byteProtoVer );
+    HRESULT GetRCACorpListVer (
+        unsigned char byteProtoVer );
+    HRESULT RCASendData (
+        unsigned char byteProtoVer,
+        _bstr_t Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags );
+    HRESULT SetIdentifyMode (
+        unsigned char byteProtoVer,
+        unsigned char byteVal );
+    HRESULT SetRCABasicInfo (
+        unsigned char byteProtoVer,
+        unsigned long dwUIN,
+        _bstr_t Nick,
+        _bstr_t Name,
+        unsigned char Gender,
+        _bstr_t Position,
+        unsigned char Age,
+        _bstr_t Mobile,
+        _bstr_t Email,
+        _bstr_t Phone );
+    HRESULT RCASearchUser (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szKeyWord );
+    HRESULT RCAApplyAddExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szUserAccount,
+        unsigned long dwBuddyBUin,
+        LPWSTR szBuddyAccount );
+    HRESULT RCAAddExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szUserAccount,
+        unsigned long dwBuddyBUin,
+        LPWSTR szBuddyAccount,
+        LPWSTR szAuthInfo );
+    HRESULT RCAReAddExtBuddy (
+        unsigned char byteProtoVer,
+        long bAllowAdd,
+        unsigned long dwBUIN,
+        LPWSTR szAccount,
+        unsigned long dwBuddyBUin,
+        unsigned long dwBuddyCUin,
+        LPWSTR szBuddyAccount,
+        LPWSTR szInfo );
+    HRESULT RCADelExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        unsigned long dwBuddyBUin,
+        unsigned long dwBuddyCUin,
+        LPWSTR szBuddyAccount );
+    HRESULT RCAGetToken (
+        unsigned char byteProtoVer );
+    HRESULT GetRCACorpUserRightEx (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId );
+    HRESULT GetRCAFriendMsg (
+        unsigned char byteProtoVer,
+        unsigned long dwNextBuin,
+        _bstr_t pAccounts );
+    HRESULT RCAGetMyExtInfo (
+        unsigned char byteProtoVer );
+    HRESULT RCASearchExactUser (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR lpszAccount );
+    HRESULT RCAQUeryExtUserStateEx (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId );
+    HRESULT RCAQuerySessionState (
+        unsigned char byteProtoVer,
+        _bstr_t Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags );
+
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall raw_SendData2 (
+        BSTR MsgType,
+        BSTR Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags ) = 0;
+    virtual HRESULT __stdcall raw_SendData3 (
+        long DisGroupId,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags ) = 0;
+    virtual HRESULT __stdcall raw_DisGroupGetVer ( ) = 0;
+    virtual HRESULT __stdcall raw_DisGroupGetBasic (
+        long DisGroupId ) = 0;
+    virtual HRESULT __stdcall raw_DisGroupGetUserlist (
+        long DisGroupId,
+        BSTR NextAccount ) = 0;
+    virtual HRESULT __stdcall raw_GetData2 (
+        BSTR Key,
+        VARIANT_BOOL Remove,
+        VARIANT_BOOL Reverse,
+        struct IRTXCData * * Data ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpVer (
+        unsigned char byteProtoVer,
+        long nRId ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpUserRight (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        unsigned long * pdwUin,
+        unsigned long * pdwRId ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpList (
+        unsigned char byteProtoVer,
+        unsigned long dwNextUIN ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpUserState (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        unsigned long * pdwUin,
+        unsigned long * pdwRId ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpFriends (
+        unsigned char byteProtoVer,
+        long nRId,
+        BSTR NextAccount ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpFriendVer (
+        unsigned char byteProtoVer ) = 0;
+    virtual HRESULT __stdcall raw_GetRCAUserProfileVer (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId ) = 0;
+    virtual HRESULT __stdcall raw_GetRCAUserProfile (
+        unsigned char byteProtoVer,
+        BSTR lpszAccount,
+        unsigned long dwRId ) = 0;
+    virtual HRESULT __stdcall raw_QueryRCAUserExistence (
+        unsigned char byteProtoVer,
+        BSTR lpszAccount,
+        unsigned long dwRId ) = 0;
+    virtual HRESULT __stdcall raw_GetCorpUserListVer (
+        unsigned char byteProtoVer,
+        unsigned long dwRId,
+        unsigned long dwNextDeptId ) = 0;
+    virtual HRESULT __stdcall raw_GetCorpUserList (
+        unsigned char byteProtoVer,
+        unsigned long dwRId,
+        unsigned long dwDeptId,
+        unsigned long dwNextUIN ) = 0;
+    virtual HRESULT __stdcall raw_GetOrgFileInfo (
+        unsigned char byteProtoVer,
+        long nRId ) = 0;
+    virtual HRESULT __stdcall raw_GetExtConfig (
+        unsigned char byteProtoVer ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpListVer (
+        unsigned char byteProtoVer ) = 0;
+    virtual HRESULT __stdcall raw_RCASendData (
+        unsigned char byteProtoVer,
+        BSTR Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags ) = 0;
+    virtual HRESULT __stdcall raw_SetIdentifyMode (
+        unsigned char byteProtoVer,
+        unsigned char byteVal ) = 0;
+    virtual HRESULT __stdcall raw_SetRCABasicInfo (
+        unsigned char byteProtoVer,
+        unsigned long dwUIN,
+        BSTR Nick,
+        BSTR Name,
+        unsigned char Gender,
+        BSTR Position,
+        unsigned char Age,
+        BSTR Mobile,
+        BSTR Email,
+        BSTR Phone ) = 0;
+    virtual HRESULT __stdcall raw_RCASearchUser (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szKeyWord ) = 0;
+    virtual HRESULT __stdcall raw_RCAApplyAddExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szUserAccount,
+        unsigned long dwBuddyBUin,
+        LPWSTR szBuddyAccount ) = 0;
+    virtual HRESULT __stdcall raw_RCAAddExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR szUserAccount,
+        unsigned long dwBuddyBUin,
+        LPWSTR szBuddyAccount,
+        LPWSTR szAuthInfo ) = 0;
+    virtual HRESULT __stdcall raw_RCAReAddExtBuddy (
+        unsigned char byteProtoVer,
+        long bAllowAdd,
+        unsigned long dwBUIN,
+        LPWSTR szAccount,
+        unsigned long dwBuddyBUin,
+        unsigned long dwBuddyCUin,
+        LPWSTR szBuddyAccount,
+        LPWSTR szInfo ) = 0;
+    virtual HRESULT __stdcall raw_RCADelExtBuddy (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        unsigned long dwBuddyBUin,
+        unsigned long dwBuddyCUin,
+        LPWSTR szBuddyAccount ) = 0;
+    virtual HRESULT __stdcall raw_RCAGetToken (
+        unsigned char byteProtoVer ) = 0;
+    virtual HRESULT __stdcall raw_GetRCACorpUserRightEx (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId ) = 0;
+    virtual HRESULT __stdcall raw_GetRCAFriendMsg (
+        unsigned char byteProtoVer,
+        unsigned long dwNextBuin,
+        BSTR pAccounts ) = 0;
+    virtual HRESULT __stdcall raw_RCAGetMyExtInfo (
+        unsigned char byteProtoVer ) = 0;
+    virtual HRESULT __stdcall raw_RCASearchExactUser (
+        unsigned char byteProtoVer,
+        unsigned long dwBUIN,
+        LPWSTR lpszAccount ) = 0;
+    virtual HRESULT __stdcall raw_RCAQUeryExtUserStateEx (
+        unsigned char byteProtoVer,
+        unsigned long dwCount,
+        BSTR * pAccounts,
+        unsigned long * pdwRId ) = 0;
+    virtual HRESULT __stdcall raw_RCAQuerySessionState (
+        unsigned char byteProtoVer,
+        BSTR Receiver,
+        struct IRTXCData * RTXCData,
+        enum RTXC_SEND_DATA_FLAG Flags ) = 0;
+};
+
+struct __declspec(uuid("deec9bd4-338a-42bd-b029-ddc142b1b11f"))
+IRTXCModuleSite3 : IRTXCModuleSite
+{};
+
+struct __declspec(uuid("e32dc330-3889-4d94-bfd6-39fc3a5432bd"))
+_IRTXCModuleSiteEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnDataReceived (
+        _bstr_t Key );
+    HRESULT OnViewData (
+        _bstr_t Key );
+    HRESULT OnSendDataResult (
+        enum RTXC_MODULE_SEND_DATA_RESULT Result,
+        const _variant_t & Extra );
+};
+
+struct __declspec(uuid("7c96e265-9231-431a-91e0-15a5846ff59a"))
+_IRTXCMFCSupportEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnPreTranslateMessage (
+        long MSGPointer,
+        VARIANT_BOOL * Handled );
+    HRESULT OnIdle (
+        long Count );
+};
+
+struct __declspec(uuid("8295917f-7481-438f-9bad-6afd6ef7ac7b"))
+_IRTXCRootEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnLoginResult (
+        enum RTXC_LOGIN_RESULT Result );
+    HRESULT OnMyPresenceChange (
+        enum RTXC_RESULT Result,
+        enum RTX_PRESENCE RTXPresence );
+    HRESULT OnLogoutResult (
+        enum RTXC_RESULT Result );
+    HRESULT OnAccountChange ( );
+    HRESULT OnPackageCome (
+        long Reserved );
+    HRESULT OnModifyPassword (
+        enum RTXC_MODIFY_PWD_RESULT Result );
+    HRESULT OnMsgCountChange (
+        long Count,
+        VARIANT_BOOL Forbid,
+        _bstr_t Identifier,
+        _bstr_t Key,
+        _bstr_t Sender );
+    HRESULT OnExitApp (
+        struct IRTXCData * pData,
+        VARIANT_BOOL * pbCanExit );
+};
+
+struct __declspec(uuid("dee9d53f-41d4-463d-b064-3baf402f85dd"))
+_IRTXCRTXGroupManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnGroupChange (
+        struct IRTXCRTXGroup * RTXCRTXGroup );
+    HRESULT OnGroupAdd (
+        struct IRTXCRTXGroup * RTXCRTXGroup );
+    HRESULT OnGroupRemove (
+        struct IRTXCRTXGroup * RTXCRTXGroup );
+    HRESULT OnBuddyAdd (
+        struct IRTXCRTXGroup * RTXCRTXGroup,
+        struct IRTXCRTXBuddy * RTXCRTXBuddy );
+    HRESULT OnBuddyRemove (
+        struct IRTXCRTXGroup * RTXCRTXGroup,
+        struct IRTXCRTXBuddy * RTXCRTXBuddy );
+};
+
+struct __declspec(uuid("43caa076-fe58-4951-9b25-18d87403642f"))
+RTXCRoot;
+    // [ default ] interface IRTXCRoot
+    // [ default, source ] dispinterface _IRTXCRootEvents
+
+struct __declspec(uuid("21c835c0-2073-4fbc-ba5c-df491340d257"))
+RTXCData;
+    // [ default ] interface IRTXCData
+
+struct __declspec(uuid("28681da9-6ba8-4ea3-bc9d-7da1a1b07021"))
+RTXCDataCollection;
+    // [ default ] interface IRTXCDataCollection
+
+struct __declspec(uuid("189f90d6-37cf-40df-a9e8-6f12637223ed"))
+RTXCRTXGroupManager;
+    // [ default ] interface IRTXCRTXGroupManager
+    // [ default, source ] dispinterface _IRTXCRTXGroupManagerEvents
+
+struct __declspec(uuid("d5b54235-cba4-4fcf-bea0-d830f796a21a"))
+RTXCRTXGroup;
+    // [ default ] interface IRTXCRTXGroup
+
+struct __declspec(uuid("a3c821fe-d270-470e-8535-f5797993a1ba"))
+_IRTXCRTXBuddyManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnBuddyProfileChange (
+        struct IRTXCRTXBuddy * RTXCRTXBuddy );
+    HRESULT OnQueryExistence (
+        _bstr_t Account,
+        VARIANT_BOOL Existence );
+};
+
+struct __declspec(uuid("bf4227b0-9654-48a6-b414-844a8813ac46"))
+RTXCRTXBuddyManager;
+    // [ default ] interface IRTXCRTXBuddyManager
+    // [ default, source ] dispinterface _IRTXCRTXBuddyManagerEvents
+
+struct __declspec(uuid("de015f73-c0ea-46de-9e9d-3374f3d0e209"))
+_IRTXCRTXBuddyEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnModifyProfile (
+        VARIANT_BOOL Success );
+};
+
+struct __declspec(uuid("b5350793-63cc-4f34-b6e3-631088a6bf85"))
+RTXCRTXBuddy;
+    // [ default ] interface IRTXCRTXBuddy
+    // [ default, source ] dispinterface _IRTXCRTXBuddyEvents
+
+struct __declspec(uuid("631cc46d-d197-415c-99bd-d83ff728c84d"))
+RTXCRTXGroupCollection;
+    // [ default ] interface IRTXCRTXGroupCollection
+
+struct __declspec(uuid("4d9002c2-6c26-4bbe-88f4-a1abc03c5c72"))
+RTXCRTXBuddyCollection;
+    // [ default ] interface IRTXCRTXBuddyCollection
+
+struct __declspec(uuid("70e181ab-7d63-4e9b-a2ca-31f77c50f833"))
+RTXCModuleSite;
+    // [ default ] interface IRTXCModuleSite
+    // [ default, source ] dispinterface _IRTXCModuleSiteEvents
+
+struct __declspec(uuid("474def81-d0e0-49f4-bc00-25a0e85e4d87"))
+RTXCModuleCollection;
+    // [ default ] interface IRTXCModuleCollection
+
+struct __declspec(uuid("eb354242-29f3-4fa5-a5e6-b3599973589d"))
+_IRTXCPresenceEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnPresenceChange (
+        _bstr_t Account,
+        enum RTX_PRESENCE RTXPresence );
+};
+
+struct __declspec(uuid("b5e82d5b-84dc-4a06-80a9-b4d0bb3b428c"))
+RTXCPresence;
+    // [ default ] interface IRTXCPresence
+    // [ default, source ] dispinterface _IRTXCPresenceEvents
+
+struct __declspec(uuid("84525e5c-a868-41b2-b01f-a42b7b12d7b0"))
+_IRTXCSessionManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnQuerySessionInfoComplete (
+        struct IRTXCSession * Session,
+        long Cookie );
+    HRESULT OnSessionAdd (
+        struct IRTXCSession * Session );
+    HRESULT OnRequestInitiator (
+        struct IRTXCSession * Session,
+        _bstr_t Participant );
+    HRESULT OnRegisterSession (
+        struct IRTXCSession * Session );
+};
+
+struct __declspec(uuid("8dd21917-e595-4db7-b0c5-4a0a0dc827b0"))
+RTXCSessionManager;
+    // [ default ] interface IRTXCSessionManager
+    // [ default, source ] dispinterface _IRTXCSessionManagerEvents
+
+struct __declspec(uuid("08191316-5140-48fd-8ae7-17f07f149be0"))
+_IRTXCSessionEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnParticipantChange (
+        _bstr_t Participant );
+    HRESULT OnTopicChange (
+        _bstr_t Topic );
+    HRESULT OnMessageCountChange (
+        long MsgCount );
+    HRESULT OnRequestInitiator (
+        _bstr_t Participant );
+    HRESULT OnRequestInitiatorComplete (
+        long nResult );
+    HRESULT OnInitiatorChange (
+        _bstr_t Initiator );
+    HRESULT OnStateChange (
+        enum RTXC_SESSION_STATE State );
+    HRESULT OnParticipantChangeState (
+        _bstr_t Participant,
+        enum RTXC_SESSION_STATE State );
+};
+
+struct __declspec(uuid("9b0f99bb-4b0e-4150-b257-600ec504a1ab"))
+RTXCSession;
+    // [ default ] interface IRTXCSession
+    // [ default, source ] dispinterface _IRTXCSessionEvents
+
+struct __declspec(uuid("eab6e590-6cbd-4531-926f-2429233a3b57"))
+RTXCSessionCollection;
+    // [ default ] interface IRTXCSessionCollection
+
+struct __declspec(uuid("0320cdc5-d075-493b-8792-28b1fb082fcf"))
+RTXCMFCSupport;
+    // [ default ] interface IRTXCMFCSupport
+    // [ default, source ] dispinterface _IRTXCMFCSupportEvents
+
+struct __declspec(uuid("277cdfbb-5ef6-449e-b09f-5b984c1ebdcf"))
+_IRTXCMDSessionManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnInvite (
+        struct IRTXCMDSession * Session,
+        _bstr_t VerifyString );
+    HRESULT OnCancel (
+        struct IRTXCMDSession * Session );
+};
+
+struct __declspec(uuid("cf2d1287-9dbb-44db-8b55-740ede1d4934"))
+RTXCMDSessionManager;
+    // [ default ] interface IRTXCMDSessionManager
+    // [ default, source ] dispinterface _IRTXCMDSessionManagerEvents
+
+struct __declspec(uuid("8244eed1-c5ac-4648-9606-df81e3891744"))
+_IRTXCMDSessionEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnAddParticipantComplete (
+        _bstr_t Participant,
+        long nResult );
+    HRESULT OnConnectComplete (
+        _bstr_t Participant,
+        long nResult );
+    HRESULT OnParticipantChange (
+        _bstr_t Participant );
+    HRESULT OnDisConnect (
+        _bstr_t Participant );
+    HRESULT OnBye (
+        _bstr_t Participant );
+    HRESULT OnRecvData (
+        _bstr_t Participant,
+        const _variant_t & Data );
+    HRESULT OnKickout (
+        _bstr_t Participant );
+};
+
+struct __declspec(uuid("0e9c9bb4-dac9-4550-af7f-67d099453e2c"))
+RTXCMDSession;
+    // [ default ] interface IRTXCMDSession
+    // [ default, source ] dispinterface _IRTXCMDSessionEvents
+
+struct __declspec(uuid("5e6697f9-a328-4b68-9c8f-36dd4c8ac009"))
+_IRTXCLicenseEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnConfigChanged (
+        VARIANT_BOOL IsSucceed,
+        _bstr_t Name,
+        const _variant_t & Val );
+};
+
+struct __declspec(uuid("1c8dc091-bc25-454c-adfb-0020ebe2e230"))
+RTXCLicense;
+    // [ default ] interface IRTXCLicense
+    // [ default, source ] dispinterface _IRTXCLicenseEvents
+
+struct __declspec(uuid("cdf6a4e0-0068-4c51-a3ff-8640df5abd0b"))
+_IRTXCExtBuddyEvents : IDispatch
+{};
+
+struct __declspec(uuid("50f66ea7-d35f-4cc3-8468-a2f993c2d35a"))
+RTXCExtBuddy;
+    // [ default ] interface IRTXCExtBuddy
+    // [ default, source ] dispinterface _IRTXCExtBuddyEvents
+
+struct __declspec(uuid("8ff094d3-e84c-40ea-afee-34b06b3f2ac5"))
+_IRTXCExtBuddyManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnExtBuddyChange (
+        struct IRTXCExtBuddy * RTXCExtBuddy );
+    HRESULT OnAddNewExtBuddy (
+        _bstr_t Account );
+};
+
+struct __declspec(uuid("38dfc555-083e-426e-ad32-91e3986e7b1a"))
+RTXCExtBuddyManager;
+    // [ default ] interface IRTXCExtBuddyManager
+    // [ default, source ] dispinterface _IRTXCExtBuddyManagerEvents
+
+struct __declspec(uuid("e413fdb8-e5d0-4336-8e17-6c536bbb7e19"))
+RTXCExtBuddyCollection;
+    // [ default ] interface IRTXCExtBuddyCollection
+
+struct __declspec(uuid("c69ed89f-4024-45e9-be5e-cd27700e5ef5"))
+_IRTXCExtGroupManagerEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnGroupChange (
+        struct IRTXCExtGroup * RTXCRTXGroup );
+    HRESULT OnGroupAdd (
+        struct IRTXCExtGroup * RTXCRTXGroup );
+    HRESULT OnGroupRemove (
+        struct IRTXCExtGroup * RTXCRTXGroup );
+    HRESULT OnBuddyAdd (
+        struct IRTXCExtGroup * RTXCRTXGroup,
+        struct IRTXCExtBuddy * RTXCRTXBuddy );
+    HRESULT OnBuddyRemove (
+        struct IRTXCExtGroup * RTXCRTXGroup,
+        struct IRTXCExtBuddy * RTXCRTXBuddy );
+};
+
+struct __declspec(uuid("31955751-57a1-4067-8f6d-0e4118c955fb"))
+_IRTXCExtGroupEvents : IDispatch
+{};
+
+struct __declspec(uuid("6d016796-a3f9-471b-84e9-af56e8eccb31"))
+RTXCExtGroup;
+    // [ default ] interface IRTXCExtGroup
+    // [ default, source ] dispinterface _IRTXCExtGroupEvents
+
+struct __declspec(uuid("a25ba79e-ebae-4471-b413-a492a1858db0"))
+RTXCExtGroupManager;
+    // [ default ] interface IRTXCExtGroupManager
+    // [ default, source ] dispinterface _IRTXCExtGroupManagerEvents
+
+struct __declspec(uuid("e1f89f78-2bbe-41d9-b91d-db379938145d"))
+_IRTXCExtGroupCollectionEvents : IDispatch
+{};
+
+struct __declspec(uuid("0ff28a4d-c74d-4fed-9d02-5ee14d02571e"))
+RTXCExtGroupCollection;
+    // [ default ] interface IRTXCExtGroupCollection
+    // [ default, source ] dispinterface _IRTXCExtGroupCollectionEvents
+
+struct __declspec(uuid("528935aa-74a9-425f-a632-51c4f3e3e458"))
+_IRTXCEventCenterEvents : IDispatch
+{};
+
+struct __declspec(uuid("5436fbfa-1386-4987-9899-26a6ed679571"))
+RTXCEventCenter;
+    // [ default ] interface IRTXCEventCenter
+    // [ default, source ] dispinterface _IRTXCEventCenterEvents
+
+struct __declspec(uuid("bc0ac144-423e-40d5-b369-9c5dd05360a1"))
+_DRTXOrg : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT SetShowStyle (
+        long lstyle );
+    char InitCtrl (
+        IDispatch * pModule );
+    long RemoveUsers (
+        long lDeptID );
+    char StartAnimate (
+        _bstr_t pszUserName );
+    char SetState (
+        _bstr_t pszUserName,
+        short nState );
+    char GetSelectedData (
+        struct IRTXCDataCollection * * RTXCDataCollection );
+    char SetTipsIcon (
+        _bstr_t Account,
+        struct IRTXCDataCollection * pIconDataCollection );
+    HRESULT AboutBox ( );
+};
+
+struct __declspec(uuid("7aefd014-cd49-40a4-8593-eba23bc4c6a3"))
+_DRTXOrgEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT LClickEvent (
+        const _variant_t & Val,
+        long nType );
+};
+
+struct __declspec(uuid("45846cfe-5908-458d-a6bc-bfef97cd39f6"))
+_IRTXCExStateEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT OnExStateChange (
+        _bstr_t bstrAccount,
+        _bstr_t bstrExStateName,
+        long lExState );
+};
+
+struct __declspec(uuid("abc82d40-6f0c-46bc-85a2-a0e73000140b"))
+RTXCExState;
+    // [ default ] interface IRTXCExState
+    // [ default, source ] dispinterface _IRTXCExStateEvents
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_RTXCAPILib =
+    {0x8f1a1787,0x6f50,0x4de4,{0x90,0xdc,0x8d,0xe5,0x66,0x3d,0xee,0x81}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCDataCollection =
+    {0xdb69c2a9,0xc6e4,0x4200,{0xb4,0x18,0x61,0xc1,0xed,0x53,0x24,0x99}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCData =
+    {0xb1251ee5,0x3843,0x4857,{0x9c,0xff,0xa9,0x7e,0xc2,0x0c,0x3d,0x85}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCLicense =
+    {0x93899b30,0x3ac4,0x4c33,{0x84,0x43,0x2e,0xcd,0xab,0xe8,0xce,0x5d}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXGroup =
+    {0x6e9340fd,0x535f,0x4997,{0xaa,0x6d,0x9e,0xa5,0x92,0x02,0xc5,0x8b}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXGroupCollection =
+    {0x33156ed4,0x7eda,0x40cd,{0x92,0xf4,0x16,0x0c,0x3d,0xcd,0x59,0x70}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXBuddyCollection =
+    {0x142275c8,0xb019,0x498b,{0x95,0x6d,0xb6,0xfd,0xa1,0x35,0xf6,0x9b}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXBuddy =
+    {0x2e38f2e2,0x5e73,0x4447,{0xa9,0xc8,0xf3,0xed,0x22,0xc0,0x5e,0x28}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtBuddy =
+    {0x07c671cc,0x7905,0x4301,{0x8a,0x7a,0xbe,0x29,0x2a,0x57,0x5f,0x60}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtGroupCollection =
+    {0x814eee2c,0x097c,0x41d3,{0x90,0x7d,0x04,0x3b,0x5f,0x96,0x92,0x1b}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtGroup =
+    {0x524ba3c7,0x4ac8,0x4bfc,{0x84,0xb4,0x63,0xdc,0xff,0xcc,0xe8,0x45}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtBuddyCollection =
+    {0x9d70436e,0xe766,0x4025,{0x9f,0xb5,0x23,0x43,0xd8,0xd1,0xd4,0x93}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXGroupManager =
+    {0x4df115ec,0x9ab2,0x4d75,{0xa6,0x10,0x5d,0x0b,0x58,0x12,0x9e,0x29}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRTXBuddyManager =
+    {0xb7a37633,0xd5e6,0x4472,{0xb0,0x0e,0xba,0x74,0x1f,0x6b,0x4a,0xe9}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCPresence =
+    {0x6b73cb5c,0xbaa6,0x4dbc,{0xb0,0xf6,0x75,0xdd,0xdc,0x66,0x14,0x7a}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExState =
+    {0xe4373fd6,0x6add,0x408b,{0xac,0xf2,0xe6,0x6d,0x79,0x6a,0xc6,0x08}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModuleCollection =
+    {0x2cb3b961,0xdc69,0x49d2,{0xaf,0x3c,0x7c,0xd7,0x3c,0x9b,0xfb,0xba}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCSession =
+    {0xf747e1c2,0xfe0b,0x4a3b,{0x99,0x06,0x22,0x80,0x4d,0xac,0xa8,0x44}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCSessionCollection =
+    {0xc4914eae,0x8d0d,0x4fb2,{0x8e,0x89,0x11,0xad,0xc8,0x09,0xfb,0x1d}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCSessionManager =
+    {0x91f9d53d,0xdc7e,0x4a10,{0xb1,0x09,0x20,0x97,0x2c,0x75,0x64,0xaa}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCMFCSupport =
+    {0x19ec1a99,0x03e4,0x463b,{0xa6,0x43,0x93,0xb8,0x87,0xb3,0x13,0x56}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCMDSessionManager =
+    {0x0fcebd34,0xf4f9,0x4244,{0xa9,0xa7,0xda,0x04,0xba,0xdb,0x80,0xa0}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCMDSession =
+    {0x3a9ca998,0x1def,0x4682,{0x89,0x76,0x08,0x92,0xff,0x66,0x13,0xd4}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtGroupManager =
+    {0x552b2c18,0xc977,0x4850,{0xbf,0x82,0x46,0xe8,0xbc,0x4c,0x9c,0x70}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtBuddyManager =
+    {0xbd43582c,0x4cdb,0x4168,{0x8d,0x12,0x02,0xba,0x2e,0x73,0xe1,0x9a}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCEventCenter =
+    {0xe4508738,0xc04a,0x4e1d,{0x86,0x1e,0x3c,0x70,0x10,0x49,0xe1,0x53}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCRoot =
+    {0x2c86c87b,0xa019,0x4204,{0xa7,0xd3,0xfb,0x4c,0x24,0x64,0xcf,0xe0}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModuleSite =
+    {0x7bac8791,0x6182,0x45e0,{0xa0,0x67,0x30,0xa0,0x40,0xf3,0x65,0x53}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModuleSite2 =
+    {0xd7392fbc,0xbc0b,0x4865,{0x9d,0x77,0x9e,0xf5,0x2d,0x87,0x62,0xbc}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCModuleSite3 =
+    {0xdeec9bd4,0x338a,0x42bd,{0xb0,0x29,0xdd,0xc1,0x42,0xb1,0xb1,0x1f}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCModuleSiteEvents =
+    {0xe32dc330,0x3889,0x4d94,{0xbf,0xd6,0x39,0xfc,0x3a,0x54,0x32,0xbd}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCMFCSupportEvents =
+    {0x7c96e265,0x9231,0x431a,{0x91,0xe0,0x15,0xa5,0x84,0x6f,0xf5,0x9a}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCRootEvents =
+    {0x8295917f,0x7481,0x438f,{0x9b,0xad,0x6a,0xfd,0x6e,0xf7,0xac,0x7b}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCRTXGroupManagerEvents =
+    {0xdee9d53f,0x41d4,0x463d,{0xb0,0x64,0x3b,0xaf,0x40,0x2f,0x85,0xdd}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRoot =
+    {0x43caa076,0xfe58,0x4951,{0x9b,0x25,0x18,0xd8,0x74,0x03,0x64,0x2f}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCData =
+    {0x21c835c0,0x2073,0x4fbc,{0xba,0x5c,0xdf,0x49,0x13,0x40,0xd2,0x57}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCDataCollection =
+    {0x28681da9,0x6ba8,0x4ea3,{0xbc,0x9d,0x7d,0xa1,0xa1,0xb0,0x70,0x21}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXGroupManager =
+    {0x189f90d6,0x37cf,0x40df,{0xa9,0xe8,0x6f,0x12,0x63,0x72,0x23,0xed}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXGroup =
+    {0xd5b54235,0xcba4,0x4fcf,{0xbe,0xa0,0xd8,0x30,0xf7,0x96,0xa2,0x1a}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCRTXBuddyManagerEvents =
+    {0xa3c821fe,0xd270,0x470e,{0x85,0x35,0xf5,0x79,0x79,0x93,0xa1,0xba}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXBuddyManager =
+    {0xbf4227b0,0x9654,0x48a6,{0xb4,0x14,0x84,0x4a,0x88,0x13,0xac,0x46}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCRTXBuddyEvents =
+    {0xde015f73,0xc0ea,0x46de,{0x9e,0x9d,0x33,0x74,0xf3,0xd0,0xe2,0x09}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXBuddy =
+    {0xb5350793,0x63cc,0x4f34,{0xb6,0xe3,0x63,0x10,0x88,0xa6,0xbf,0x85}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXGroupCollection =
+    {0x631cc46d,0xd197,0x415c,{0x99,0xbd,0xd8,0x3f,0xf7,0x28,0xc8,0x4d}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCRTXBuddyCollection =
+    {0x4d9002c2,0x6c26,0x4bbe,{0x88,0xf4,0xa1,0xab,0xc0,0x3c,0x5c,0x72}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCModuleSite =
+    {0x70e181ab,0x7d63,0x4e9b,{0xa2,0xca,0x31,0xf7,0x7c,0x50,0xf8,0x33}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCModuleCollection =
+    {0x474def81,0xd0e0,0x49f4,{0xbc,0x00,0x25,0xa0,0xe8,0x5e,0x4d,0x87}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCPresenceEvents =
+    {0xeb354242,0x29f3,0x4fa5,{0xa5,0xe6,0xb3,0x59,0x99,0x73,0x58,0x9d}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCPresence =
+    {0xb5e82d5b,0x84dc,0x4a06,{0x80,0xa9,0xb4,0xd0,0xbb,0x3b,0x42,0x8c}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCSessionManagerEvents =
+    {0x84525e5c,0xa868,0x41b2,{0xb0,0x1f,0xa4,0x2b,0x7b,0x12,0xd7,0xb0}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCSessionManager =
+    {0x8dd21917,0xe595,0x4db7,{0xb0,0xc5,0x4a,0x0a,0x0d,0xc8,0x27,0xb0}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCSessionEvents =
+    {0x08191316,0x5140,0x48fd,{0x8a,0xe7,0x17,0xf0,0x7f,0x14,0x9b,0xe0}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCSession =
+    {0x9b0f99bb,0x4b0e,0x4150,{0xb2,0x57,0x60,0x0e,0xc5,0x04,0xa1,0xab}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCSessionCollection =
+    {0xeab6e590,0x6cbd,0x4531,{0x92,0x6f,0x24,0x29,0x23,0x3a,0x3b,0x57}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCMFCSupport =
+    {0x0320cdc5,0xd075,0x493b,{0x87,0x92,0x28,0xb1,0xfb,0x08,0x2f,0xcf}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCMDSessionManagerEvents =
+    {0x277cdfbb,0x5ef6,0x449e,{0xb0,0x9f,0x5b,0x98,0x4c,0x1e,0xbd,0xcf}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCMDSessionManager =
+    {0xcf2d1287,0x9dbb,0x44db,{0x8b,0x55,0x74,0x0e,0xde,0x1d,0x49,0x34}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCMDSessionEvents =
+    {0x8244eed1,0xc5ac,0x4648,{0x96,0x06,0xdf,0x81,0xe3,0x89,0x17,0x44}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCMDSession =
+    {0x0e9c9bb4,0xdac9,0x4550,{0xaf,0x7f,0x67,0xd0,0x99,0x45,0x3e,0x2c}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCLicenseEvents =
+    {0x5e6697f9,0xa328,0x4b68,{0x9c,0x8f,0x36,0xdd,0x4c,0x8a,0xc0,0x09}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCLicense =
+    {0x1c8dc091,0xbc25,0x454c,{0xad,0xfb,0x00,0x20,0xeb,0xe2,0xe2,0x30}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtBuddyEvents =
+    {0xcdf6a4e0,0x0068,0x4c51,{0xa3,0xff,0x86,0x40,0xdf,0x5a,0xbd,0x0b}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtBuddy =
+    {0x50f66ea7,0xd35f,0x4cc3,{0x84,0x68,0xa2,0xf9,0x93,0xc2,0xd3,0x5a}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtBuddyManagerEvents =
+    {0x8ff094d3,0xe84c,0x40ea,{0xaf,0xee,0x34,0xb0,0x6b,0x3f,0x2a,0xc5}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtBuddyManager =
+    {0x38dfc555,0x083e,0x426e,{0xad,0x32,0x91,0xe3,0x98,0x6e,0x7b,0x1a}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtBuddyCollection =
+    {0xe413fdb8,0xe5d0,0x4336,{0x8e,0x17,0x6c,0x53,0x6b,0xbb,0x7e,0x19}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtGroupManagerEvents =
+    {0xc69ed89f,0x4024,0x45e9,{0xbe,0x5e,0xcd,0x27,0x70,0x0e,0x5e,0xf5}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtGroupEvents =
+    {0x31955751,0x57a1,0x4067,{0x8f,0x6d,0x0e,0x41,0x18,0xc9,0x55,0xfb}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtGroup =
+    {0x6d016796,0xa3f9,0x471b,{0x84,0xe9,0xaf,0x56,0xe8,0xec,0xcb,0x31}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtGroupManager =
+    {0xa25ba79e,0xebae,0x4471,{0xb4,0x13,0xa4,0x92,0xa1,0x85,0x8d,0xb0}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtGroupCollectionEvents =
+    {0xe1f89f78,0x2bbe,0x41d9,{0xb9,0x1d,0xdb,0x37,0x99,0x38,0x14,0x5d}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtGroupCollection =
+    {0x0ff28a4d,0xc74d,0x4fed,{0x9d,0x02,0x5e,0xe1,0x4d,0x02,0x57,0x1e}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCEventCenterEvents =
+    {0x528935aa,0x74a9,0x425f,{0xa6,0x32,0x51,0xc4,0xf3,0xe3,0xe4,0x58}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCEventCenter =
+    {0x5436fbfa,0x1386,0x4987,{0x98,0x99,0x26,0xa6,0xed,0x67,0x95,0x71}};
+extern "C" const GUID __declspec(selectany) DIID__DRTXOrg =
+    {0xbc0ac144,0x423e,0x40d5,{0xb3,0x69,0x9c,0x5d,0xd0,0x53,0x60,0xa1}};
+extern "C" const GUID __declspec(selectany) DIID__DRTXOrgEvents =
+    {0x7aefd014,0xcd49,0x40a4,{0x85,0x93,0xeb,0xa2,0x3b,0xc4,0xc6,0xa3}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExStateEvents =
+    {0x45846cfe,0x5908,0x458d,{0xa6,0xbc,0xbf,0xef,0x97,0xcd,0x39,0xf6}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExState =
+    {0xabc82d40,0x6f0c,0x46bc,{0x85,0xa2,0xa0,0xe7,0x30,0x00,0x14,0x0b}};
+
+//
+// Wrapper method implementations
+//
+
+#include "RTXCAPI.tli"
+
+#pragma pack(pop)

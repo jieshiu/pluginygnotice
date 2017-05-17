@@ -1,0 +1,60 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (4033c644).
+//
+// YgTabFlash.tlh
+//
+// C++ source equivalent of Win32 type library ../YgTabFlash/Debug/YgTabFlash.tlb
+// compiler-generated file created 04/12/16 at 12:58:09 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("df1a4646-bb8e-49cb-ade0-09f97925ef18"))
+/* dispinterface */ _DYgTabFlash;
+struct __declspec(uuid("0825e61a-bb46-45d3-8d94-0de1bbaf41a9"))
+/* dispinterface */ _DYgTabFlashEvents;
+struct /* coclass */ YgTabFlash;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DYgTabFlash, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_DYgTabFlashEvents, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("df1a4646-bb8e-49cb-ade0-09f97925ef18"))
+_DYgTabFlash : IDispatch
+{};
+
+struct __declspec(uuid("0825e61a-bb46-45d3-8d94-0de1bbaf41a9"))
+_DYgTabFlashEvents : IDispatch
+{};
+
+struct __declspec(uuid("2866b93d-ef7b-4c1a-8e00-4d626f3203f8"))
+YgTabFlash;
+    // [ default ] dispinterface _DYgTabFlash
+    // [ default, source ] dispinterface _DYgTabFlashEvents
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_YGTABFLASHLib =
+    {0xf27c1818,0xd0a6,0x4e4e,{0xb4,0x27,0xa5,0x1f,0x77,0xae,0x3c,0xd7}};
+extern "C" const GUID __declspec(selectany) DIID__DYgTabFlash =
+    {0xdf1a4646,0xbb8e,0x49cb,{0xad,0xe0,0x09,0xf9,0x79,0x25,0xef,0x18}};
+extern "C" const GUID __declspec(selectany) DIID__DYgTabFlashEvents =
+    {0x0825e61a,0xbb46,0x45d3,{0x8d,0x94,0x0d,0xe1,0xbb,0xaf,0x41,0xa9}};
+extern "C" const GUID __declspec(selectany) CLSID_YgTabFlash =
+    {0x2866b93d,0xef7b,0x4c1a,{0x8e,0x00,0x4d,0x62,0x6f,0x32,0x03,0xf8}};
+
+#pragma pack(pop)

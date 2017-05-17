@@ -1,0 +1,52 @@
+// PlugInYgNotice.odl : type library source for PlugInYgNotice.dll
+	[
+		object,
+		uuid(796BE106-8710-4333-A292-74AFBD381146),
+		dual,
+		helpstring("IRTXEvent Interface"),
+		pointer_default(unique)
+	]
+	interface IRTXEvent : IDispatch
+	{
+	};
+import "oaidl.idl";
+
+// This file will be processed by the MIDL compiler to produce the
+// type library (PlugInYgNotice.tlb).
+
+[ uuid(FBEC9369-E16E-4E27-BF30-6EB4BE711979), version(1.0) ]
+library PlugInYgNotice
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	importlib("..\..\..\tlb\RTXCModuleInterface.tlb");
+
+	[ uuid(31BCB913-6B09-476A-9E94-5E97EB997223) ]
+	coclass PlugInYgNoticeModule
+	{
+		[default] interface IRTXCModule;
+	};
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+	[
+		uuid(4B4EAD9B-FB9C-4855-8578-D039FC4D7AB1),
+		helpstring("_IRTXEventEvents Interface")
+	]
+	dispinterface _IRTXEventEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method OnModuleEvent")] HRESULT OnModuleEvent(BSTR recdata);
+	};
+
+	[
+		uuid(07B5E93F-635F-47C2-8CA6-68BD98EDE8DF),
+		helpstring("RTXEvent Class")
+	]
+	coclass RTXEvent
+	{
+		[default] interface IRTXEvent;
+		[default, source] dispinterface _IRTXEventEvents;
+	};
+};

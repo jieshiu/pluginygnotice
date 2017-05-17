@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="gb2312"?>
+<RTXMsgTypes>
+	<MsgType GUID="{89E5E583-202B-43A5-8639-101EA58473BB}" Title="超级消息" IconFile="S017.ico" Enabled="1">
+	YgMsgMgrOcx.ocx
+	</MsgType>
+</RTXMsgTypes>

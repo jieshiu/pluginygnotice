@@ -1,0 +1,646 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (5975eb0a).
+//
+// ClientObjects.tlh
+//
+// C++ source equivalent of Win32 type library ../../../tlb/ClientObjects.tlb
+// compiler-generated file created 04/11/16 at 15:43:44 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//  #import "C:\Program Files (x86)\Tencent\RTXC\rtxcapi.dll"
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a0890bfc-15f4-461d-8646-389a6c8af928"))
+/* dual interface */ IRTXCExtraInfoShow;
+struct __declspec(uuid("2844aaf9-aeb6-4dc6-89c4-f2d2edc7b484"))
+/* dispinterface */ _IRTXCExtraInfoShowEvents;
+struct /* coclass */ RTXCExtraInfoShow;
+struct __declspec(uuid("7b7d4d1b-c1c3-40cd-9fe9-fae50f9103ba"))
+/* dual interface */ IRTXCUserTips;
+struct __declspec(uuid("60fff9d1-7bfe-4956-a91c-a34a9622379f"))
+/* dispinterface */ _IRTXCUserTipsEvents;
+struct /* coclass */ RTXCUserTips;
+struct __declspec(uuid("a7b4e2b4-0aac-46ab-9324-5fd0ab963c24"))
+/* dual interface */ IRTXCDeptPortal;
+struct __declspec(uuid("fdfd3f16-d229-4700-911d-2010f58c2e85"))
+/* dispinterface */ _IRTXCDeptPortalEvents;
+struct /* coclass */ RTXCDeptPortal;
+struct __declspec(uuid("a9ee332e-105a-45e2-a5e7-7a2ffe9a9e43"))
+/* dual interface */ IRTXCUICommand;
+struct __declspec(uuid("e065f019-af95-4fc0-9f93-50ae6130b75b"))
+/* dual interface */ IRTXCMenu;
+struct __declspec(uuid("8cd6fe52-dad5-4b87-817c-c96715635692"))
+/* dual interface */ IClientObjectsModule;
+struct __declspec(uuid("28b750a2-06c4-425f-be9a-7ebc8731472a"))
+/* dual interface */ ITabBaseMgr;
+struct __declspec(uuid("67559248-d777-4136-8ec1-b242eb310249"))
+/* dual interface */ IRTXCNotification;
+struct __declspec(uuid("6727fbba-9abb-4f73-8a47-39e9e1ea0bbd"))
+/* dual interface */ IRTXCSubItem;
+struct __declspec(uuid("e685bc36-0ebc-4fa8-8177-d5e430183f1b"))
+/* dispinterface */ _IRTXCNotificationEvents;
+struct /* coclass */ ClientObjectsModule;
+struct /* coclass */ RTXCMenu;
+struct /* coclass */ RTXCUICommand;
+struct /* coclass */ RTXCNotification;
+struct /* coclass */ TabBaseMgr;
+struct __declspec(uuid("30434d7b-690b-45ff-96ed-c6775624d12e"))
+/* dispinterface */ _IRTXCSubItemEvents;
+struct __declspec(uuid("838974fe-d2e0-43c5-8a80-22900ac42c82"))
+/* dual interface */ IRTXSpecialTipWnd;
+struct /* coclass */ RTXCSubItem;
+struct /* coclass */ RTXSpecialTipWnd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IRTXCExtraInfoShow, __uuidof(IRTXCExtraInfoShow));
+_COM_SMARTPTR_TYPEDEF(_IRTXCExtraInfoShowEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXCUserTips, __uuidof(IRTXCUserTips));
+_COM_SMARTPTR_TYPEDEF(_IRTXCUserTipsEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXCDeptPortal, __uuidof(IRTXCDeptPortal));
+_COM_SMARTPTR_TYPEDEF(_IRTXCDeptPortalEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXCUICommand, __uuidof(IRTXCUICommand));
+_COM_SMARTPTR_TYPEDEF(IRTXCMenu, __uuidof(IRTXCMenu));
+_COM_SMARTPTR_TYPEDEF(IClientObjectsModule, __uuidof(IClientObjectsModule));
+_COM_SMARTPTR_TYPEDEF(ITabBaseMgr, __uuidof(ITabBaseMgr));
+_COM_SMARTPTR_TYPEDEF(IRTXCNotification, __uuidof(IRTXCNotification));
+_COM_SMARTPTR_TYPEDEF(IRTXCSubItem, __uuidof(IRTXCSubItem));
+_COM_SMARTPTR_TYPEDEF(_IRTXCNotificationEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(_IRTXCSubItemEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IRTXSpecialTipWnd, __uuidof(IRTXSpecialTipWnd));
+
+//
+// Type library items
+//
+
+enum RTXC_UI_TYPE
+{
+    RTXC_UI_TYPE_ORG_STRUCT_BAR = 0,
+    RTXC_UI_TYPE_ORG_STRUCT_GROUP = 1,
+    RTXC_UI_TYPE_ORG_STRUCT_USER = 2,
+    RTXC_UI_TYPE_ORG_STRUCT_BLANK = 3,
+    RTXC_UI_TYPE_ALL_CONTACTS_BAR = 4,
+    RTXC_UI_TYPE_ALL_CONTACTS_GROUP = 5,
+    RTXC_UI_TYPE_MYCONTACTS_USERDEFINEDGROUP_USER = 6,
+    RTXC_UI_TYPE_RECENTCONTACTS_SESSIONS_USER = 7,
+    RTXC_UI_TYPE_ALL_CONTACTS_DISCUSS_GROUP = 8,
+    RTXC_UI_TYPE_ALL_CONTACTS_RECENT = 9,
+    RTXC_UI_TYPE_ALL_CONTACTS_MINE = 10,
+    RTXC_UI_TYPE_ALL_CONTACTS_BLANK = 11,
+    RTXC_UI_TYPE_USER_DEFINED_ROOT = 12,
+    RTXC_UI_TYPE_DAILY_DEPT_ROOT = 13,
+    RTXC_UI_TYPE_USER_MOBILEICON = 14,
+    RTXC_UI_TYPE_USER_STATE_WATCHER = 15,
+    RTXC_UI_TYPE_MOBILEBAR_USER = 16,
+    RTXC_UI_TYPE_MOBILEBAR_BLANK = 17,
+    RTXC_UI_TYPE_MOBILEBAR_GROUP = 18,
+    RTXC_UI_TYPE_MOBILEBAR_BAR = 19,
+    RTXC_UI_TYPE_MULTISELECTED = 20,
+    RTXC_UI_TYPE_MAINFRAME_LOGIN = 21,
+    RTXC_UI_TYPE_MAINFRAME_PANEL_USER = 22,
+    RTXC_UI_TYPE_MAINFRAME_YOUCANDO = 23,
+    RTXC_UI_TYPE_MINIBAR = 24,
+    RTXC_UI_TYPE_BUDDY_SUBITEM = 25,
+    RTXC_UI_TYPE_CONTACTBAR_BUDDY_SUBITEM = 26,
+    RTXC_UI_TYPE_MAINFRAME_FILE = 27,
+    RTXC_UI_TYPE_MAINFRAME_CONTACT = 28,
+    RTXC_UI_TYPE_MAINFRAME_ACTION = 29,
+    RTXC_UI_TYPE_PHONE_DIALER = 30,
+    RTXC_UI_TYPE_DRAGFILETOSEND = 31,
+    RTXC_UI_TYPE_INVALID = 32,
+    RTXC_UI_TYPE_MAINFRAME_BEFORE_LOGIN = 33,
+    RTXC_UI_TYPE_ALLINONE_USER_PIC = 34,
+    RTXC_UI_TYPE_ALLINONE_NORMAL_ADDTO = 35,
+    RTXC_UI_TYPE_ALLINONE_MULTI_ADDTO = 36,
+    RTXC_UI_TYPE_MAINFRAME_BEFORE_LOGIN_STATUS = 37,
+    RTXC_UI_TYPE_ORG_USER_MOBILEICON = 38,
+    RTXC_UI_TYPE_IM_THIRDPARTY = 39,
+    RTXC_UI_TYPE_RTXNAME = 40,
+    RTXC_UI_TYPE_RTXNAME_GROUP = 41,
+    RTXC_UI_TYPE_STATEBAR_ORGUPDATE = 42,
+    RTXC_UI_TYPE_ACTION = 43,
+    RTXC_UI_TYPE_ALLINONE_MOBILE = 44,
+    RTXC_UI_TYPE_ALLINONE_PHONE = 45,
+    RTXC_UI_TYPE_ALL_CONTACTS_DISGROUP = 46,
+    RTXC_UI_TYPY_RCA_BUDDY = 47,
+    RTXC_UI_TYPY_RCA_SEARCHEDBUDDY = 48,
+    RTXC_UI_TYPY_RCA_FRIEND = 49,
+    RTXC_UI_TYPE_RCA_AIO_BUDDY = 50,
+    RTXC_UI_TYPE_ALLINONE_RCAUSER_PIC = 51,
+    RTXC_UI_TYPE_ALL_CONTACTS_RCADISCUSS_GROUP = 52,
+    RTXC_UI_TYPY_RCA_RECENTCONTACTS_BUDDY = 53,
+    RTXC_UI_TYPY_RCA_ORGBUDDY = 54,
+    RTXC_UI_TYPE_DEPT_PORTAL_SUBITEM = 55,
+    RTXC_UI_TYPE_MAINFRAME_HELP = 56,
+    RTXC_UI_TYPE_ALLINONE_EMAIL = 57,
+    RTXC_UI_TYPE_RCADISCUSS_USERDEFINEGROUP = 58,
+    RTXC_UI_TYPE_RECENTCONTACT_DISGROUP = 59,
+    RTXC_UI_TYPE_ALLINONE_NORMAL_ADDTO_RCA = 60,
+    RTXC_UI_TYPE_ALLINONE_MULTI_ADDTO_RCA = 61,
+    RTXC_UI_TYPE_MAX = 62
+};
+
+enum RTXC_MENU_ITEM_SEPARATOR
+{
+    RTXC_MENU_ITEM_SEPARATOR_NONE = 0,
+    RTXC_MENU_ITEM_SEPARATOR_ABOVE = 1,
+    RTXC_MENU_ITEM_SEPARATOR_BELOW = 2,
+    RTXC_MENU_ITEM_SEPARATOR_ABOVE_AND_BELOW = 3
+};
+
+enum RTXC_UI_ITEM_STATE
+{
+    RTXC_UI_ITEM_STATE_NORMAL = 0,
+    RTXC_UI_ITEM_STATE_DISABLED = 1,
+    RTXC_UI_ITEM_STATE_CHECKED = 2,
+    RTXC_UI_ITEM_STATE_DISABLED_CHECKED = 4,
+    RTXC_UI_ITEM_STATE_HIDE = 8,
+    RTXC_UI_ITEM_STATE_ADD = 16,
+    RTXC_UI_ITEM_STATE_DELETE = 32
+};
+
+enum RTXC_QQBAR_SUBITEM_LAYOUT
+{
+    RTXC_QQBAR_SUBITEM_LAYOUT_NORMAL = 0,
+    RTXC_QQBAR_SUBITEM_LAYOUT_FIRST = 1,
+    RTXC_QQBAR_SUBITEM_LAYOUT_LAST = 2
+};
+
+enum RTXC_MENU_LAYOUT
+{
+    RTXC_MENU_ITEM_LAYOUT_TOP = 0,
+    RTXC_MENU_ITEM_LAYOUT_NORMAL = 1,
+    RTXC_MENU_ITEM_LAYOUT_BOTTOM = 2
+};
+
+enum SUB_ITEM_TYPE
+{
+    SUB_ITEM_TYPE_INVALID = -1,
+    SUB_ITEM_TYPE_MenuRClk = 0,
+    SUB_ITEM_TYPE_MenuDropDown = 1
+};
+
+enum SUBITEM_ACTION_TYPE
+{
+    SUBITEM_ACTION_TYPE_MENUPOPUP = 0,
+    SUBITEM_ACTION_TYPE_RUN = 1
+};
+
+enum EXTRAINFO_SHOW_TYPE
+{
+    EXTRAINFO_SHOW_TYPE_IM = 0,
+    EXTRAICON_SHOW_TYPE_IM = 1,
+    EXTRAICON_SHOW_TYPE_IM_TOPRIGHT = 2,
+    EXTRAICON_SHOW_TYPE_IM_TOPLEFT = 3,
+    EXTRAICON_MODIFY_TYPE_IM = 4,
+    EXTRAICON_MODIFY_TYPE_IM_TOPRIGHT = 5,
+    EXTRAICON_MODIFY_TYPE_IM_TOPLEFT = 6
+};
+
+enum USERTIPS_CLICK_TYPE
+{
+    USERTIPS_CLICK_TYPE_ICON = 0
+};
+
+enum MAINFRAME_TABTYPE
+{
+    MFTT_ORGSTRUCT = 1,
+    MFTT_MOBILE = 2,
+    MFTT_OTHER = 3
+};
+
+struct __declspec(uuid("a0890bfc-15f4-461d-8646-389a6c8af928"))
+IRTXCExtraInfoShow : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SetExtraInfo (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall ExtraInfoInvoked (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall ExtraInfoActived (
+        BSTR Account,
+        VARIANT varType ) = 0;
+    virtual HRESULT __stdcall SetExtraIcon (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall ExtraIconInvoked (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall SetAIOCustomPhoto (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall ExtraIconExInvoked (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+    virtual HRESULT __stdcall ModifyExtraIcon (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+};
+
+struct __declspec(uuid("2844aaf9-aeb6-4dc6-89c4-f2d2edc7b484"))
+_IRTXCExtraInfoShowEvents : IDispatch
+{};
+
+struct __declspec(uuid("63a5aec8-28ba-4304-ae43-a6a463ae7fca"))
+RTXCExtraInfoShow;
+    // [ default ] interface IRTXCExtraInfoShow
+    // [ default, source ] dispinterface _IRTXCExtraInfoShowEvents
+
+struct __declspec(uuid("7b7d4d1b-c1c3-40cd-9fe9-fae50f9103ba"))
+IRTXCUserTips : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall UserTipsActived (
+        BSTR Account ) = 0;
+    virtual HRESULT __stdcall AddUserTipsIcon (
+        BSTR Account,
+        struct IRTXCDataCollection * IconData ) = 0;
+    virtual HRESULT __stdcall MouseClick (
+        BSTR Account,
+        VARIANT varType,
+        VARIANT varExtraInfo ) = 0;
+};
+
+struct __declspec(uuid("60fff9d1-7bfe-4956-a91c-a34a9622379f"))
+_IRTXCUserTipsEvents : IDispatch
+{};
+
+struct __declspec(uuid("a497f762-5c2e-444c-8186-d93bc9adbdad"))
+RTXCUserTips;
+    // [ default ] interface IRTXCUserTips
+    // [ default, source ] dispinterface _IRTXCUserTipsEvents
+
+struct __declspec(uuid("a7b4e2b4-0aac-46ab-9324-5fd0ab963c24"))
+IRTXCDeptPortal : IDispatch
+{};
+
+struct __declspec(uuid("fdfd3f16-d229-4700-911d-2010f58c2e85"))
+_IRTXCDeptPortalEvents : IDispatch
+{};
+
+struct __declspec(uuid("9f61a206-682e-4433-885d-66efbf5888dc"))
+RTXCDeptPortal;
+    // [ default ] interface IRTXCDeptPortal
+    // [ default, source ] dispinterface _IRTXCDeptPortalEvents
+
+struct __declspec(uuid("a9ee332e-105a-45e2-a5e7-7a2ffe9a9e43"))
+IRTXCUICommand : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall OnInvoke (
+        enum RTXC_UI_TYPE UIType,
+        long Id,
+        VARIANT Parameter ) = 0;
+    virtual HRESULT __stdcall OnQueryState (
+        enum RTXC_UI_TYPE UIType,
+        long Id,
+        VARIANT Parameter,
+        BSTR * Text,
+        enum RTXC_UI_ITEM_STATE * State ) = 0;
+};
+
+struct __declspec(uuid("e065f019-af95-4fc0-9f93-50ae6130b75b"))
+IRTXCMenu : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall AddItem (
+        VARIANT_BOOL IsGroup,
+        long ParentId,
+        enum RTXC_UI_TYPE Type,
+        long Id,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR Text,
+        BSTR IconFile,
+        enum RTXC_MENU_ITEM_SEPARATOR Separator,
+        long Level,
+        VARIANT_BOOL IsDefault ) = 0;
+    virtual HRESULT __stdcall AddItemEx (
+        VARIANT_BOOL IsGroup,
+        long ParentId,
+        enum RTXC_UI_TYPE Type,
+        long Id,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR Text,
+        BSTR IconFile,
+        enum RTXC_MENU_ITEM_SEPARATOR Separator,
+        long Level,
+        VARIANT_BOOL IsDefault ) = 0;
+    virtual HRESULT __stdcall CancelLastPop ( ) = 0;
+    virtual HRESULT __stdcall Popup2 (
+        long PariantWnd,
+        VARIANT_BOOL IsAutoRun,
+        enum RTXC_UI_TYPE Type,
+        VARIANT Parameter,
+        long X,
+        long Y ) = 0;
+    virtual HRESULT __stdcall DelItem (
+        enum RTXC_UI_TYPE Type,
+        long Id,
+        struct IRTXCUICommand * RTXCUICommand ) = 0;
+    virtual HRESULT __stdcall Popup (
+        VARIANT_BOOL IsAutoRun,
+        enum RTXC_UI_TYPE Type,
+        VARIANT Parameter,
+        long X,
+        long Y ) = 0;
+    virtual HRESULT __stdcall AddItem2 (
+        VARIANT_BOOL IsGroup,
+        long ParentId,
+        VARIANT Types,
+        long Id,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR Text,
+        BSTR IconFile,
+        enum RTXC_MENU_ITEM_SEPARATOR Separator,
+        long Level,
+        VARIANT_BOOL IsDefault ) = 0;
+    virtual HRESULT __stdcall AddItem2Ex (
+        VARIANT_BOOL IsGroup,
+        long ParentId,
+        VARIANT Types,
+        long Id,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR Text,
+        BSTR IconFile,
+        enum RTXC_MENU_ITEM_SEPARATOR Separator,
+        long Level,
+        VARIANT_BOOL IsDefault ) = 0;
+    virtual HRESULT __stdcall Popup3 (
+        long PariantWnd,
+        VARIANT_BOOL IsAutoRun,
+        enum RTXC_UI_TYPE Type,
+        VARIANT Parameter,
+        long X,
+        long Y ) = 0;
+    virtual HRESULT __stdcall RegisterCtMenuType (
+        BSTR bstrMenuType,
+        long * lRet ) = 0;
+    virtual HRESULT __stdcall GetCtMenuType (
+        BSTR bstrMenuType,
+        long * lMenuTypeIndex ) = 0;
+    virtual HRESULT __stdcall IsMenuExist (
+        enum RTXC_UI_TYPE Type,
+        VARIANT_BOOL * pbRet ) = 0;
+    virtual HRESULT __stdcall Popup4 (
+        VARIANT_BOOL IsAutoRun,
+        enum RTXC_UI_TYPE Type,
+        VARIANT Parameter,
+        long X,
+        long Y ) = 0;
+};
+
+struct __declspec(uuid("8cd6fe52-dad5-4b87-817c-c96715635692"))
+IClientObjectsModule : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_Object (
+        BSTR Identifier,
+        IDispatch * * pVal ) = 0;
+};
+
+struct __declspec(uuid("28b750a2-06c4-425f-be9a-7ebc8731472a"))
+ITabBaseMgr : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Init (
+        IUnknown * pMainFrame,
+        wireHWND hParent ) = 0;
+    virtual HRESULT __stdcall GetMainFrameWnd (
+        wireHWND * pMainFrameWnd ) = 0;
+    virtual HRESULT __stdcall AddTab (
+        unsigned long dwTabID,
+        LPWSTR strTabName,
+        wireHWND hWnd,
+        LPWSTR strIconName,
+        GUID guid ) = 0;
+    virtual HRESULT __stdcall DeleteTab (
+        unsigned long dwTabID ) = 0;
+    virtual HRESULT __stdcall GetTabInfoList (
+        IDispatch * * RTXCDataCollection ) = 0;
+    virtual HRESULT __stdcall AddTab2 (
+        unsigned long dwTabID,
+        LPWSTR strTabName,
+        wireHWND hWnd,
+        LPWSTR strIconName,
+        long X,
+        long Y,
+        GUID guid ) = 0;
+    virtual HRESULT __stdcall StartTabFlash (
+        GUID guid,
+        int nFeq ) = 0;
+    virtual HRESULT __stdcall StopTabFlash (
+        GUID guid ) = 0;
+    virtual HRESULT __stdcall GetCurrentTab (
+        enum MAINFRAME_TABTYPE * pMFTabType ) = 0;
+};
+
+struct __declspec(uuid("67559248-d777-4136-8ec1-b242eb310249"))
+IRTXCNotification : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Show (
+        BSTR Key,
+        struct IRTXCData * Data ) = 0;
+    virtual HRESULT __stdcall Hide (
+        BSTR Key ) = 0;
+    virtual HRESULT __stdcall Update (
+        BSTR moduleId,
+        BSTR Key,
+        int iType,
+        BSTR content ) = 0;
+};
+
+struct __declspec(uuid("6727fbba-9abb-4f73-8a47-39e9e1ea0bbd"))
+IRTXCSubItem : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall AddItem (
+        enum RTXC_UI_TYPE enType,
+        BSTR bstrGroupName,
+        long lID,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR bstrCaption,
+        BSTR IconPath,
+        enum RTXC_UI_TYPE enMenuUIType,
+        enum SUB_ITEM_TYPE enSubItemType ) = 0;
+    virtual HRESULT __stdcall DelItem (
+        enum RTXC_UI_TYPE enType,
+        BSTR bstrGroupName,
+        long lID ) = 0;
+    virtual HRESULT __stdcall InvokeSubItem (
+        enum RTXC_UI_TYPE enType,
+        BSTR bstrGroupName,
+        long lID,
+        enum SUBITEM_ACTION_TYPE enActionType,
+        long lXPos,
+        long lYPos,
+        VARIANT varMenuPara ) = 0;
+    virtual HRESULT __stdcall Refresh (
+        enum RTXC_UI_TYPE enType,
+        BSTR bstrGroupName,
+        long lID ) = 0;
+    virtual HRESULT __stdcall AddItemEx (
+        enum RTXC_UI_TYPE enType,
+        BSTR bstrGroupName,
+        long lID,
+        struct IRTXCUICommand * RTXCUICommand,
+        BSTR bstrCaption,
+        BSTR IconPath,
+        enum RTXC_UI_TYPE enMenuUIType,
+        enum SUB_ITEM_TYPE enSubItemType,
+        enum RTXC_QQBAR_SUBITEM_LAYOUT enLayoutType ) = 0;
+};
+
+struct __declspec(uuid("e685bc36-0ebc-4fa8-8177-d5e430183f1b"))
+_IRTXCNotificationEvents : IDispatch
+{};
+
+struct __declspec(uuid("65a8f2b5-64dd-424b-b3bc-1d033b54fa39"))
+ClientObjectsModule;
+    // [ default ] interface IClientObjectsModule
+
+struct __declspec(uuid("4a287adb-2280-4bdb-a927-5e04b0012b4e"))
+RTXCMenu;
+    // [ default ] interface IRTXCMenu
+
+struct __declspec(uuid("8a281e04-b00d-4f9f-8297-7afd3666f558"))
+RTXCUICommand;
+    // [ default ] interface IRTXCUICommand
+
+struct __declspec(uuid("01528744-119c-47ee-a47d-4386042959ea"))
+RTXCNotification;
+    // [ default ] interface IRTXCNotification
+    // [ default, source ] dispinterface _IRTXCNotificationEvents
+
+struct __declspec(uuid("43abc5d6-56d4-41df-98b1-ecc2c805d356"))
+TabBaseMgr;
+    // [ default ] interface ITabBaseMgr
+
+struct __declspec(uuid("30434d7b-690b-45ff-96ed-c6775624d12e"))
+_IRTXCSubItemEvents : IDispatch
+{};
+
+struct __declspec(uuid("838974fe-d2e0-43c5-8a80-22900ac42c82"))
+IRTXSpecialTipWnd : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Show (
+        struct IRTXCData * pRTXCData,
+        BSTR bstrSpecialTitle ) = 0;
+};
+
+struct __declspec(uuid("0fdd4b1c-d6da-4336-b599-c0401eee01c2"))
+RTXCSubItem;
+    // [ default ] interface IRTXCSubItem
+    // [ default, source ] dispinterface _IRTXCSubItemEvents
+
+struct __declspec(uuid("2af08b58-901b-41d1-86a0-c41416f32f5f"))
+RTXSpecialTipWnd;
+    // [ default ] interface IRTXSpecialTipWnd
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_CLIENTOBJECTSLib =
+    {0x2c5a016f,0x4db6,0x4c71,{0x97,0xb4,0x5c,0x6d,0xcc,0xe1,0x7a,0x96}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCExtraInfoShow =
+    {0xa0890bfc,0x15f4,0x461d,{0x86,0x46,0x38,0x9a,0x6c,0x8a,0xf9,0x28}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCExtraInfoShowEvents =
+    {0x2844aaf9,0xaeb6,0x4dc6,{0x89,0xc4,0xf2,0xd2,0xed,0xc7,0xb4,0x84}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCExtraInfoShow =
+    {0x63a5aec8,0x28ba,0x4304,{0xae,0x43,0xa6,0xa4,0x63,0xae,0x7f,0xca}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCUserTips =
+    {0x7b7d4d1b,0xc1c3,0x40cd,{0x9f,0xe9,0xfa,0xe5,0x0f,0x91,0x03,0xba}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCUserTipsEvents =
+    {0x60fff9d1,0x7bfe,0x4956,{0xa9,0x1c,0xa3,0x4a,0x96,0x22,0x37,0x9f}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCUserTips =
+    {0xa497f762,0x5c2e,0x444c,{0x81,0x86,0xd9,0x3b,0xc9,0xad,0xbd,0xad}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCDeptPortal =
+    {0xa7b4e2b4,0x0aac,0x46ab,{0x93,0x24,0x5f,0xd0,0xab,0x96,0x3c,0x24}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCDeptPortalEvents =
+    {0xfdfd3f16,0xd229,0x4700,{0x91,0x1d,0x20,0x10,0xf5,0x8c,0x2e,0x85}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCDeptPortal =
+    {0x9f61a206,0x682e,0x4433,{0x88,0x5d,0x66,0xef,0xbf,0x58,0x88,0xdc}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCUICommand =
+    {0xa9ee332e,0x105a,0x45e2,{0xa5,0xe7,0x7a,0x2f,0xfe,0x9a,0x9e,0x43}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCMenu =
+    {0xe065f019,0xaf95,0x4fc0,{0x9f,0x93,0x50,0xae,0x61,0x30,0xb7,0x5b}};
+extern "C" const GUID __declspec(selectany) IID_IClientObjectsModule =
+    {0x8cd6fe52,0xdad5,0x4b87,{0x81,0x7c,0xc9,0x67,0x15,0x63,0x56,0x92}};
+extern "C" const GUID __declspec(selectany) IID_ITabBaseMgr =
+    {0x28b750a2,0x06c4,0x425f,{0xbe,0x9a,0x7e,0xbc,0x87,0x31,0x47,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCNotification =
+    {0x67559248,0xd777,0x4136,{0x8e,0xc1,0xb2,0x42,0xeb,0x31,0x02,0x49}};
+extern "C" const GUID __declspec(selectany) IID_IRTXCSubItem =
+    {0x6727fbba,0x9abb,0x4f73,{0x8a,0x47,0x39,0xe9,0xe1,0xea,0x0b,0xbd}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCNotificationEvents =
+    {0xe685bc36,0x0ebc,0x4fa8,{0x81,0x77,0xd5,0xe4,0x30,0x18,0x3f,0x1b}};
+extern "C" const GUID __declspec(selectany) CLSID_ClientObjectsModule =
+    {0x65a8f2b5,0x64dd,0x424b,{0xb3,0xbc,0x1d,0x03,0x3b,0x54,0xfa,0x39}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCMenu =
+    {0x4a287adb,0x2280,0x4bdb,{0xa9,0x27,0x5e,0x04,0xb0,0x01,0x2b,0x4e}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCUICommand =
+    {0x8a281e04,0xb00d,0x4f9f,{0x82,0x97,0x7a,0xfd,0x36,0x66,0xf5,0x58}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCNotification =
+    {0x01528744,0x119c,0x47ee,{0xa4,0x7d,0x43,0x86,0x04,0x29,0x59,0xea}};
+extern "C" const GUID __declspec(selectany) CLSID_TabBaseMgr =
+    {0x43abc5d6,0x56d4,0x41df,{0x98,0xb1,0xec,0xc2,0xc8,0x05,0xd3,0x56}};
+extern "C" const GUID __declspec(selectany) DIID__IRTXCSubItemEvents =
+    {0x30434d7b,0x690b,0x45ff,{0x96,0xed,0xc6,0x77,0x56,0x24,0xd1,0x2e}};
+extern "C" const GUID __declspec(selectany) IID_IRTXSpecialTipWnd =
+    {0x838974fe,0xd2e0,0x43c5,{0x8a,0x80,0x22,0x90,0x0a,0xc4,0x2c,0x82}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXCSubItem =
+    {0x0fdd4b1c,0xd6da,0x4336,{0xb5,0x99,0xc0,0x40,0x1e,0xee,0x01,0xc2}};
+extern "C" const GUID __declspec(selectany) CLSID_RTXSpecialTipWnd =
+    {0x2af08b58,0x901b,0x41d1,{0x86,0xa0,0xc4,0x14,0x16,0xf3,0x2f,0x5f}};
+
+#pragma pack(pop)

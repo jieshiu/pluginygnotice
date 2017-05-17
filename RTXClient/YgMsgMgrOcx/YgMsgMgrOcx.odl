@@ -1,0 +1,69 @@
+// YgMsgMgrOcx.odl : type library source for ActiveX Control project.
+
+// This file will be processed by the Make Type Library (mktyplib) tool to
+// produce the type library (YgMsgMgrOcx.tlb) that will become a resource in
+// YgMsgMgrOcx.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(6299CF25-1952-46E6-871A-D594B5859177), version(1.0),
+  helpfile("YgMsgMgrOcx.hlp"),
+  helpstring("YgMsgMgrOcx ActiveX Control module"),
+  control ]
+library YGMSGMGROCXLib
+{
+	importlib(STDOLE_TLB);
+	importlib(STDTYPE_TLB);
+
+	//  Primary dispatch interface for CYgMsgMgrOcxCtrl
+
+	[ uuid(0423B95A-2F9D-4824-8144-74C64A7156F5),
+	  helpstring("Dispatch interface for YgMsgMgrOcx Control"), hidden ]
+	dispinterface _DYgMsgMgrOcx
+	{
+		properties:
+			// NOTE - ClassWizard will maintain property information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_PROP(CYgMsgMgrOcxCtrl)
+			//}}AFX_ODL_PROP
+
+		methods:
+			// NOTE - ClassWizard will maintain method information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_METHOD(CYgMsgMgrOcxCtrl)
+			//}}AFX_ODL_METHOD
+
+			[id(DISPID_ABOUTBOX)] void AboutBox();
+	};
+
+	//  Event dispatch interface for CYgMsgMgrOcxCtrl
+
+	[ uuid(3731F508-82E2-4354-AF23-CE574547AB38),
+	  helpstring("Event interface for YgMsgMgrOcx Control") ]
+	dispinterface _DYgMsgMgrOcxEvents
+	{
+		properties:
+			//  Event interface has no properties
+
+		methods:
+			// NOTE - ClassWizard will maintain event information here.
+			//    Use extreme caution when editing this section.
+			//{{AFX_ODL_EVENT(CYgMsgMgrOcxCtrl)
+			//}}AFX_ODL_EVENT
+	};
+
+	//  Class information for CYgMsgMgrOcxCtrl
+
+	[ uuid(89E5E583-202B-43A5-8639-101EA58473BB),
+	  helpstring("YgMsgMgrOcx Control"), control ]
+	coclass YgMsgMgrOcx
+	{
+		[default] dispinterface _DYgMsgMgrOcx;
+		[default, source] dispinterface _DYgMsgMgrOcxEvents;
+	};
+
+
+	//{{AFX_APPEND_ODL}}
+	//}}AFX_APPEND_ODL}}
+};
